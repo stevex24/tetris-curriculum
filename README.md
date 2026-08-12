@@ -10,6 +10,18 @@ Run the demonstration:
 python demo.py
 ```
 
+Run the small Hour 2 three-condition plumbing demonstration:
+
+```sh
+python hour2_demo.py
+```
+
+Hour 2 compares equal placement budgets for ordinary control practice, a
+rating-only tutorial, and a rating-plus-observable-history tutorial. The Elo
+difficulty tiers and history severity scales are explicit prototype assumptions,
+not empirically calibrated Tetris pedagogy. Tutorial selection is separate from
+evaluation and does not update Elo.
+
 Run tests:
 
 ```sh
