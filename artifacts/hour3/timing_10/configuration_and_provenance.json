@@ -1,0 +1,173 @@
+{
+  "config": {
+    "master_seed": 300003,
+    "replicates": 10,
+    "baseline_history_placements": 40,
+    "training_placements": 40,
+    "evaluation_challenges": 6,
+    "evaluation_max_placements": 120,
+    "initial_elo": 1500.0,
+    "elo_k": 32.0,
+    "initial_weights": [
+      0.2,
+      0.1,
+      0.15,
+      0.25
+    ],
+    "learning_rate": 0.04,
+    "temperature": 0.25,
+    "primary_measure": "mean lines cleared per evaluation challenge"
+  },
+  "replicate_seeds": [
+    {
+      "baseline_agent": 1415639743,
+      "baseline_history": 265289025,
+      "tutorial_selection": 1413021245,
+      "training_stream": 1890712999,
+      "evaluation": [
+        570631483,
+        1032781541,
+        1646740971,
+        1744198910,
+        48673510,
+        612789207
+      ]
+    },
+    {
+      "baseline_agent": 1471779076,
+      "baseline_history": 646003961,
+      "tutorial_selection": 503570562,
+      "training_stream": 1675855179,
+      "evaluation": [
+        1472861882,
+        1940855286,
+        743648430,
+        1907708291,
+        1413367940,
+        1211693137
+      ]
+    },
+    {
+      "baseline_agent": 1655612861,
+      "baseline_history": 330259036,
+      "tutorial_selection": 2112425943,
+      "training_stream": 330778879,
+      "evaluation": [
+        1587667491,
+        1764180396,
+        475011817,
+        589255357,
+        740986366,
+        1067406268
+      ]
+    },
+    {
+      "baseline_agent": 700049409,
+      "baseline_history": 1328836232,
+      "tutorial_selection": 1238811379,
+      "training_stream": 1024708469,
+      "evaluation": [
+        1549902586,
+        1055606807,
+        710071151,
+        606871762,
+        882996840,
+        1786024450
+      ]
+    },
+    {
+      "baseline_agent": 19486493,
+      "baseline_history": 1780438017,
+      "tutorial_selection": 1618483383,
+      "training_stream": 711958473,
+      "evaluation": [
+        359544095,
+        281310308,
+        473135098,
+        1137156428,
+        1315953786,
+        1566608170
+      ]
+    },
+    {
+      "baseline_agent": 466853565,
+      "baseline_history": 1759707042,
+      "tutorial_selection": 1254200253,
+      "training_stream": 217855790,
+      "evaluation": [
+        325032105,
+        1444700543,
+        1902148430,
+        1637722551,
+        1774308571,
+        876943634
+      ]
+    },
+    {
+      "baseline_agent": 22214969,
+      "baseline_history": 1460426068,
+      "tutorial_selection": 206036303,
+      "training_stream": 1808787724,
+      "evaluation": [
+        320377188,
+        301746068,
+        507569836,
+        236827814,
+        983290630,
+        1367315994
+      ]
+    },
+    {
+      "baseline_agent": 577952596,
+      "baseline_history": 1388466965,
+      "tutorial_selection": 1254392582,
+      "training_stream": 1285945695,
+      "evaluation": [
+        1109785165,
+        1811613890,
+        237165098,
+        69261937,
+        858572147,
+        207965429
+      ]
+    },
+    {
+      "baseline_agent": 1450106548,
+      "baseline_history": 231134290,
+      "tutorial_selection": 1407763382,
+      "training_stream": 212218138,
+      "evaluation": [
+        1687783881,
+        1133737801,
+        723056985,
+        1290339138,
+        1293426383,
+        1704938477
+      ]
+    },
+    {
+      "baseline_agent": 301626002,
+      "baseline_history": 453990918,
+      "tutorial_selection": 1075202979,
+      "training_stream": 64869374,
+      "evaluation": [
+        198079816,
+        174626384,
+        1194553971,
+        482420674,
+        1929244057,
+        504767024
+      ]
+    }
+  ],
+  "elapsed_seconds": 19.527311843,
+  "seconds_per_replicate": 1.9527311843,
+  "python": "3.9.12 (main, Apr  5 2022, 01:53:17) \n[Clang 12.0.0 ]",
+  "platform": "macOS-10.16-x86_64-i386-64bit",
+  "git_commit": "13784eba0db4565f53d5fa5127d205aafe8f7906",
+  "controls": {
+    "all_initial_states_identical": true,
+    "all_evaluation_challenges_matched": true,
+    "all_evaluation_seeds_disjoint": true
+  }
+}

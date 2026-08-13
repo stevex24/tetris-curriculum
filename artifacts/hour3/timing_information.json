@@ -1,0 +1,13 @@
+{
+  "timing_command": "/usr/bin/time -p python hour3_pilot.py --replicates 10 --master-seed 300003 --output artifacts/hour3/timing_10",
+  "ten_replicate_harness_seconds": 19.527,
+  "ten_replicate_wall_clock_seconds": 19.67,
+  "approximate_seconds_per_replicate": 1.9527,
+  "estimated_100_replicate_seconds": 195.27,
+  "estimated_100_replicate_display": "3 minutes 15 seconds",
+  "estimated_1000_replicate_seconds": 1952.7,
+  "estimated_1000_replicate_display": "32 minutes 33 seconds",
+  "pilot_50_harness_seconds": 96.832,
+  "pilot_50_wall_clock_seconds": 97.01,
+  "estimation_method": "Linear extrapolation from the harness timing for the 10-replicate run."
+}

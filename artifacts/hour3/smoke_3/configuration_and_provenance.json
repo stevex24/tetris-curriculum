@@ -1,0 +1,75 @@
+{
+  "config": {
+    "master_seed": 300003,
+    "replicates": 3,
+    "baseline_history_placements": 40,
+    "training_placements": 40,
+    "evaluation_challenges": 6,
+    "evaluation_max_placements": 120,
+    "initial_elo": 1500.0,
+    "elo_k": 32.0,
+    "initial_weights": [
+      0.2,
+      0.1,
+      0.15,
+      0.25
+    ],
+    "learning_rate": 0.04,
+    "temperature": 0.25,
+    "primary_measure": "mean lines cleared per evaluation challenge"
+  },
+  "replicate_seeds": [
+    {
+      "baseline_agent": 1415639743,
+      "baseline_history": 265289025,
+      "tutorial_selection": 1413021245,
+      "training_stream": 1890712999,
+      "evaluation": [
+        570631483,
+        1032781541,
+        1646740971,
+        1744198910,
+        48673510,
+        612789207
+      ]
+    },
+    {
+      "baseline_agent": 1471779076,
+      "baseline_history": 646003961,
+      "tutorial_selection": 503570562,
+      "training_stream": 1675855179,
+      "evaluation": [
+        1472861882,
+        1940855286,
+        743648430,
+        1907708291,
+        1413367940,
+        1211693137
+      ]
+    },
+    {
+      "baseline_agent": 1655612861,
+      "baseline_history": 330259036,
+      "tutorial_selection": 2112425943,
+      "training_stream": 330778879,
+      "evaluation": [
+        1587667491,
+        1764180396,
+        475011817,
+        589255357,
+        740986366,
+        1067406268
+      ]
+    }
+  ],
+  "elapsed_seconds": 5.835118684,
+  "seconds_per_replicate": 1.9450395613333333,
+  "python": "3.9.12 (main, Apr  5 2022, 01:53:17) \n[Clang 12.0.0 ]",
+  "platform": "macOS-10.16-x86_64-i386-64bit",
+  "git_commit": "13784eba0db4565f53d5fa5127d205aafe8f7906",
+  "controls": {
+    "all_initial_states_identical": true,
+    "all_evaluation_challenges_matched": true,
+    "all_evaluation_seeds_disjoint": true
+  }
+}

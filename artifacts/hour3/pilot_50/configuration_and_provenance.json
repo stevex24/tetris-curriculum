@@ -1,0 +1,733 @@
+{
+  "config": {
+    "master_seed": 300003,
+    "replicates": 50,
+    "baseline_history_placements": 40,
+    "training_placements": 40,
+    "evaluation_challenges": 6,
+    "evaluation_max_placements": 120,
+    "initial_elo": 1500.0,
+    "elo_k": 32.0,
+    "initial_weights": [
+      0.2,
+      0.1,
+      0.15,
+      0.25
+    ],
+    "learning_rate": 0.04,
+    "temperature": 0.25,
+    "primary_measure": "mean lines cleared per evaluation challenge"
+  },
+  "replicate_seeds": [
+    {
+      "baseline_agent": 1415639743,
+      "baseline_history": 265289025,
+      "tutorial_selection": 1413021245,
+      "training_stream": 1890712999,
+      "evaluation": [
+        570631483,
+        1032781541,
+        1646740971,
+        1744198910,
+        48673510,
+        612789207
+      ]
+    },
+    {
+      "baseline_agent": 1471779076,
+      "baseline_history": 646003961,
+      "tutorial_selection": 503570562,
+      "training_stream": 1675855179,
+      "evaluation": [
+        1472861882,
+        1940855286,
+        743648430,
+        1907708291,
+        1413367940,
+        1211693137
+      ]
+    },
+    {
+      "baseline_agent": 1655612861,
+      "baseline_history": 330259036,
+      "tutorial_selection": 2112425943,
+      "training_stream": 330778879,
+      "evaluation": [
+        1587667491,
+        1764180396,
+        475011817,
+        589255357,
+        740986366,
+        1067406268
+      ]
+    },
+    {
+      "baseline_agent": 700049409,
+      "baseline_history": 1328836232,
+      "tutorial_selection": 1238811379,
+      "training_stream": 1024708469,
+      "evaluation": [
+        1549902586,
+        1055606807,
+        710071151,
+        606871762,
+        882996840,
+        1786024450
+      ]
+    },
+    {
+      "baseline_agent": 19486493,
+      "baseline_history": 1780438017,
+      "tutorial_selection": 1618483383,
+      "training_stream": 711958473,
+      "evaluation": [
+        359544095,
+        281310308,
+        473135098,
+        1137156428,
+        1315953786,
+        1566608170
+      ]
+    },
+    {
+      "baseline_agent": 466853565,
+      "baseline_history": 1759707042,
+      "tutorial_selection": 1254200253,
+      "training_stream": 217855790,
+      "evaluation": [
+        325032105,
+        1444700543,
+        1902148430,
+        1637722551,
+        1774308571,
+        876943634
+      ]
+    },
+    {
+      "baseline_agent": 22214969,
+      "baseline_history": 1460426068,
+      "tutorial_selection": 206036303,
+      "training_stream": 1808787724,
+      "evaluation": [
+        320377188,
+        301746068,
+        507569836,
+        236827814,
+        983290630,
+        1367315994
+      ]
+    },
+    {
+      "baseline_agent": 577952596,
+      "baseline_history": 1388466965,
+      "tutorial_selection": 1254392582,
+      "training_stream": 1285945695,
+      "evaluation": [
+        1109785165,
+        1811613890,
+        237165098,
+        69261937,
+        858572147,
+        207965429
+      ]
+    },
+    {
+      "baseline_agent": 1450106548,
+      "baseline_history": 231134290,
+      "tutorial_selection": 1407763382,
+      "training_stream": 212218138,
+      "evaluation": [
+        1687783881,
+        1133737801,
+        723056985,
+        1290339138,
+        1293426383,
+        1704938477
+      ]
+    },
+    {
+      "baseline_agent": 301626002,
+      "baseline_history": 453990918,
+      "tutorial_selection": 1075202979,
+      "training_stream": 64869374,
+      "evaluation": [
+        198079816,
+        174626384,
+        1194553971,
+        482420674,
+        1929244057,
+        504767024
+      ]
+    },
+    {
+      "baseline_agent": 1577420947,
+      "baseline_history": 1560816813,
+      "tutorial_selection": 822373374,
+      "training_stream": 861915166,
+      "evaluation": [
+        406480252,
+        696123215,
+        2067412393,
+        669181080,
+        1230271744,
+        274936955
+      ]
+    },
+    {
+      "baseline_agent": 2021729771,
+      "baseline_history": 1205774150,
+      "tutorial_selection": 1135009171,
+      "training_stream": 1193823441,
+      "evaluation": [
+        2049871195,
+        121881352,
+        438249794,
+        1248148425,
+        964639179,
+        1825923711
+      ]
+    },
+    {
+      "baseline_agent": 1762581212,
+      "baseline_history": 273412376,
+      "tutorial_selection": 1176490759,
+      "training_stream": 2091405522,
+      "evaluation": [
+        56135478,
+        134495162,
+        1613137515,
+        1104667054,
+        399319471,
+        1345851399
+      ]
+    },
+    {
+      "baseline_agent": 1164887097,
+      "baseline_history": 1098733742,
+      "tutorial_selection": 190241793,
+      "training_stream": 1741718285,
+      "evaluation": [
+        1195077790,
+        276175679,
+        468176862,
+        35888511,
+        1995253103,
+        427302188
+      ]
+    },
+    {
+      "baseline_agent": 752085999,
+      "baseline_history": 944711958,
+      "tutorial_selection": 1214230965,
+      "training_stream": 410313055,
+      "evaluation": [
+        1975459638,
+        791522286,
+        851325462,
+        824675813,
+        1503684744,
+        1443104168
+      ]
+    },
+    {
+      "baseline_agent": 2125711770,
+      "baseline_history": 1972269156,
+      "tutorial_selection": 251792958,
+      "training_stream": 691990685,
+      "evaluation": [
+        1078810994,
+        1165706575,
+        1283805932,
+        2137371492,
+        451642994,
+        1795023721
+      ]
+    },
+    {
+      "baseline_agent": 212458936,
+      "baseline_history": 241504703,
+      "tutorial_selection": 1384423701,
+      "training_stream": 1358701843,
+      "evaluation": [
+        1560683904,
+        282037811,
+        484173999,
+        225768120,
+        220647056,
+        1969925742
+      ]
+    },
+    {
+      "baseline_agent": 696295549,
+      "baseline_history": 1800770598,
+      "tutorial_selection": 820061873,
+      "training_stream": 2105565960,
+      "evaluation": [
+        867491662,
+        118127546,
+        1647357920,
+        331034080,
+        454436002,
+        1325432676
+      ]
+    },
+    {
+      "baseline_agent": 231413476,
+      "baseline_history": 381705528,
+      "tutorial_selection": 419363715,
+      "training_stream": 1169967119,
+      "evaluation": [
+        683983538,
+        1087226940,
+        1587911827,
+        24745039,
+        830350474,
+        1081891900
+      ]
+    },
+    {
+      "baseline_agent": 917927405,
+      "baseline_history": 1245212614,
+      "tutorial_selection": 360141457,
+      "training_stream": 1477484705,
+      "evaluation": [
+        1781817207,
+        2086388230,
+        1182364832,
+        1822698539,
+        32029727,
+        454105963
+      ]
+    },
+    {
+      "baseline_agent": 1863398814,
+      "baseline_history": 1007780209,
+      "tutorial_selection": 1068515084,
+      "training_stream": 1768169685,
+      "evaluation": [
+        751029791,
+        1327178180,
+        291867628,
+        567550097,
+        1208129412,
+        340264400
+      ]
+    },
+    {
+      "baseline_agent": 888141826,
+      "baseline_history": 2033961957,
+      "tutorial_selection": 547507866,
+      "training_stream": 1701190419,
+      "evaluation": [
+        1134507535,
+        516349522,
+        1541231141,
+        1304065114,
+        776331044,
+        1491707170
+      ]
+    },
+    {
+      "baseline_agent": 961896313,
+      "baseline_history": 1827019834,
+      "tutorial_selection": 357467982,
+      "training_stream": 2012157448,
+      "evaluation": [
+        1694394688,
+        1472699782,
+        1628274627,
+        2037704703,
+        832693412,
+        1033167232
+      ]
+    },
+    {
+      "baseline_agent": 1928607194,
+      "baseline_history": 658339138,
+      "tutorial_selection": 1576489251,
+      "training_stream": 384477882,
+      "evaluation": [
+        587871625,
+        886312371,
+        793753158,
+        449435321,
+        1931179756,
+        796959748
+      ]
+    },
+    {
+      "baseline_agent": 285468323,
+      "baseline_history": 1354284744,
+      "tutorial_selection": 1905528574,
+      "training_stream": 2029921999,
+      "evaluation": [
+        242183182,
+        1695612877,
+        1491230293,
+        126754382,
+        1830037237,
+        738814816
+      ]
+    },
+    {
+      "baseline_agent": 1346960890,
+      "baseline_history": 312583345,
+      "tutorial_selection": 538043371,
+      "training_stream": 1389781436,
+      "evaluation": [
+        1860166936,
+        1802722693,
+        2145327238,
+        2097722350,
+        1138701493,
+        382884671
+      ]
+    },
+    {
+      "baseline_agent": 615748233,
+      "baseline_history": 319550986,
+      "tutorial_selection": 21643948,
+      "training_stream": 1077893988,
+      "evaluation": [
+        1045101815,
+        627123789,
+        623929270,
+        537821622,
+        292099191,
+        1172357826
+      ]
+    },
+    {
+      "baseline_agent": 331001230,
+      "baseline_history": 1062155143,
+      "tutorial_selection": 865679618,
+      "training_stream": 1787242632,
+      "evaluation": [
+        2036743773,
+        116766038,
+        1742314734,
+        1403103322,
+        1859755473,
+        1660209119
+      ]
+    },
+    {
+      "baseline_agent": 272302062,
+      "baseline_history": 1019283752,
+      "tutorial_selection": 1178556621,
+      "training_stream": 1150268808,
+      "evaluation": [
+        1060000887,
+        1093375810,
+        2040318582,
+        441827872,
+        419105546,
+        42990493
+      ]
+    },
+    {
+      "baseline_agent": 921470725,
+      "baseline_history": 196261473,
+      "tutorial_selection": 57608756,
+      "training_stream": 827230384,
+      "evaluation": [
+        930434933,
+        127030483,
+        751360264,
+        643287913,
+        832228523,
+        1481332974
+      ]
+    },
+    {
+      "baseline_agent": 484481523,
+      "baseline_history": 1492601611,
+      "tutorial_selection": 672759339,
+      "training_stream": 589288176,
+      "evaluation": [
+        1066968531,
+        554504845,
+        2061301612,
+        2036010601,
+        140032479,
+        1448867512
+      ]
+    },
+    {
+      "baseline_agent": 253634838,
+      "baseline_history": 836130676,
+      "tutorial_selection": 1257070862,
+      "training_stream": 572833716,
+      "evaluation": [
+        1117519473,
+        1429979875,
+        1895987371,
+        457444902,
+        1611905657,
+        1189594462
+      ]
+    },
+    {
+      "baseline_agent": 1473718759,
+      "baseline_history": 803588378,
+      "tutorial_selection": 1085730729,
+      "training_stream": 1169897236,
+      "evaluation": [
+        473966818,
+        1493603120,
+        1784447650,
+        1341747053,
+        10901821,
+        1335957874
+      ]
+    },
+    {
+      "baseline_agent": 1776287787,
+      "baseline_history": 1539105431,
+      "tutorial_selection": 675305388,
+      "training_stream": 627061235,
+      "evaluation": [
+        1027517718,
+        1764461697,
+        788219257,
+        935019400,
+        1954086371,
+        1858837496
+      ]
+    },
+    {
+      "baseline_agent": 1900239174,
+      "baseline_history": 656428299,
+      "tutorial_selection": 719472903,
+      "training_stream": 524177116,
+      "evaluation": [
+        1246383994,
+        927988793,
+        1920784946,
+        475736310,
+        654993007,
+        2062935988
+      ]
+    },
+    {
+      "baseline_agent": 2036101814,
+      "baseline_history": 1403642128,
+      "tutorial_selection": 725796917,
+      "training_stream": 1118837203,
+      "evaluation": [
+        211988958,
+        1205864984,
+        2112209136,
+        1198530397,
+        342820074,
+        1068119413
+      ]
+    },
+    {
+      "baseline_agent": 839006730,
+      "baseline_history": 1006796090,
+      "tutorial_selection": 2129550336,
+      "training_stream": 137987867,
+      "evaluation": [
+        711572887,
+        1357691890,
+        1441814714,
+        844958740,
+        864933361,
+        1812148535
+      ]
+    },
+    {
+      "baseline_agent": 140413267,
+      "baseline_history": 417018362,
+      "tutorial_selection": 814090496,
+      "training_stream": 1303955588,
+      "evaluation": [
+        1910981928,
+        1644810954,
+        96925623,
+        68716061,
+        1915782391,
+        498886417
+      ]
+    },
+    {
+      "baseline_agent": 863227491,
+      "baseline_history": 454262100,
+      "tutorial_selection": 192839840,
+      "training_stream": 1119718145,
+      "evaluation": [
+        1047244485,
+        495790599,
+        399426530,
+        268720430,
+        42146462,
+        1999719557
+      ]
+    },
+    {
+      "baseline_agent": 449012746,
+      "baseline_history": 2121082598,
+      "tutorial_selection": 466756726,
+      "training_stream": 1831714078,
+      "evaluation": [
+        1433432776,
+        1225352663,
+        618349118,
+        581737751,
+        815250337,
+        356232353
+      ]
+    },
+    {
+      "baseline_agent": 1665198336,
+      "baseline_history": 139569546,
+      "tutorial_selection": 1327870836,
+      "training_stream": 1106325394,
+      "evaluation": [
+        263702346,
+        1043632217,
+        894153597,
+        67575851,
+        486829655,
+        501267139
+      ]
+    },
+    {
+      "baseline_agent": 2017114186,
+      "baseline_history": 1664641634,
+      "tutorial_selection": 1828683743,
+      "training_stream": 1797617130,
+      "evaluation": [
+        1834886175,
+        413566679,
+        1853039047,
+        307910498,
+        924134492,
+        402481528
+      ]
+    },
+    {
+      "baseline_agent": 844651566,
+      "baseline_history": 507440336,
+      "tutorial_selection": 372539684,
+      "training_stream": 1803417272,
+      "evaluation": [
+        1026883196,
+        2060834639,
+        244911951,
+        364518562,
+        87963078,
+        614160728
+      ]
+    },
+    {
+      "baseline_agent": 1744499304,
+      "baseline_history": 1752725370,
+      "tutorial_selection": 2134445132,
+      "training_stream": 1770386211,
+      "evaluation": [
+        1283479594,
+        142865518,
+        503052391,
+        1913913638,
+        1571999974,
+        27605827
+      ]
+    },
+    {
+      "baseline_agent": 1156633994,
+      "baseline_history": 1741835772,
+      "tutorial_selection": 402237925,
+      "training_stream": 857596642,
+      "evaluation": [
+        925107253,
+        1145355872,
+        1348843783,
+        176892303,
+        1193387625,
+        1346320256
+      ]
+    },
+    {
+      "baseline_agent": 1821554890,
+      "baseline_history": 99538400,
+      "tutorial_selection": 768492826,
+      "training_stream": 1936343807,
+      "evaluation": [
+        1839232937,
+        946481723,
+        80060466,
+        206884042,
+        1021370433,
+        531057241
+      ]
+    },
+    {
+      "baseline_agent": 1220740850,
+      "baseline_history": 1632228921,
+      "tutorial_selection": 1923657823,
+      "training_stream": 1151203967,
+      "evaluation": [
+        425324585,
+        316529806,
+        2102225468,
+        163112130,
+        1822316973,
+        170954072
+      ]
+    },
+    {
+      "baseline_agent": 1759531621,
+      "baseline_history": 1392700264,
+      "tutorial_selection": 863027310,
+      "training_stream": 290502717,
+      "evaluation": [
+        751586377,
+        532564111,
+        7009600,
+        323501705,
+        1453270689,
+        202956754
+      ]
+    },
+    {
+      "baseline_agent": 779450502,
+      "baseline_history": 1345675836,
+      "tutorial_selection": 1449042617,
+      "training_stream": 76966352,
+      "evaluation": [
+        1745147012,
+        619017474,
+        736545953,
+        1824018273,
+        653928153,
+        899937422
+      ]
+    },
+    {
+      "baseline_agent": 1853673923,
+      "baseline_history": 185605851,
+      "tutorial_selection": 1333076685,
+      "training_stream": 647639275,
+      "evaluation": [
+        1604655728,
+        640889447,
+        1985302587,
+        1365121180,
+        1974086274,
+        1390168794
+      ]
+    }
+  ],
+  "elapsed_seconds": 96.832236747,
+  "seconds_per_replicate": 1.93664473494,
+  "python": "3.9.12 (main, Apr  5 2022, 01:53:17) \n[Clang 12.0.0 ]",
+  "platform": "macOS-10.16-x86_64-i386-64bit",
+  "git_commit": "13784eba0db4565f53d5fa5127d205aafe8f7906",
+  "controls": {
+    "all_initial_states_identical": true,
+    "all_evaluation_challenges_matched": true,
+    "all_evaluation_seeds_disjoint": true
+  }
+}
