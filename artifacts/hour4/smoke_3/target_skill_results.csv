@@ -1,0 +1,4 @@
+replicate,diagnosed_weakness,diagnostic_evidence,tutorial_type,target_metric,pre_score,post_score,improvement
+0,hole_avoidance,"{""bumpiness"": 0.48187499999999994, ""hole_avoidance"": 1.465, ""line_efficiency"": 1.0, ""stack_height"": 0.6325000000000001, ""steps_observed"": 40.0}",hole_avoidance,hole_avoidance,-37.12050450922346,-40.28613688780356,-3.1656323785800993
+1,hole_avoidance,"{""bumpiness"": 0.390625, ""hole_avoidance"": 1.6512499999999999, ""line_efficiency"": 1.0, ""stack_height"": 0.55625, ""steps_observed"": 40.0}",hole_avoidance,hole_avoidance,-39.33252873563218,-38.05469531717658,1.2778334184556002
+2,hole_avoidance,"{""bumpiness"": 0.55, ""hole_avoidance"": 1.4075, ""line_efficiency"": 1.0, ""stack_height"": 0.61125, ""steps_observed"": 40.0}",hole_avoidance,hole_avoidance,-37.77753998874688,-37.96986354775829,-0.19232355901140608

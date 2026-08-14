@@ -1,0 +1,54 @@
+{
+  "status": "FROZEN BEFORE HOUR 4 DATA COLLECTION",
+  "frozen_at_local": "2026-08-13 America/Los_Angeles",
+  "source_baseline_commit": "357fc79",
+  "scientific_questions": {
+    "target_skill_learning": "For the rating_history agent, did the held-out observable score corresponding to its history-diagnosed weakness improve from pre-training to post-training?",
+    "general_transfer": "Did pre-to-post change in ordinary held-out play, measured by mean successful placements per challenge, exceed matched control and rating_only change?"
+  },
+  "component_skills": {
+    "hole_avoidance": "Negative arithmetic mean holes after every successful placement, first averaged within each challenge and then across six challenges. Larger (closer to zero) is better.",
+    "stack_height_management": "Negative arithmetic mean maximum column height after every successful placement, first averaged within each challenge and then across six challenges. Larger (closer to zero) is better.",
+    "surface_smoothness": "Negative arithmetic mean sum of absolute height differences between adjacent columns after every successful placement, first averaged within each challenge and then across six challenges. Larger (closer to zero) is better.",
+    "line_clearing_efficiency": "Total lines cleared divided by successful placements within each challenge, then averaged across six challenges. Larger is better. This is measurable but expected to remain sparse."
+  },
+  "primary_general_outcome": {
+    "name": "mean successful placements per held-out challenge",
+    "definition": "For each challenge, count legally completed tetromino placements before no legal action remains or the fixed cap of 120 is reached; take the arithmetic mean across six challenges.",
+    "orientation": "larger is better",
+    "range": [0, 120],
+    "rationale": "It is observable and defined for every challenge; delaying top-out is ordinary Tetris performance that requires ongoing hole, height, and surface management. It has materially finer resolution than rare line clears in the existing simulator.",
+    "secondary_outcome": "mean lines cleared per held-out challenge, retained unchanged in meaning for Hour 3 comparability"
+  },
+  "target_mapping": {
+    "hole_avoidance": "hole_avoidance",
+    "stack_height": "stack_height_management",
+    "bumpiness": "surface_smoothness",
+    "line_efficiency": "line_clearing_efficiency"
+  },
+  "target_score_timing": "The mapped component score is calculated from the rating_history agent's ordinary matched held-out challenges immediately before and after training; evaluation learning is disabled.",
+  "diagnosis": "Tutorial selection retains the existing Hour 3 observable-history severity calculation, weakness selection, thresholds/scales, and tutorial boards. Hidden policy weights are unavailable to selection.",
+  "line_clearing_role": "Line clearing is a downstream/general outcome: reaching and completing a row depends jointly on avoiding buried holes, controlling stack height, maintaining usable surfaces, piece sequence, and placement choices. Its observable efficiency is measurable, but that does not establish it as a single primitive skill.",
+  "controls": {
+    "matched_clones": true,
+    "identical_initial_weights_elo_rng_history": true,
+    "training_placements_per_condition": 40,
+    "same_learning_algorithm_and_rate": true,
+    "observable_history_only_for_personalization": true,
+    "held_out_challenges": 6,
+    "evaluation_max_placements": 120,
+    "matched_evaluation_challenges_within_replicate": true,
+    "evaluation_learning_disabled_and_disposable_clone_used": true,
+    "domain_separated_reproducible_seeds": true,
+    "master_seed": 400004,
+    "replicates": 50
+  },
+  "analysis": {
+    "condition_summaries": "mean pre, mean post, mean improvement, SD and t-based 95% CI",
+    "confirmatory_pairs": ["rating_history minus control improvement", "rating_history minus rating_only improvement"],
+    "parametric": "paired t-test, two-sided p-value, paired Cohen dz, and t-based 95% CI",
+    "nonparametric": "exact two-sided Wilcoxon signed-rank conditional on absolute ranks, zeros omitted and tied absolute differences assigned average ranks",
+    "targeted_analysis": "group rating_history target scores by diagnosed weakness; report n, means, improvement, SD and CI where calculable; exploratory/mechanistic only"
+  },
+  "immutability_rule": "No metric, tutorial, learning rate, weakness threshold/scale, reward, or experimental-design change is permitted after viewing smoke-condition comparisons or the 50-replicate results. Smoke usability is judged only from pooled score resolution/floor/cap behavior."
+}

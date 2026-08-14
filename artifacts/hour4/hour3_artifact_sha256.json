@@ -1,0 +1,15 @@
+{
+  "artifacts/hour3/pilot_50/challenge_results.jsonl": "1eec5d11b25001cbb0dad4f049fa15e6afcead0008206f3c2cffed46842f61cc",
+  "artifacts/hour3/pilot_50/configuration_and_provenance.json": "51b70accc6b30e715406eb4da7fc27a85e3fb07d90a15f99586ddcc38b8363ac",
+  "artifacts/hour3/pilot_50/replicate_results.csv": "74bed6285d2316d02059f9c4e2374c4fee2a03503dcba783974ce5bd19175759",
+  "artifacts/hour3/pilot_50/statistics.json": "73d326442a7b904ab630b117c593cc249714d1de0fd666badd48f23216528549",
+  "artifacts/hour3/smoke_3/challenge_results.jsonl": "a8ec89413c01aa751da02a2b04fe818b25bfa8ad2fe1ca5f303b17b78f3eacf9",
+  "artifacts/hour3/smoke_3/configuration_and_provenance.json": "4fb496efa1688a4798ff9c63c98747a9c1ed6bc0ab1e84668a7e63b084648b34",
+  "artifacts/hour3/smoke_3/replicate_results.csv": "c6df603971926db71d4dff584580e992921031ff131018d2c13b050d4c5df2cd",
+  "artifacts/hour3/smoke_3/statistics.json": "608a226ee56e1b862dc9553531ddb813d2d2894b0c6dec7c73db38e85c990c7f",
+  "artifacts/hour3/timing_10/challenge_results.jsonl": "aee1570640f90b0450ffd9da39133a1836b9adcd20fb243f23d5ce68c827af48",
+  "artifacts/hour3/timing_10/configuration_and_provenance.json": "d2ed47ea85d63475d422da337ab1f8d112e6c9df8f6ddd9df6b81eba92276b35",
+  "artifacts/hour3/timing_10/replicate_results.csv": "889cdc575a3656129105b32ca71b0ddfb6141afc6fcb1a6e8b00019ef22543cf",
+  "artifacts/hour3/timing_10/statistics.json": "b0a31e9a7958348ed8fa0f3081d09cfb2d32521599db2f30c646ef514fa2cb21",
+  "artifacts/hour3/timing_information.json": "936d7902cfae40ec9ed31adf6b2ef03e912f2754bdd3b12c46adde491ffb35d7"
+}

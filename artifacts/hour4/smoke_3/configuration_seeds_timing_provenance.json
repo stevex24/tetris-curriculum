@@ -1,0 +1,89 @@
+{
+  "phase": "smoke",
+  "config": {
+    "master_seed": 400004,
+    "replicates": 3,
+    "baseline_history_placements": 40,
+    "training_placements": 40,
+    "evaluation_challenges": 6,
+    "evaluation_max_placements": 120,
+    "initial_elo": 1500.0,
+    "elo_k": 32.0,
+    "initial_weights": [
+      0.2,
+      0.1,
+      0.15,
+      0.25
+    ],
+    "learning_rate": 0.04,
+    "temperature": 0.25,
+    "primary_measure": "mean successful placements per held-out challenge"
+  },
+  "replicate_seeds": [
+    {
+      "baseline_agent": 201685528,
+      "baseline_history": 185037865,
+      "tutorial_selection": 1306928031,
+      "training_stream": 1231010133,
+      "evaluation": [
+        1880281753,
+        1910548025,
+        2135650710,
+        622097368,
+        1921454058,
+        54600529
+      ]
+    },
+    {
+      "baseline_agent": 1622589236,
+      "baseline_history": 686005157,
+      "tutorial_selection": 1168895946,
+      "training_stream": 321402443,
+      "evaluation": [
+        1977242473,
+        931976007,
+        425725313,
+        837614996,
+        284753522,
+        1714702734
+      ]
+    },
+    {
+      "baseline_agent": 733879665,
+      "baseline_history": 1387549996,
+      "tutorial_selection": 317271475,
+      "training_stream": 928619414,
+      "evaluation": [
+        846985825,
+        56279184,
+        1680198678,
+        388707222,
+        986741453,
+        1147560158
+      ]
+    }
+  ],
+  "elapsed_seconds": 5.794930056999999,
+  "seconds_per_replicate": 1.9316433523333332,
+  "python": "3.9.12 (main, Apr  5 2022, 01:53:17) \n[Clang 12.0.0 ]",
+  "platform": "macOS-10.16-x86_64-i386-64bit",
+  "git_commit_at_run": "357fc79b848a3d74995cc038d4850f218e85178c",
+  "resolution": {
+    "n_challenge_observations": 108,
+    "minimum_score": 19.0,
+    "proportion_at_zero": 0.0,
+    "proportion_at_observed_minimum": 0.009259259259259259,
+    "number_distinct_values": 14,
+    "proportion_at_cap": 0.0,
+    "observed_range": [
+      19.0,
+      34.0
+    ]
+  },
+  "controls": {
+    "all_initial_states_identical": true,
+    "all_evaluation_challenges_matched": true,
+    "all_evaluation_seeds_disjoint": true,
+    "all_training_budgets_equal": true
+  }
+}

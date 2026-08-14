@@ -1,0 +1,17 @@
+{
+  "source_baseline_commit": "357fc79",
+  "frozen_specification_sha256": "c21bab2fcad5914b53e4b9f18f5a9bc3d591b672fb90f4f687415c283e802af7",
+  "pre_data_test_command": "python -m unittest discover -s tests -v",
+  "pre_data_test_result": "19 tests passed",
+  "pre_data_test_seconds": 2.814,
+  "smoke_command": "python hour4_experiment.py --replicates 3 --master-seed 400004 --output artifacts/hour4/smoke_3",
+  "smoke_harness_seconds": 5.795,
+  "confirmatory_command": "python hour4_experiment.py --replicates 50 --master-seed 400004 --output artifacts/hour4/experiment_50",
+  "confirmatory_harness_seconds": 97.209,
+  "confirmatory_seconds_per_replicate": 1.94418,
+  "post_run_test_command": "python -m unittest discover -s tests -v",
+  "post_run_test_result": "19 tests passed",
+  "post_run_test_seconds": 2.792,
+  "hour3_integrity": "All 13 files match artifacts/hour4/hour3_artifact_sha256.json; git diff reports no Hour 3 changes.",
+  "notes": "The smoke and confirmatory directories contain their full Python/platform, seeds, configuration, control checks, and measured elapsed-time provenance. No Hour 3 data were passed through Hour 4 scoring or analysis."
+}

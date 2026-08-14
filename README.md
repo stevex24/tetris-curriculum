@@ -28,6 +28,17 @@ Run tests:
 python -m unittest discover -s tests -v
 ```
 
+Run the frozen Hour 4 evaluation experiment (after its required three-replicate smoke run):
+
+```sh
+python hour4_experiment.py --replicates 50 --master-seed 400004 --output artifacts/hour4/experiment_50
+```
+
+Hour 4 predeclares mean successful placements per six unseen challenges as its primary
+general-performance outcome and retains lines cleared as secondary. Its trajectory-averaged
+observable component scores separately assess targeted learning. The frozen specification is
+in `artifacts/hour4/evaluation_specification.json`; Hour 3 is not rescored or modified.
+
 Run the predeclared Hour 3 controlled pilot (write to a new directory):
 
 ```sh
