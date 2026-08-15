@@ -1,0 +1,238 @@
+{
+  "classifier_received_labels": false,
+  "confusion_matrix": {
+    "height_management": {
+      "height_management": 1,
+      "hole_management": 0,
+      "surface_management": 0
+    },
+    "hole_management": {
+      "height_management": 0,
+      "hole_management": 1,
+      "surface_management": 0
+    },
+    "surface_management": {
+      "height_management": 0,
+      "hole_management": 0,
+      "surface_management": 1
+    }
+  },
+  "construction_frozen_in": "tetris_research.hour5.synthetic_history",
+  "examples": [
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 2.4707748662244167,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 0.21768471183516405,
+          "hole_management": 2.6884595780595806,
+          "surface_management": 0.025282263176790366
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "known_construct": "hole_management",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 18.3,
+        "mean_holes": 42.825,
+        "mean_max_height": 11.8375,
+        "normalized_weakness": {
+          "height_management": 0.21768471183516405,
+          "hole_management": 2.6884595780595806,
+          "surface_management": 0.025282263176790366
+        },
+        "placements_observed": 40
+      },
+      "tutorial": {
+        "board": [
+          "##.#.#####",
+          "####.#####",
+          "###..#####",
+          "#####.####"
+        ],
+        "difficulty": "intermediate",
+        "rationale": "Practice exposes choices that create or avoid cavities.",
+        "selection_basis": "hole_management",
+        "tutorial_type": "hole_avoidance"
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 4.625658411590013,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 4.814942262479866,
+          "hole_management": 0.18928385088985206,
+          "surface_management": -0.10680466280807184
+        },
+        "primary": "height_management",
+        "secondary": "hole_management"
+      },
+      "known_construct": "height_management",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 17.9,
+        "mean_holes": 31.400000000000002,
+        "mean_max_height": 15.6125,
+        "normalized_weakness": {
+          "height_management": 4.814942262479866,
+          "hole_management": 0.18928385088985206,
+          "surface_management": -0.10680466280807184
+        },
+        "placements_observed": 40
+      },
+      "tutorial": {
+        "board": [
+          "#####.####",
+          "#####.####",
+          "#####.####",
+          "#####.####",
+          "#####.####",
+          "#####.####",
+          "####.#####"
+        ],
+        "difficulty": "intermediate",
+        "rationale": "Practice makes stack reduction and vertical risk salient.",
+        "selection_basis": "height_management",
+        "tutorial_type": "stack_height"
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 2.6528542909230897,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 0.47647073289794567,
+          "hole_management": 0.2275644418968276,
+          "surface_management": 3.1293250238210355
+        },
+        "primary": "surface_management",
+        "secondary": "height_management"
+      },
+      "known_construct": "surface_management",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 27.7,
+        "mean_holes": 31.575,
+        "mean_max_height": 12.05,
+        "normalized_weakness": {
+          "height_management": 0.47647073289794567,
+          "hole_management": 0.2275644418968276,
+          "surface_management": 3.1293250238210355
+        },
+        "placements_observed": 40
+      },
+      "tutorial": {
+        "board": [
+          "#.....#...",
+          "#.#...#.#.",
+          "#.#.#.#.#.",
+          "#####.####"
+        ],
+        "difficulty": "intermediate",
+        "rationale": "Practice contrasts smooth and sharply uneven landing surfaces.",
+        "selection_basis": "surface_management",
+        "tutorial_type": "bumpiness"
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.3221114895980657,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": 2.3488637088227717,
+          "hole_management": 2.026752219224706,
+          "surface_management": -0.015994901193478853
+        },
+        "primary": "height_management",
+        "secondary": "hole_management"
+      },
+      "known_construct": "mixed_hole_height",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 18.175,
+        "mean_holes": 39.8,
+        "mean_max_height": 13.587499999999999,
+        "normalized_weakness": {
+          "height_management": 2.3488637088227717,
+          "hole_management": 2.026752219224706,
+          "surface_management": -0.015994901193478853
+        },
+        "placements_observed": 40
+      },
+      "tutorial": {
+        "board": [
+          "#####.####",
+          "#####.####",
+          "#####.####",
+          "#####.####",
+          "#####.####",
+          "#####.####",
+          "####.#####"
+        ],
+        "difficulty": "intermediate",
+        "rationale": "Practice makes stack reduction and vertical risk salient.",
+        "selection_basis": "height_management",
+        "tutorial_type": "stack_height"
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.006078591105502407,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": 0.2937982474418644,
+          "hole_management": 0.287719656336362,
+          "surface_management": -0.0985492299340173
+        },
+        "primary": "height_management",
+        "secondary": "hole_management"
+      },
+      "known_construct": "balanced",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 17.925,
+        "mean_holes": 31.85,
+        "mean_max_height": 11.9,
+        "normalized_weakness": {
+          "height_management": 0.2937982474418644,
+          "hole_management": 0.287719656336362,
+          "surface_management": -0.0985492299340173
+        },
+        "placements_observed": 40
+      },
+      "tutorial": {
+        "board": [
+          "####.#####",
+          "####.#####",
+          "####.#####",
+          "####.#####",
+          "####.#####",
+          "####.#####",
+          "#####.####"
+        ],
+        "difficulty": "intermediate",
+        "rationale": "Practice makes stack reduction and vertical risk salient.",
+        "selection_basis": "height_management",
+        "tutorial_type": "stack_height"
+      }
+    }
+  ],
+  "line_efficiency_status": "observable but under-resolved; excluded from primary diagnosis"
+}

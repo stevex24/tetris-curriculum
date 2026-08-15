@@ -39,6 +39,13 @@ general-performance outcome and retains lines cleared as secondary. Its trajecto
 observable component scores separately assess targeted learning. The frozen specification is
 in `artifacts/hour4/evaluation_specification.json`; Hour 3 is not rescored or modified.
 
+Run the Hour 5 learner-profile audit and small diagnostic demonstration (this does not train on
+tutorials or run an effectiveness experiment):
+
+```bash
+python hour5_diagnostic.py --output artifacts/hour5/demo --calibration-count 80 --diagnostic-count 50
+```
+
 Run the predeclared Hour 3 controlled pilot (write to a new directory):
 
 ```sh

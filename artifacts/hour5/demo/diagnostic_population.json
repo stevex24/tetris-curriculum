@@ -1,0 +1,1516 @@
+{
+  "above_below_calibration_mean_patterns": {
+    "(0, 0, 0)": 11,
+    "(0, 0, 1)": 3,
+    "(0, 1, 0)": 2,
+    "(0, 1, 1)": 4,
+    "(1, 0, 0)": 8,
+    "(1, 0, 1)": 2,
+    "(1, 1, 0)": 8,
+    "(1, 1, 1)": 12
+  },
+  "correlations": {
+    "height_management": {
+      "height_management": 1.0,
+      "hole_management": 0.5258028073002361,
+      "surface_management": 0.49951492122959923
+    },
+    "hole_management": {
+      "height_management": 0.5258028073002361,
+      "hole_management": 1.0,
+      "surface_management": -0.0633058861068872
+    },
+    "surface_management": {
+      "height_management": 0.49951492122959923,
+      "hole_management": -0.0633058861068872,
+      "surface_management": 1.0
+    }
+  },
+  "diagnosis_counts": {
+    "height_management": 10,
+    "hole_management": 26,
+    "surface_management": 14
+  },
+  "disjoint_from_calibration": true,
+  "interpretation": "Observable variation and several relative patterns exist, but agents share one policy/learning process; seed-driven variation is not evidence of stable learner types.",
+  "profiles": [
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.09267657187836287,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": 0.720034046839386,
+          "hole_management": 0.8127106187177489,
+          "surface_management": -0.16459269292644782
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-000",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 17.725,
+        "mean_holes": 34.25,
+        "mean_max_height": 12.25,
+        "normalized_weakness": {
+          "height_management": 0.720034046839386,
+          "hole_management": 0.8127106187177489,
+          "surface_management": -0.16459269292644782
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 1.7227910466633636,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -1.4415903643909045,
+          "hole_management": -2.2278620384077845,
+          "surface_management": 0.2812006822724591
+        },
+        "primary": "surface_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-001",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 19.075,
+        "mean_holes": 20.35,
+        "mean_max_height": 10.475,
+        "normalized_weakness": {
+          "height_management": -1.4415903643909045,
+          "hole_management": -2.2278620384077845,
+          "surface_management": 0.2812006822724591
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 0.8730006729344126,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -0.4977825228678197,
+          "hole_management": 0.37521815006659287,
+          "surface_management": -0.965369681709671
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-002",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 15.3,
+        "mean_holes": 32.25,
+        "mean_max_height": 11.25,
+        "normalized_weakness": {
+          "height_management": -0.4977825228678197,
+          "hole_management": 0.37521815006659287,
+          "surface_management": -0.965369681709671
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "moderate",
+        "margin": 0.4062826605353026,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 1.054933603508868,
+          "hole_management": 0.6486509429735653,
+          "surface_management": 0.0830702932951675
+        },
+        "primary": "height_management",
+        "secondary": "hole_management"
+      },
+      "history_id": "diagnostic-003",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 18.475,
+        "mean_holes": 33.5,
+        "mean_max_height": 12.525,
+        "normalized_weakness": {
+          "height_management": 1.054933603508868,
+          "hole_management": 0.6486509429735653,
+          "surface_management": 0.0830702932951675
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.2645714243868412,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": 0.7504794610820665,
+          "hole_management": 1.0150508854689078,
+          "surface_management": 0.20690178640597517
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-004",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 18.85,
+        "mean_holes": 35.175,
+        "mean_max_height": 12.275,
+        "normalized_weakness": {
+          "height_management": 0.7504794610820665,
+          "hole_management": 1.0150508854689078,
+          "surface_management": 0.20690178640597517
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.2245169703473613,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": -1.0457999792360613,
+          "hole_management": -0.2372713060450256,
+          "surface_management": -0.4617882763923869
+        },
+        "primary": "hole_management",
+        "secondary": "surface_management"
+      },
+      "history_id": "diagnostic-005",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 16.825,
+        "mean_holes": 29.45,
+        "mean_max_height": 10.8,
+        "normalized_weakness": {
+          "height_management": -1.0457999792360613,
+          "hole_management": -0.2372713060450256,
+          "surface_management": -0.4617882763923869
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.1663005178518758,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": 0.20246200471382267,
+          "hole_management": 0.03616148686194686,
+          "surface_management": -0.3792339476518485
+        },
+        "primary": "height_management",
+        "secondary": "hole_management"
+      },
+      "history_id": "diagnostic-006",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 17.075,
+        "mean_holes": 30.7,
+        "mean_max_height": 11.825,
+        "normalized_weakness": {
+          "height_management": 0.20246200471382267,
+          "hole_management": 0.03616148686194686,
+          "surface_management": -0.3792339476518485
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 1.132816207100897,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 0.8113702895674255,
+          "hole_management": -0.7513249567101334,
+          "surface_management": -0.32144591753347135
+        },
+        "primary": "height_management",
+        "secondary": "surface_management"
+      },
+      "history_id": "diagnostic-007",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 17.25,
+        "mean_holes": 27.1,
+        "mean_max_height": 12.325,
+        "normalized_weakness": {
+          "height_management": 0.8113702895674255,
+          "hole_management": -0.7513249567101334,
+          "surface_management": -0.32144591753347135
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "moderate",
+        "margin": 0.502644199247543,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 2.0900776877599925,
+          "hole_management": 1.1080180350572795,
+          "surface_management": 2.5927218870075355
+        },
+        "primary": "surface_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-008",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 26.075,
+        "mean_holes": 35.6,
+        "mean_max_height": 13.375,
+        "normalized_weakness": {
+          "height_management": 2.0900776877599925,
+          "hole_management": 1.1080180350572795,
+          "surface_management": 2.5927218870075355
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 1.5238334998505678,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 0.6286978041113463,
+          "hole_management": 2.152531303961914,
+          "surface_management": 0.21515721928002854
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-009",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.025,
+        "lines_cleared": 1,
+        "mean_bumpiness": 18.875,
+        "mean_holes": 40.375,
+        "mean_max_height": 12.175,
+        "normalized_weakness": {
+          "height_management": 0.6286978041113463,
+          "hole_management": 2.152531303961914,
+          "surface_management": 0.21515721928002854
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "moderate",
+        "margin": 0.4312453883723635,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 0.6591432183540248,
+          "hole_management": 1.4306687306875072,
+          "surface_management": 0.9994233423151437
+        },
+        "primary": "hole_management",
+        "secondary": "surface_management"
+      },
+      "history_id": "diagnostic-010",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 21.25,
+        "mean_holes": 37.075,
+        "mean_max_height": 12.2,
+        "normalized_weakness": {
+          "height_management": 0.6591432183540248,
+          "hole_management": 1.4306687306875072,
+          "surface_management": 0.9994233423151437
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "moderate",
+        "margin": 0.5891082490370406,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -0.4977825228678197,
+          "hole_management": -1.0356950613333848,
+          "surface_management": 0.09132572616922088
+        },
+        "primary": "surface_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-011",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 18.5,
+        "mean_holes": 25.8,
+        "mean_max_height": 11.25,
+        "normalized_weakness": {
+          "height_management": -0.4977825228678197,
+          "hole_management": -1.0356950613333848,
+          "surface_management": 0.09132572616922088
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.09750651266179133,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": -0.13243755195565715,
+          "hole_management": -0.034931039293865825,
+          "surface_management": -2.5091356291577402
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-012",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 10.625,
+        "mean_holes": 30.375,
+        "mean_max_height": 11.55,
+        "normalized_weakness": {
+          "height_management": -0.13243755195565715,
+          "hole_management": -0.034931039293865825,
+          "surface_management": -2.5091356291577402
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.22683600805708182,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": 0.14157117622846369,
+          "hole_management": 0.6322449753991464,
+          "surface_management": 0.8590809834562282
+        },
+        "primary": "surface_management",
+        "secondary": "hole_management"
+      },
+      "history_id": "diagnostic-013",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 20.825,
+        "mean_holes": 33.425,
+        "mean_max_height": 11.775,
+        "normalized_weakness": {
+          "height_management": 0.14157117622846369,
+          "hole_management": 0.6322449753991464,
+          "surface_management": 0.8590809834562282
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 0.9284228455616346,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -0.5586733513531809,
+          "hole_management": 0.36974949420845377,
+          "surface_management": -1.1304783391907478
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-014",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 14.8,
+        "mean_holes": 32.225,
+        "mean_max_height": 11.2,
+        "normalized_weakness": {
+          "height_management": -0.5586733513531809,
+          "hole_management": 0.36974949420845377,
+          "surface_management": -1.1304783391907478
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "moderate",
+        "margin": 0.4178927457234904,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -1.411144950148224,
+          "hole_management": -0.9044473207380386,
+          "surface_management": -0.4865545750145482
+        },
+        "primary": "surface_management",
+        "secondary": "hole_management"
+      },
+      "history_id": "diagnostic-015",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 16.75,
+        "mean_holes": 26.4,
+        "mean_max_height": 10.5,
+        "normalized_weakness": {
+          "height_management": -1.411144950148224,
+          "hole_management": -0.9044473207380386,
+          "surface_management": -0.4865545750145482
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.14695209409415266,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": -0.04110130922761759,
+          "hole_management": -0.18805340332177026,
+          "surface_management": -0.5608534708810333
+        },
+        "primary": "height_management",
+        "secondary": "hole_management"
+      },
+      "history_id": "diagnostic-016",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 16.525,
+        "mean_holes": 29.675,
+        "mean_max_height": 11.625,
+        "normalized_weakness": {
+          "height_management": -0.04110130922761759,
+          "hole_management": -0.18805340332177026,
+          "surface_management": -0.5608534708810333
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.0911825441667828,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": -0.43689169438245856,
+          "hole_management": 0.07444207786892316,
+          "surface_management": 0.16562462203570597
+        },
+        "primary": "surface_management",
+        "secondary": "hole_management"
+      },
+      "history_id": "diagnostic-017",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 18.725,
+        "mean_holes": 30.875,
+        "mean_max_height": 11.3,
+        "normalized_weakness": {
+          "height_management": -0.43689169438245856,
+          "hole_management": 0.07444207786892316,
+          "surface_management": 0.16562462203570597
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "moderate",
+        "margin": 0.40025952291220346,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -0.010655894984937011,
+          "hole_management": 0.2111584743224094,
+          "surface_management": 0.6114179972346129
+        },
+        "primary": "surface_management",
+        "secondary": "hole_management"
+      },
+      "history_id": "diagnostic-018",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 20.075,
+        "mean_holes": 31.5,
+        "mean_max_height": 11.65,
+        "normalized_weakness": {
+          "height_management": -0.010655894984937011,
+          "hole_management": 0.2111584743224094,
+          "surface_management": 0.6114179972346129
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 1.073550354056564,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -0.8022366652946211,
+          "hole_management": 0.271313688761943,
+          "surface_management": -1.4937173856491175
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-019",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 13.7,
+        "mean_holes": 31.775,
+        "mean_max_height": 11.0,
+        "normalized_weakness": {
+          "height_management": -0.8022366652946211,
+          "hole_management": 0.271313688761943,
+          "surface_management": -1.4937173856491175
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "moderate",
+        "margin": 0.3594233952764675,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 0.20246200471382267,
+          "hole_management": -1.6919337643101189,
+          "surface_management": 0.5618853999902902
+        },
+        "primary": "surface_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-020",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 19.925,
+        "mean_holes": 22.8,
+        "mean_max_height": 11.825,
+        "normalized_weakness": {
+          "height_management": 0.20246200471382267,
+          "hole_management": -1.6919337643101189,
+          "surface_management": 0.5618853999902902
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.13553052592897463,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": 0.5678069756259853,
+          "hole_management": 0.7033375015549599,
+          "surface_management": 0.4132876082573213
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-021",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 19.475,
+        "mean_holes": 33.75,
+        "mean_max_height": 12.125,
+        "normalized_weakness": {
+          "height_management": 0.5678069756259853,
+          "hole_management": 0.7033375015549599,
+          "surface_management": 0.4132876082573213
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "moderate",
+        "margin": 0.37183459838326827,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 0.019789519257743565,
+          "hole_management": 0.39162411764101185,
+          "surface_management": -0.7589838598583248
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-022",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 15.925,
+        "mean_holes": 32.325,
+        "mean_max_height": 11.675,
+        "normalized_weakness": {
+          "height_management": 0.019789519257743565,
+          "hole_management": 0.39162411764101185,
+          "surface_management": -0.7589838598583248
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "moderate",
+        "margin": 0.7197814099353921,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 0.4155799044125845,
+          "hole_management": 1.1353613143479766,
+          "surface_management": -0.6929403968658943
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-023",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 16.125,
+        "mean_holes": 35.725,
+        "mean_max_height": 12.0,
+        "normalized_weakness": {
+          "height_management": 0.4155799044125845,
+          "hole_management": 1.1353613143479766,
+          "surface_management": -0.6929403968658943
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 1.415065840928463,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 0.385134490169904,
+          "hole_management": -0.39039367007293,
+          "surface_management": 1.800200331098367
+        },
+        "primary": "surface_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-024",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 23.675,
+        "mean_holes": 28.75,
+        "mean_max_height": 11.975,
+        "normalized_weakness": {
+          "height_management": 0.385134490169904,
+          "hole_management": -0.39039367007293,
+          "surface_management": 1.800200331098367
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 0.8326729185586359,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -0.10199213771297873,
+          "hole_management": 0.7306807808456571,
+          "surface_management": -0.8580490543469712
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-025",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 15.625,
+        "mean_holes": 33.875,
+        "mean_max_height": 11.575,
+        "normalized_weakness": {
+          "height_management": -0.10199213771297873,
+          "hole_management": 0.7306807808456571,
+          "surface_management": -0.8580490543469712
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "moderate",
+        "margin": 0.49793826080069753,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 0.720034046839386,
+          "hole_management": 0.22209578603868846,
+          "surface_management": -0.31319048465941796
+        },
+        "primary": "height_management",
+        "secondary": "hole_management"
+      },
+      "history_id": "diagnostic-026",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 17.275,
+        "mean_holes": 31.55,
+        "mean_max_height": 12.25,
+        "normalized_weakness": {
+          "height_management": 0.720034046839386,
+          "hole_management": 0.22209578603868846,
+          "surface_management": -0.31319048465941796
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 1.786391760838824,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 1.7551781310905104,
+          "hole_management": 3.5415698919293344,
+          "surface_management": -1.0892011748204786
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-027",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.05,
+        "lines_cleared": 2,
+        "mean_bumpiness": 14.925,
+        "mean_holes": 46.725,
+        "mean_max_height": 13.1,
+        "normalized_weakness": {
+          "height_management": 1.7551781310905104,
+          "hole_management": 3.5415698919293344,
+          "surface_management": -1.0892011748204786
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.280754933395021,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": -0.5891187655958593,
+          "hole_management": -0.3083638322008383,
+          "surface_management": -0.6434077996215717
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-028",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 16.275,
+        "mean_holes": 29.125,
+        "mean_max_height": 11.175,
+        "normalized_weakness": {
+          "height_management": -0.5891187655958593,
+          "hole_management": -0.3083638322008383,
+          "surface_management": -0.6434077996215717
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.12095662752839131,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": 0.9940427750235068,
+          "hole_management": 0.7798986835689125,
+          "surface_management": 1.1149994025518981
+        },
+        "primary": "surface_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-029",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 21.6,
+        "mean_holes": 34.1,
+        "mean_max_height": 12.475,
+        "normalized_weakness": {
+          "height_management": 0.9940427750235068,
+          "hole_management": 0.7798986835689125,
+          "surface_management": 1.1149994025518981
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 1.2287079876782445,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 1.2071606747222687,
+          "hole_management": -0.8716353855892014,
+          "surface_management": 2.4358686624005133
+        },
+        "primary": "surface_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-030",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 25.6,
+        "mean_holes": 26.55,
+        "mean_max_height": 12.65,
+        "normalized_weakness": {
+          "height_management": 1.2071606747222687,
+          "hole_management": -0.8716353855892014,
+          "surface_management": 2.4358686624005133
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "moderate",
+        "margin": 0.3525375797185447,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -0.4064462801397801,
+          "hole_management": -0.8497607621566441,
+          "surface_management": -0.7589838598583248
+        },
+        "primary": "height_management",
+        "secondary": "surface_management"
+      },
+      "history_id": "diagnostic-031",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 15.925,
+        "mean_holes": 26.65,
+        "mean_max_height": 11.325,
+        "normalized_weakness": {
+          "height_management": -0.4064462801397801,
+          "hole_management": -0.8497607621566441,
+          "surface_management": -0.7589838598583248
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.2644117456181658,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": 0.5373615613833047,
+          "hole_management": 0.8017733070014705,
+          "surface_management": 0.22341265215408193
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-032",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 18.9,
+        "mean_holes": 34.2,
+        "mean_max_height": 12.1,
+        "normalized_weakness": {
+          "height_management": 0.5373615613833047,
+          "hole_management": 0.8017733070014705,
+          "surface_management": 0.22341265215408193
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "moderate",
+        "margin": 0.44781984512007095,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 0.2937982474418644,
+          "hole_management": 0.7416180925619353,
+          "surface_management": -1.0726903090723712
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-033",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 14.975,
+        "mean_holes": 33.925,
+        "mean_max_height": 11.9,
+        "normalized_weakness": {
+          "height_management": 0.2937982474418644,
+          "hole_management": 0.7416180925619353,
+          "surface_management": -1.0726903090723712
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 0.9882721462078796,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -1.9287169922737872,
+          "hole_management": -0.4724235079450218,
+          "surface_management": -1.4606956541529015
+        },
+        "primary": "hole_management",
+        "secondary": "surface_management"
+      },
+      "history_id": "diagnostic-034",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 13.8,
+        "mean_holes": 28.375,
+        "mean_max_height": 10.075,
+        "normalized_weakness": {
+          "height_management": -1.9287169922737872,
+          "hole_management": -0.4724235079450218,
+          "surface_management": -1.4606956541529015
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.2065721935528164,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": 0.05023493350042197,
+          "hole_management": -0.5489846899589744,
+          "surface_management": -0.15633726005239443
+        },
+        "primary": "height_management",
+        "secondary": "surface_management"
+      },
+      "history_id": "diagnostic-035",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 17.75,
+        "mean_holes": 28.025,
+        "mean_max_height": 11.7,
+        "normalized_weakness": {
+          "height_management": 0.05023493350042197,
+          "hole_management": -0.5489846899589744,
+          "surface_management": -0.15633726005239443
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.2433696352025484,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": -0.43689169438245856,
+          "hole_management": -0.19352205917991017,
+          "surface_management": -0.5113208736367095
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-036",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 16.675,
+        "mean_holes": 29.65,
+        "mean_max_height": 11.3,
+        "normalized_weakness": {
+          "height_management": -0.43689169438245856,
+          "hole_management": -0.19352205917991017,
+          "surface_management": -0.5113208736367095
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.11315078788447525,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": -0.31511003741173843,
+          "hole_management": -0.034931039293865825,
+          "surface_management": -0.14808182717834106
+        },
+        "primary": "hole_management",
+        "secondary": "surface_management"
+      },
+      "history_id": "diagnostic-037",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 17.775,
+        "mean_holes": 30.375,
+        "mean_max_height": 11.4,
+        "normalized_weakness": {
+          "height_management": -0.31511003741173843,
+          "hole_management": -0.034931039293865825,
+          "surface_management": -0.14808182717834106
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.21649656253553423,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": -0.7717912510519406,
+          "hole_management": -0.5544533458171135,
+          "surface_management": -0.33795678328157924
+        },
+        "primary": "surface_management",
+        "secondary": "hole_management"
+      },
+      "history_id": "diagnostic-038",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 17.2,
+        "mean_holes": 28.0,
+        "mean_max_height": 11.025,
+        "normalized_weakness": {
+          "height_management": -0.7717912510519406,
+          "hole_management": -0.5544533458171135,
+          "surface_management": -0.33795678328157924
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.0197017812652934,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": -0.16288296619833773,
+          "hole_management": -0.18258474746363113,
+          "surface_management": -0.41225567914806316
+        },
+        "primary": "height_management",
+        "secondary": "hole_management"
+      },
+      "history_id": "diagnostic-039",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 16.975,
+        "mean_holes": 29.7,
+        "mean_max_height": 11.525,
+        "normalized_weakness": {
+          "height_management": -0.16288296619833773,
+          "hole_management": -0.18258474746363113,
+          "surface_management": -0.41225567914806316
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 1.3347296132691273,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -0.9544637365080219,
+          "hole_management": -1.5388114002822144,
+          "surface_management": 0.38026587676110546
+        },
+        "primary": "surface_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-040",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 19.375,
+        "mean_holes": 23.5,
+        "mean_max_height": 10.875,
+        "normalized_weakness": {
+          "height_management": -0.9544637365080219,
+          "hole_management": -1.5388114002822144,
+          "surface_management": 0.38026587676110546
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.1628790253625393,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": 0.5982523898686658,
+          "hole_management": 0.4353733645061265,
+          "surface_management": -0.7094512626140023
+        },
+        "primary": "height_management",
+        "secondary": "hole_management"
+      },
+      "history_id": "diagnostic-041",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 16.075,
+        "mean_holes": 32.525,
+        "mean_max_height": 12.15,
+        "normalized_weakness": {
+          "height_management": 0.5982523898686658,
+          "hole_management": 0.4353733645061265,
+          "surface_management": -0.7094512626140023
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 1.4676181535228274,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 1.5420602313917506,
+          "hole_management": 0.07444207786892316,
+          "surface_management": 0.025282263176790366
+        },
+        "primary": "height_management",
+        "secondary": "hole_management"
+      },
+      "history_id": "diagnostic-042",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.05,
+        "lines_cleared": 2,
+        "mean_bumpiness": 18.3,
+        "mean_holes": 30.875,
+        "mean_max_height": 12.925,
+        "normalized_weakness": {
+          "height_management": 1.5420602313917506,
+          "hole_management": 0.07444207786892316,
+          "surface_management": 0.025282263176790366
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 0.922218575657668,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -0.4977825228678197,
+          "hole_management": 0.42443605278984825,
+          "surface_management": -0.808516457102648
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-043",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 15.775,
+        "mean_holes": 32.475,
+        "mean_max_height": 11.25,
+        "normalized_weakness": {
+          "height_management": -0.4977825228678197,
+          "hole_management": 0.42443605278984825,
+          "surface_management": -0.808516457102648
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 1.124975098917299,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -0.9849091507507024,
+          "hole_management": 0.1400659481665967,
+          "surface_management": -1.411163056908579
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-044",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 13.95,
+        "mean_holes": 31.175,
+        "mean_max_height": 10.85,
+        "normalized_weakness": {
+          "height_management": -0.9849091507507024,
+          "hole_management": 0.1400659481665967,
+          "surface_management": -1.411163056908579
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "low/mixed",
+        "margin": 0.24493697017456173,
+        "mixed": true,
+        "normalized_weakness": {
+          "height_management": 0.14157117622846369,
+          "hole_management": 0.8728658331572825,
+          "surface_management": 0.6279288629827208
+        },
+        "primary": "hole_management",
+        "secondary": "surface_management"
+      },
+      "history_id": "diagnostic-045",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 20.125,
+        "mean_holes": 34.525,
+        "mean_max_height": 11.775,
+        "normalized_weakness": {
+          "height_management": 0.14157117622846369,
+          "hole_management": 0.8728658331572825,
+          "surface_management": 0.6279288629827208
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "moderate",
+        "margin": 0.44034219236295635,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 0.9635973607808263,
+          "hole_management": -0.8935100090217596,
+          "surface_management": 1.4039395531437826
+        },
+        "primary": "surface_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-046",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 22.475,
+        "mean_holes": 26.45,
+        "mean_max_height": 12.45,
+        "normalized_weakness": {
+          "height_management": 0.9635973607808263,
+          "hole_management": -0.8935100090217596,
+          "surface_management": 1.4039395531437826
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "moderate",
+        "margin": 0.5398108429930407,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -0.25421920892637945,
+          "hole_management": 0.37521815006659287,
+          "surface_management": -0.16459269292644782
+        },
+        "primary": "hole_management",
+        "secondary": "surface_management"
+      },
+      "history_id": "diagnostic-047",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 17.725,
+        "mean_holes": 32.25,
+        "mean_max_height": 11.45,
+        "normalized_weakness": {
+          "height_management": -0.25421920892637945,
+          "hole_management": 0.37521815006659287,
+          "surface_management": -0.16459269292644782
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 1.3825437403534453,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": 0.7809248753247471,
+          "hole_management": 2.1634686156781924,
+          "surface_management": 0.297711548020567
+        },
+        "primary": "hole_management",
+        "secondary": "height_management"
+      },
+      "history_id": "diagnostic-048",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 19.125,
+        "mean_holes": 40.425,
+        "mean_max_height": 12.3,
+        "normalized_weakness": {
+          "height_management": 0.7809248753247471,
+          "hole_management": 2.1634686156781924,
+          "surface_management": 0.297711548020567
+        },
+        "placements_observed": 40
+      }
+    },
+    {
+      "diagnosis": {
+        "confidence": "high",
+        "margin": 0.9928106693291087,
+        "mixed": false,
+        "normalized_weakness": {
+          "height_management": -0.4673371086251391,
+          "hole_management": 0.5392778258107763,
+          "surface_management": -0.45353284351833234
+        },
+        "primary": "hole_management",
+        "secondary": "surface_management"
+      },
+      "history_id": "diagnostic-049",
+      "profile": {
+        "ability_elo": 1500.0,
+        "line_clear_rate": 0.0,
+        "lines_cleared": 0,
+        "mean_bumpiness": 16.85,
+        "mean_holes": 33.0,
+        "mean_max_height": 11.275,
+        "normalized_weakness": {
+          "height_management": -0.4673371086251391,
+          "hole_management": 0.5392778258107763,
+          "surface_management": -0.45353284351833234
+        },
+        "placements_observed": 40
+      }
+    }
+  ],
+  "seed": 500105,
+  "split": "diagnostic",
+  "variation": {
+    "line_clear_rate": {
+      "max": 0.05,
+      "mean": 0.0025,
+      "min": 0.0,
+      "sample_sd": 0.010412414097938036
+    },
+    "mean_bumpiness": {
+      "max": 26.075,
+      "mean": 17.8695,
+      "min": 10.625,
+      "sample_sd": 2.9025204124860102
+    },
+    "mean_holes": {
+      "max": 46.725,
+      "mean": 31.385,
+      "min": 20.35,
+      "sample_sd": 4.543370927819464
+    },
+    "mean_max_height": {
+      "max": 13.375,
+      "mean": 11.716,
+      "min": 10.075,
+      "sample_sd": 0.6805939782758191
+    }
+  }
+}
