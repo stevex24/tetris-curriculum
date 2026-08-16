@@ -1,0 +1,24 @@
+{
+  "scope": "Descriptive, predeclared confidence stratification; no cases excluded and no inferential claims.",
+  "low/mixed": {
+    "n": 23,
+    "mean_standardized_target_improvement": 0.094699745368828,
+    "sd_standardized_target_improvement": 1.0349090853384024,
+    "mean_general_improvement": 0.21739130434782594,
+    "sd_general_improvement": 1.8453016934693762
+  },
+  "moderate": {
+    "n": 11,
+    "mean_standardized_target_improvement": 0.27170341251098806,
+    "sd_standardized_target_improvement": 0.6700455195572974,
+    "mean_general_improvement": -0.04545454545454481,
+    "sd_general_improvement": 1.9452090848642427
+  },
+  "high": {
+    "n": 16,
+    "mean_standardized_target_improvement": -0.3142818775959356,
+    "sd_standardized_target_improvement": 0.8085071192667763,
+    "mean_general_improvement": 0.8333333333333333,
+    "sd_general_improvement": 1.9167874358086956
+  }
+}

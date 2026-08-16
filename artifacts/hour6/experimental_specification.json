@@ -1,0 +1,23 @@
+{
+  "frozen_before_outcomes": true,
+  "base_commit": "74dcc05",
+  "master_seed": 600006,
+  "replicates": 50,
+  "smoke_replicates": 3,
+  "baseline_history_placements": 40,
+  "training_placements_per_condition": 40,
+  "conditions": ["control", "rating_only", "rating_history"],
+  "evaluation_challenges": 6,
+  "evaluation_max_placements": 120,
+  "primary_general_outcome": "mean successful placements per held-out challenge",
+  "diagnostic_dimensions": ["hole_management", "height_management", "surface_management"],
+  "line_efficiency_status": "observable secondary measure; under-resolved and excluded from primary diagnosis",
+  "calibration": "reuse exact committed Hour 5 calibration parameters from artifacts/hour5/demo/calibration_parameters.json",
+  "mixed_rule": "If top-two margin is below 0.35, use the primary diagnosis tutorial while retaining low/mixed and mixed=true; include in all analyses and describe by confidence where sample sizes permit.",
+  "target_skill_outcome": "held-out post score minus held-out pre score for the diagnosed skill; higher is better",
+  "overall_target_standardization": "divide target-skill improvement by the corresponding frozen Hour 5 raw-observable calibration sample SD",
+  "primary_comparisons": ["rating_history improvement minus control improvement", "rating_history improvement minus rating_only improvement"],
+  "primary_inference": "paired mean difference, 95% t CI, paired t-test, two-sided p, Cohen dz, exact Wilcoxon signed-rank where appropriate",
+  "transfer": "exploratory Pearson and Spearman association between standardized target improvement and general improvement within rating_history",
+  "no_post_outcome_tuning": true
+}
