@@ -1,0 +1,53 @@
+{
+  "status": "exploratory; secondary to the independent Hour 7 replication",
+  "studies": {
+    "hour6": {
+      "rating_history_minus_control": {
+        "n": 50,
+        "estimate": 0.4866666666666664,
+        "sampling_variance": 0.03784217687074832
+      },
+      "rating_history_minus_rating_only": {
+        "n": 50,
+        "estimate": 0.40666666666666645,
+        "sampling_variance": 0.02682902494331068
+      }
+    },
+    "hour7": {
+      "rating_history_minus_control": {
+        "n": 50,
+        "estimate": -0.1433333333333332,
+        "sampling_variance": 0.03918390022675736
+      },
+      "rating_history_minus_rating_only": {
+        "n": 50,
+        "estimate": 0.21999999999999978,
+        "sampling_variance": 0.038944217687074845
+      }
+    }
+  },
+  "combined": {
+    "rating_history_minus_control": {
+      "hour6_estimate": 0.4866666666666664,
+      "hour7_estimate": -0.1433333333333332,
+      "fixed_effect_estimate": 0.1771536766906593,
+      "standard_error": 0.13874680673062278,
+      "ci95": [
+        -0.09478506747130094,
+        0.4490924208526195
+      ],
+      "method": "inverse-variance fixed effect across the two independent study estimates"
+    },
+    "rating_history_minus_rating_only": {
+      "hour6_estimate": 0.40666666666666645,
+      "hour7_estimate": 0.21999999999999978,
+      "fixed_effect_estimate": 0.33052499482865594,
+      "standard_error": 0.12603736357406012,
+      "ci95": [
+        0.0834963015171176,
+        0.5775536881401943
+      ],
+      "method": "inverse-variance fixed effect across the two independent study estimates"
+    }
+  }
+}

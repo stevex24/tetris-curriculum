@@ -1,0 +1,17 @@
+{
+  "interpretation_rule": "Compare estimates and uncertainty directly; do not classify replication solely by p < .05.",
+  "rating_history_minus_control": {
+    "hour6": {"estimate": 0.4866666666666664, "ci95": [0.09574267364838257, 0.8775906596849503], "p_two_sided": 0.015746926856927197, "cohens_dz": 0.3538005822394883},
+    "hour7": {"estimate": -0.1433333333333332, "ci95": [-0.5411272171911756, 0.25446055052450917], "p_two_sided": 0.4724527816700502, "cohens_dz": -0.10240198322307945},
+    "direction_agrees": false,
+    "hour6_estimate_inside_hour7_ci": false,
+    "compatibility": "Some tension: the estimate reversed and the Hour 6 estimate is outside the Hour 7 CI, although the CIs overlap. Hour 7 weakens and does not independently reproduce the Hour 6 control comparison."
+  },
+  "rating_history_minus_rating_only": {
+    "hour6": {"estimate": 0.40666666666666645, "ci95": [0.0775069232289804, 0.7358264101043526], "p_two_sided": 0.016509429106445126, "cohens_dz": 0.3511164114255535},
+    "hour7": {"estimate": 0.21999999999999978, "ci95": [-0.17657539236824868, 0.6165753923682482], "p_two_sided": 0.2703695505613559, "cohens_dz": 0.15765806303736282},
+    "direction_agrees": true,
+    "hour6_estimate_inside_hour7_ci": true,
+    "compatibility": "Reasonably compatible: Hour 7 is positive but smaller, its CI includes the Hour 6 estimate and zero, and uncertainty is substantial. This is suggestive but inconclusive independent support."
+  }
+}
