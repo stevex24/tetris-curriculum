@@ -16,7 +16,30 @@ class DemoIntegrityTests(unittest.TestCase):
     def test_same_deterministic_challenge(self):
         self.assertEqual(self.data["challenge_seed"], 1370957669)
         self.assertEqual(len(self.data["before"]) - 1, 28)
-        self.assertEqual(len(self.data["after"]) - 1, 26)
+        self.assertEqual(set(self.data["after"]), {"control", "rating_only", "rating_history"})
+        self.assertTrue(self.data["integrity"]["same_after_challenge_seed"])
+        self.assertEqual({condition: len(frames) - 1 for condition, frames in self.data["after"].items()},
+                         {"control": 26, "rating_only": 26, "rating_history": 26})
+
+    def test_matched_clones_and_saved_counts(self):
+        self.assertTrue(self.data["integrity"]["same_baseline_clone"])
+        self.assertTrue(self.data["integrity"]["matches_saved_hour7"])
+        self.assertEqual(self.data["final_counts"],
+                         {"before": 28, "control": 26, "rating_only": 26, "rating_history": 26})
+        saved = json.loads((ROOT / "artifacts/hour7/results/challenge_results.jsonl").read_text().splitlines()[0])
+        for condition in ("control", "rating_only", "rating_history"):
+            challenge = saved["post"][condition]["challenges"][0]
+            self.assertEqual(challenge["seed"], self.data["challenge_seed"])
+            self.assertEqual(challenge["successful_placements"], self.data["final_counts"][condition])
+            self.assertEqual(challenge["lines_cleared"], self.data["after"][condition][-1]["lines"])
+
+    def test_condition_labels_are_scientifically_explicit(self):
+        conditions = self.data["conditions"]
+        self.assertEqual(conditions["control"]["training"], "Ordinary practice")
+        self.assertIn("without access to history", conditions["rating_only"]["training"])
+        self.assertIn("calibrated learner profile", conditions["rating_history"]["training"])
+        self.assertEqual(self.data["selection"]["label"],
+                         "One matched replicate — illustrative, not the aggregate statistical result.")
 
     def test_saved_result_numbers(self):
         expected = {"6": ((.4866666666666664, .09574267364838257, .8775906596849503),

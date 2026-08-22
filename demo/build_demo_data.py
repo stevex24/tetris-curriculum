@@ -1,4 +1,4 @@
-"""Build one deterministic presentation replay without running an experiment batch."""
+"""Build deterministic Hour 7 replicate-0 presentation replays, not an experiment."""
 from __future__ import annotations
 
 import csv
@@ -42,15 +42,19 @@ def replay(agent, seed, start_state=None, limit=120, learn=False):
     result = [{"board": rows(state), "piece": None, "placement": 0, "holes": 0,
                "max_height": 0, "bumpiness": 0, "lines": 0, "cleared_now": 0}]
     lines = 0
+    piece = adapter.sample_environment(rng)
     while len(result) - 1 < limit:
-        piece = adapter.sample_environment(rng)
         choices = adapter.legal_actions(state, piece)
         if not choices:
             break
         choice = agent.choose(choices, learn=learn)
         state = choice.next_state
         lines += int(choice.info["lines_cleared"])
-        result.append(frame(state, piece, choice, len(result), lines))
+        next_piece = adapter.sample_environment(rng)
+        current = frame(state, piece, choice, len(result), lines)
+        current["next_piece"] = next_piece
+        result.append(current)
+        piece = next_piece
     return result
 
 
@@ -73,6 +77,14 @@ def main():
     profile = normalize_profile(measure_profile(history, config.initial_elo, 40), calibration)
     diagnosis = diagnose(profile, config.mixed_margin)
     agents = {condition: baseline.clone(condition) for condition in CONDITIONS}
+    baseline_fingerprints = {
+        condition: json.dumps({"weights": agent.weights, "rng": repr(agent._rng.getstate()),
+                               "games_learned": agent.games_learned}, sort_keys=True)
+        for condition, agent in agents.items()
+    }
+    identical_clones = len(set(baseline_fingerprints.values())) == 1
+    assert identical_clones
+    before_agent = agents[RATING_HISTORY].clone("before_replay")
     pre = {condition: evaluate(agent, seeds["evaluation"], 120) for condition, agent in agents.items()}
     ratings = EloRatings(config.initial_elo, config.elo_k)
     for i in range(6):
@@ -84,17 +96,22 @@ def main():
                  RATING_HISTORY: history_material(diagnosis, ratings.rating(RATING_HISTORY), seeds["tutorial_selection"])}
 
     # Replays consume disposable clones, preserving the exact training RNG state.
-    before_frames = replay(agents[RATING_HISTORY].clone("before_replay"), seeds["evaluation"][CHALLENGE_INDEX])
+    before_frames = replay(before_agent, seeds["evaluation"][CHALLENGE_INDEX])
     tutorial_frames = replay(agents[RATING_HISTORY].clone("tutorial_replay"), seeds["training_stream"],
                              materials[RATING_HISTORY].state, limit=16, learn=True)
     training = {condition: train(agents[condition], materials[condition], ratings.rating(condition),
                                  40, seeds["training_stream"]) for condition in CONDITIONS}
-    after_frames = replay(agents[RATING_HISTORY].clone("after_replay"), seeds["evaluation"][CHALLENGE_INDEX])
+    after_frames = {condition: replay(agent.clone(f"{condition}_after_replay"),
+                                      seeds["evaluation"][CHALLENGE_INDEX])
+                    for condition, agent in agents.items()}
 
     expected_pre = saved["pre"][RATING_HISTORY]["challenges"][CHALLENGE_INDEX]
-    expected_post = saved["post"][RATING_HISTORY]["challenges"][CHALLENGE_INDEX]
     assert len(before_frames) - 1 == expected_pre["successful_placements"]
-    assert len(after_frames) - 1 == expected_post["successful_placements"]
+    for condition in CONDITIONS:
+        expected = saved["post"][condition]["challenges"][CHALLENGE_INDEX]
+        assert expected["seed"] == seeds["evaluation"][CHALLENGE_INDEX]
+        assert len(after_frames[condition]) - 1 == expected["successful_placements"]
+        assert after_frames[condition][-1]["lines"] == expected["lines_cleared"]
     assert selected["primary_weakness"] == diagnosis.primary
     assert training[RATING_HISTORY]["tutorial_board"]
 
@@ -104,7 +121,7 @@ def main():
     data = {
         "selection": {"study": "Hour 7", "replicate": REPLICATE,
                       "rule": "First high-confidence history-aware learner in saved Hour 7 replicate order; chosen before viewing replay success.",
-                      "label": "Single illustrative learner — not the statistical result."},
+                      "label": "One matched replicate — illustrative, not the aggregate statistical result."},
         "profile": {"ability": float(selected["raw_ability_elo"]),
                     "hole_z": float(selected["z_hole_management"]),
                     "height_z": float(selected["z_height_management"]),
@@ -113,11 +130,23 @@ def main():
                     "confidence": selected["confidence"], "mixed": selected["mixed"] == "True"},
         "tutorial": {"type": selected["selected_tutorial"], "difficulty": materials[RATING_HISTORY].difficulty,
                      "rationale": materials[RATING_HISTORY].rationale, "frames": tutorial_frames},
+        "conditions": {
+            CONTROL: {"title": "CONTROL", "training": "Ordinary practice"},
+            RATING_ONLY: {"title": "RATING ONLY", "training": "Generic tutorial selected from rating without access to history",
+                          "tutorial": materials[RATING_ONLY].diagnosed_weakness or "rating_tier_board"},
+            RATING_HISTORY: {"title": "RATING + HISTORY", "training": "Stack-height tutorial selected from the calibrated learner profile",
+                             "tutorial": selected["selected_tutorial"]}},
         "challenge_seed": seeds["evaluation"][CHALLENGE_INDEX],
         "before": before_frames, "after": after_frames, "results": summaries,
+        "final_counts": {"before": len(before_frames) - 1,
+                         **{condition: len(frames) - 1 for condition, frames in after_frames.items()}},
+        "integrity": {"same_baseline_clone": identical_clones,
+                      "same_after_challenge_seed": all(saved["post"][condition]["challenges"][CHALLENGE_INDEX]["seed"] == seeds["evaluation"][CHALLENGE_INDEX] for condition in CONDITIONS),
+                      "matches_saved_hour7": True},
     }
     OUT.write_text(json.dumps(data, separators=(",", ":")) + "\n")
-    print(f"Wrote {OUT} ({len(before_frames)-1} before, {len(after_frames)-1} after placements)")
+    counts = ", ".join(f"{condition}={len(frames)-1}" for condition, frames in after_frames.items())
+    print(f"Wrote {OUT} ({len(before_frames)-1} before; {counts})")
 
 
 if __name__ == "__main__":
