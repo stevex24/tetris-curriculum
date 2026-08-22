@@ -1,0 +1,11 @@
+replicate,raw_ability_elo,raw_mean_holes,raw_mean_max_height,raw_mean_bumpiness,raw_line_clear_rate,raw_lines_cleared,raw_placements_observed,z_hole_management,z_height_management,z_surface_management,primary_weakness,secondary_weakness,top_two_margin,confidence,mixed,selected_tutorial
+0,1500.0,33.825,12.375,19.05,0.05,2,40,0.7197434691293788,0.8722611180527866,0.2729452493984057,height_management,hole_management,0.1525176489234078,low/mixed,True,stack_height
+1,1500.0,38.9,12.1,17.025,0.0,0,40,1.829880608331686,0.5373615613833047,-0.3957448133999564,hole_management,height_management,1.2925190469483814,high,False,hole_avoidance
+2,1500.0,29.55,10.85,13.55,0.0,0,40,-0.2153966826124675,-0.9849091507507024,-1.54324998289344,hole_management,height_management,0.7695124681382349,high,False,hole_avoidance
+3,1500.0,32.45,11.625,15.925,0.0,0,40,0.4189673969317091,-0.04110130922761759,-0.7589838598583248,hole_management,height_management,0.46006870615932666,moderate,False,hole_avoidance
+4,1500.0,24.35,10.925,24.725,0.0,0,40,-1.3528771011054728,-0.8935729080226607,2.1469285118086288,surface_management,height_management,3.0405014198312896,high,False,bumpiness
+5,1500.0,27.9,11.2,18.175,0.0,0,40,-0.5763279692496717,-0.5586733513531809,-0.015994901193478853,surface_management,height_management,0.542678450159702,moderate,False,bumpiness
+6,1500.0,34.55,12.575,22.725,0.0,0,40,0.8783344890154215,1.115824431994227,1.486493881884321,surface_management,height_management,0.370669449890094,moderate,False,bumpiness
+7,1500.0,31.475,12.15,21.35,0.0,0,40,0.20568981846427026,0.5982523898686658,1.0324450738113595,surface_management,height_management,0.4341926839426937,moderate,False,bumpiness
+8,1500.0,30.2,11.35,19.275,0.0,0,40,-0.07321163030084213,-0.3760008658970996,0.34724414526488956,surface_management,hole_management,0.42045577556573166,moderate,False,bumpiness
+9,1500.0,36.075,12.4,16.875,0.0,0,40,1.2119224963619293,0.9027065322954673,-0.445277410644279,hole_management,height_management,0.309215964066462,low/mixed,True,hole_avoidance

@@ -1,0 +1,202 @@
+{
+  "phase": "timing",
+  "config": {
+    "master_seed": 900009,
+    "replicates": 10,
+    "baseline_history_placements": 40,
+    "training_placements": 40,
+    "evaluation_challenges": 6,
+    "evaluation_max_placements": 120,
+    "initial_elo": 1500.0,
+    "elo_k": 32.0,
+    "initial_weights": [
+      0.2,
+      0.1,
+      0.15,
+      0.25
+    ],
+    "learning_rate": 0.04,
+    "temperature": 0.25,
+    "mixed_margin": 0.35,
+    "primary_measure": "mean successful placements per held-out challenge"
+  },
+  "master_seed": 900009,
+  "calibration": {
+    "path": "/Users/stevecross/tetris-curriculum/artifacts/hour5/demo/calibration_parameters.json",
+    "seed": 500005,
+    "sha256": "c69823decfe715ffbb8ec54885783881cef547bbbc1b59bb6a2de49bf114e476",
+    "reuse": "exact committed Hour 5 parameters; not regenerated"
+  },
+  "replicate_seeds": [
+    {
+      "baseline_agent": 86013792,
+      "baseline_history": 2052464833,
+      "tutorial_selection": 551471623,
+      "training_stream": 1589155935,
+      "evaluation": [
+        1954685652,
+        425498327,
+        390332256,
+        948843737,
+        1289492038,
+        2068570825
+      ]
+    },
+    {
+      "baseline_agent": 334261467,
+      "baseline_history": 704805102,
+      "tutorial_selection": 1626850540,
+      "training_stream": 1846807657,
+      "evaluation": [
+        30948699,
+        1974757396,
+        146282392,
+        265144311,
+        395118140,
+        1332567910
+      ]
+    },
+    {
+      "baseline_agent": 267677900,
+      "baseline_history": 1543127273,
+      "tutorial_selection": 1955371273,
+      "training_stream": 1605428908,
+      "evaluation": [
+        665523755,
+        605809303,
+        732306334,
+        909636204,
+        1894946513,
+        920391094
+      ]
+    },
+    {
+      "baseline_agent": 1185228624,
+      "baseline_history": 1082046891,
+      "tutorial_selection": 1125471060,
+      "training_stream": 392127450,
+      "evaluation": [
+        665244070,
+        1939273491,
+        1833265585,
+        966245636,
+        1456552728,
+        336098861
+      ]
+    },
+    {
+      "baseline_agent": 1032537476,
+      "baseline_history": 1150306626,
+      "tutorial_selection": 1414315543,
+      "training_stream": 960384272,
+      "evaluation": [
+        630414825,
+        1347906426,
+        1352921374,
+        1863476401,
+        1489863916,
+        1905037815
+      ]
+    },
+    {
+      "baseline_agent": 1110547874,
+      "baseline_history": 249515951,
+      "tutorial_selection": 1506148364,
+      "training_stream": 1863352444,
+      "evaluation": [
+        525835977,
+        1782989173,
+        601363342,
+        982493891,
+        965730443,
+        1271799441
+      ]
+    },
+    {
+      "baseline_agent": 1547913526,
+      "baseline_history": 1595661628,
+      "tutorial_selection": 2139464741,
+      "training_stream": 1157150613,
+      "evaluation": [
+        266465644,
+        1110746137,
+        572335976,
+        7671230,
+        1505752162,
+        1091190674
+      ]
+    },
+    {
+      "baseline_agent": 1948966502,
+      "baseline_history": 1568627279,
+      "tutorial_selection": 1719409281,
+      "training_stream": 40306001,
+      "evaluation": [
+        1738304923,
+        437656815,
+        1590672257,
+        1139642175,
+        1747040049,
+        1734096761
+      ]
+    },
+    {
+      "baseline_agent": 1821208168,
+      "baseline_history": 656306355,
+      "tutorial_selection": 1203862312,
+      "training_stream": 429114703,
+      "evaluation": [
+        1200610275,
+        2146534717,
+        274743086,
+        1981399267,
+        710160575,
+        529395517
+      ]
+    },
+    {
+      "baseline_agent": 1131677046,
+      "baseline_history": 281011726,
+      "tutorial_selection": 2001446574,
+      "training_stream": 1947185197,
+      "evaluation": [
+        1999312113,
+        1301608258,
+        482149042,
+        337577945,
+        1217598275,
+        806201980
+      ]
+    }
+  ],
+  "elapsed_seconds": 19.567646387,
+  "python": "3.9.12 (main, Apr  5 2022, 01:53:17) \n[Clang 12.0.0 ]",
+  "platform": "macOS-10.16-x86_64-i386-64bit",
+  "git_commit_at_run": "cc2148c47656f33391012a712722a75864d0e3c4",
+  "resolution": {
+    "general": {
+      "n": 360,
+      "range": [
+        19.0,
+        40.0
+      ],
+      "distinct_values": 17,
+      "zero_proportion": 0,
+      "cap_proportion": 0
+    },
+    "target": {
+      "n": 20,
+      "range": [
+        -39.81194444444444,
+        -13.41935715609937
+      ],
+      "distinct_values": 20
+    }
+  },
+  "controls": {
+    "identical_initial_states": true,
+    "equal_training_budgets": true,
+    "matched_evaluation_seeds": true,
+    "replicate_seed_records_unique": true
+  }
+}

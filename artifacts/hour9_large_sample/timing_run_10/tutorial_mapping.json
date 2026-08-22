@@ -1,0 +1,11 @@
+{
+  "frequency_table": {
+    "height_management -> stack_height": 1,
+    "hole_management -> hole_avoidance": 4,
+    "surface_management -> bumpiness": 5
+  },
+  "history_vs_rating_tutorial_different": {
+    "n": 10,
+    "total": 10
+  }
+}

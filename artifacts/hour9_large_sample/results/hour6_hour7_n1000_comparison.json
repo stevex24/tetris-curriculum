@@ -1,0 +1,137 @@
+{
+  "comparisons": {
+    "rating_history_minus_control": {
+      "hour6": {
+        "paired_mean_difference": 0.4866666666666664,
+        "ci95": [
+          0.09574267364838257,
+          0.8775906596849503
+        ],
+        "t": 2.5017479088929098,
+        "df": 49,
+        "p_two_sided": 0.015746926856927197,
+        "cohens_dz": 0.3538005822394883,
+        "wilcoxon": {
+          "n_nonzero": 40,
+          "zero_differences": 10,
+          "w_plus": 581.0,
+          "p_two_sided_exact": 0.02044733681032085,
+          "method": "exact signed-rank conditional on absolute ranks; zeros omitted; average tied ranks"
+        }
+      },
+      "hour7": {
+        "paired_mean_difference": -0.1433333333333332,
+        "ci95": [
+          -0.5411272171911756,
+          0.25446055052450917
+        ],
+        "t": -0.7240913674399054,
+        "df": 49,
+        "p_two_sided": 0.4724527816700502,
+        "cohens_dz": -0.10240198322307945,
+        "wilcoxon": {
+          "n_nonzero": 41,
+          "zero_differences": 9,
+          "w_plus": 383.5,
+          "p_two_sided_exact": 0.548288665497239,
+          "method": "exact signed-rank conditional on absolute ranks; zeros omitted; average tied ranks"
+        }
+      },
+      "n1000": {
+        "paired_mean_difference": 0.0013333333333333962,
+        "ci95": [
+          -0.08250025263855676,
+          0.08516691930522355
+        ],
+        "t": 0.031210108110952338,
+        "df": 999,
+        "p_two_sided": 0.9751082127348489,
+        "cohens_dz": 0.0009869502765070452,
+        "wilcoxon": {
+          "n_nonzero": 828,
+          "zero_differences": 172,
+          "w_plus": 174521.0,
+          "p_two_sided_exact": 0.6717262223918987,
+          "method": "exact signed-rank conditional on absolute ranks; zeros omitted; average tied ranks"
+        },
+        "standard_error": 0.042721202009085614
+      },
+      "ci_width": {
+        "hour6": 0.7818479860365677,
+        "hour7": 0.7955877677156848,
+        "n1000": 0.1676671719437803
+      },
+      "n1000_narrower_factor": {
+        "hour6": 4.663095208039445,
+        "hour7": 4.745041969112771
+      }
+    },
+    "rating_history_minus_rating_only": {
+      "hour6": {
+        "paired_mean_difference": 0.40666666666666645,
+        "ci95": [
+          0.0775069232289804,
+          0.7358264101043526
+        ],
+        "t": 2.4827679550489465,
+        "df": 49,
+        "p_two_sided": 0.016509429106445126,
+        "cohens_dz": 0.3511164114255535,
+        "wilcoxon": {
+          "n_nonzero": 34,
+          "zero_differences": 16,
+          "w_plus": 440.0,
+          "p_two_sided_exact": 0.013609032845124602,
+          "method": "exact signed-rank conditional on absolute ranks; zeros omitted; average tied ranks"
+        }
+      },
+      "hour7": {
+        "paired_mean_difference": 0.21999999999999978,
+        "ci95": [
+          -0.17657539236824868,
+          0.6165753923682482
+        ],
+        "t": 1.1148108548245543,
+        "df": 49,
+        "p_two_sided": 0.2703695505613559,
+        "cohens_dz": 0.15765806303736282,
+        "wilcoxon": {
+          "n_nonzero": 37,
+          "zero_differences": 13,
+          "w_plus": 406.5,
+          "p_two_sided_exact": 0.4129788883001311,
+          "method": "exact signed-rank conditional on absolute ranks; zeros omitted; average tied ranks"
+        }
+      },
+      "n1000": {
+        "paired_mean_difference": -0.026833333333333324,
+        "ci95": [
+          -0.10521278730698451,
+          0.05154612064031787
+        ],
+        "t": -0.6718107854912849,
+        "df": 999,
+        "p_two_sided": 0.5018594870495658,
+        "cohens_dz": -0.021244522388192615,
+        "wilcoxon": {
+          "n_nonzero": 757,
+          "zero_differences": 243,
+          "w_plus": 139998.5,
+          "p_two_sided_exact": 0.5662143893785215,
+          "method": "exact signed-rank conditional on absolute ranks; zeros omitted; average tied ranks"
+        },
+        "standard_error": 0.03994180193714889
+      },
+      "ci_width": {
+        "hour6": 0.6583194868753721,
+        "hour7": 0.7931507847364969,
+        "n1000": 0.15675890794730238
+      },
+      "n1000_narrower_factor": {
+        "hour6": 4.1995666817013,
+        "hour7": 5.059685571445358
+      }
+    }
+  },
+  "interpretation": "Compare estimates, intervals, and magnitudes; significance alone is not educational importance."
+}

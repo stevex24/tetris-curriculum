@@ -1,0 +1,13 @@
+{
+  "timed_replicates": 10,
+  "elapsed_seconds": 20.207774693,
+  "seconds_per_replicate": 2.0207774693,
+  "estimated_1000_seconds": 2020.7774693000001,
+  "estimated_1000_minutes": 33.67962448833334,
+  "launch_threshold_minutes": 60,
+  "within_threshold": true,
+  "experiment_core_elapsed_seconds": 2027.38569092,
+  "experiment_elapsed_seconds": 2151.4846565179996,
+  "experiment_elapsed_minutes": 35.858077608633326,
+  "runtime_note": "Full command wall time includes replicate computation, exact Wilcoxon summaries, and artifact serialization; core time comes from frozen runner provenance."
+}

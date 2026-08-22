@@ -1,0 +1,392 @@
+{
+  "status": "pass",
+  "predetermined_sample": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "fixed_shared_state_corpus": {
+    "seeds": [
+      910001,
+      910002,
+      910003,
+      910004
+    ],
+    "states": 32,
+    "pieces": [
+      "I",
+      "O",
+      "T",
+      "S",
+      "Z",
+      "J",
+      "L"
+    ]
+  },
+  "criterion": "Every sampled replicate has pairwise-distinct trained weights; the predetermined sample demonstrates at least one preferred-action difference on the shared corpus (individual replicates and pairs need not always differ); preferences use trained weights; and independent reconstruction exactly matches canonical saved outputs.",
+  "checks": {
+    "post_training_weights_differ": true,
+    "shared_corpus_preferred_actions_differ": true,
+    "updated_weights_used_by_policy": true,
+    "reconstructed_trajectories_match_saved_outputs": true
+  },
+  "replicates": [
+    {
+      "replicate": 0,
+      "post_training_weights": {
+        "control": [
+          0.20581782563362466,
+          0.10685532897234577,
+          0.18346160687213653,
+          0.24320636695716247
+        ],
+        "rating_only": [
+          0.14325201715172872,
+          0.11070570597002152,
+          0.17287518066646843,
+          0.24348291119410648
+        ],
+        "rating_history": [
+          0.14985272192573573,
+          0.13556490663124116,
+          0.1878775616082787,
+          0.37424713132663945
+        ]
+      },
+      "pair_weight_differences": {
+        "control_vs_rating_only": true,
+        "control_vs_rating_history": true,
+        "rating_only_vs_rating_history": true
+      },
+      "pair_action_differences_on_shared_corpus": {
+        "control_vs_rating_only": 6,
+        "control_vs_rating_history": 5,
+        "rating_only_vs_rating_history": 1
+      },
+      "updated_weights_used_for_preferences": true,
+      "reconstructed_trajectories_equal_saved_outputs": true
+    },
+    {
+      "replicate": 1,
+      "post_training_weights": {
+        "control": [
+          0.2773485757704531,
+          0.10091025671171573,
+          0.15188807940064308,
+          0.25
+        ],
+        "rating_only": [
+          0.23801552445083426,
+          0.0943103248661261,
+          0.1583208269089514,
+          0.2503469096261943
+        ],
+        "rating_history": [
+          0.24842923995508145,
+          0.09417498030067314,
+          0.15104714256506024,
+          0.25012387419156773
+        ]
+      },
+      "pair_weight_differences": {
+        "control_vs_rating_only": true,
+        "control_vs_rating_history": true,
+        "rating_only_vs_rating_history": true
+      },
+      "pair_action_differences_on_shared_corpus": {
+        "control_vs_rating_only": 0,
+        "control_vs_rating_history": 0,
+        "rating_only_vs_rating_history": 0
+      },
+      "updated_weights_used_for_preferences": true,
+      "reconstructed_trajectories_equal_saved_outputs": true
+    },
+    {
+      "replicate": 2,
+      "post_training_weights": {
+        "control": [
+          0.2503529996032129,
+          0.10256126495045681,
+          0.12209804632673138,
+          0.25
+        ],
+        "rating_only": [
+          0.24311580928787888,
+          0.10645095909611337,
+          0.14347990324730436,
+          0.25777810018042363
+        ],
+        "rating_history": [
+          0.21740648697475715,
+          0.09442482643691208,
+          0.12280634595161324,
+          0.2502789682902192
+        ]
+      },
+      "pair_weight_differences": {
+        "control_vs_rating_only": true,
+        "control_vs_rating_history": true,
+        "rating_only_vs_rating_history": true
+      },
+      "pair_action_differences_on_shared_corpus": {
+        "control_vs_rating_only": 2,
+        "control_vs_rating_history": 2,
+        "rating_only_vs_rating_history": 0
+      },
+      "updated_weights_used_for_preferences": true,
+      "reconstructed_trajectories_equal_saved_outputs": true
+    },
+    {
+      "replicate": 3,
+      "post_training_weights": {
+        "control": [
+          0.295782028465243,
+          0.09395202242325766,
+          0.09430215876751209,
+          0.25
+        ],
+        "rating_only": [
+          0.23100393481563042,
+          0.09310233651613842,
+          0.12805372492447212,
+          0.2586828484096681
+        ],
+        "rating_history": [
+          0.2131015573142918,
+          0.0904320968953827,
+          0.12298303832927716,
+          0.2582384195200258
+        ]
+      },
+      "pair_weight_differences": {
+        "control_vs_rating_only": true,
+        "control_vs_rating_history": true,
+        "rating_only_vs_rating_history": true
+      },
+      "pair_action_differences_on_shared_corpus": {
+        "control_vs_rating_only": 3,
+        "control_vs_rating_history": 3,
+        "rating_only_vs_rating_history": 0
+      },
+      "updated_weights_used_for_preferences": true,
+      "reconstructed_trajectories_equal_saved_outputs": true
+    },
+    {
+      "replicate": 4,
+      "post_training_weights": {
+        "control": [
+          0.24210225191754445,
+          0.11241621422923931,
+          0.23332676889679804,
+          0.2552759216325604
+        ],
+        "rating_only": [
+          0.17663346763683613,
+          0.10930332692595218,
+          0.2128100035778782,
+          0.25561901271769777
+        ],
+        "rating_history": [
+          0.152830040040559,
+          0.11454102884355027,
+          0.24772968364037928,
+          0.25528075364397823
+        ]
+      },
+      "pair_weight_differences": {
+        "control_vs_rating_only": true,
+        "control_vs_rating_history": true,
+        "rating_only_vs_rating_history": true
+      },
+      "pair_action_differences_on_shared_corpus": {
+        "control_vs_rating_only": 6,
+        "control_vs_rating_history": 9,
+        "rating_only_vs_rating_history": 3
+      },
+      "updated_weights_used_for_preferences": true,
+      "reconstructed_trajectories_equal_saved_outputs": true
+    },
+    {
+      "replicate": 5,
+      "post_training_weights": {
+        "control": [
+          0.1628996941727322,
+          0.09102400689589135,
+          0.1473334705724977,
+          0.25
+        ],
+        "rating_only": [
+          0.2006215978934427,
+          0.09493944081387452,
+          0.14577366803818353,
+          0.2501329985753584
+        ],
+        "rating_history": [
+          0.22947130394280663,
+          0.0988157450021012,
+          0.1500339525332677,
+          0.25250638228824795
+        ]
+      },
+      "pair_weight_differences": {
+        "control_vs_rating_only": true,
+        "control_vs_rating_history": true,
+        "rating_only_vs_rating_history": true
+      },
+      "pair_action_differences_on_shared_corpus": {
+        "control_vs_rating_only": 2,
+        "control_vs_rating_history": 3,
+        "rating_only_vs_rating_history": 1
+      },
+      "updated_weights_used_for_preferences": true,
+      "reconstructed_trajectories_equal_saved_outputs": true
+    },
+    {
+      "replicate": 6,
+      "post_training_weights": {
+        "control": [
+          0.21914362986538344,
+          0.11560616291528747,
+          0.17586889538553796,
+          0.2506087976082223
+        ],
+        "rating_only": [
+          0.28266861137097465,
+          0.11694847233426063,
+          0.17035260505787567,
+          0.25166510713545814
+        ],
+        "rating_history": [
+          0.2960190859097396,
+          0.11904993013901814,
+          0.14464157059506202,
+          0.2500860772954266
+        ]
+      },
+      "pair_weight_differences": {
+        "control_vs_rating_only": true,
+        "control_vs_rating_history": true,
+        "rating_only_vs_rating_history": true
+      },
+      "pair_action_differences_on_shared_corpus": {
+        "control_vs_rating_only": 3,
+        "control_vs_rating_history": 5,
+        "rating_only_vs_rating_history": 2
+      },
+      "updated_weights_used_for_preferences": true,
+      "reconstructed_trajectories_equal_saved_outputs": true
+    },
+    {
+      "replicate": 7,
+      "post_training_weights": {
+        "control": [
+          0.20658690940162366,
+          0.1029711733930512,
+          0.17054453881437995,
+          0.25
+        ],
+        "rating_only": [
+          0.29798549907310884,
+          0.12567059824153057,
+          0.12535286378338265,
+          0.2674373810122807
+        ],
+        "rating_history": [
+          0.23283536020265228,
+          0.12398801019107106,
+          0.15836762724943287,
+          0.2501021707013262
+        ]
+      },
+      "pair_weight_differences": {
+        "control_vs_rating_only": true,
+        "control_vs_rating_history": true,
+        "rating_only_vs_rating_history": true
+      },
+      "pair_action_differences_on_shared_corpus": {
+        "control_vs_rating_only": 5,
+        "control_vs_rating_history": 2,
+        "rating_only_vs_rating_history": 3
+      },
+      "updated_weights_used_for_preferences": true,
+      "reconstructed_trajectories_equal_saved_outputs": true
+    },
+    {
+      "replicate": 8,
+      "post_training_weights": {
+        "control": [
+          0.2804451500052141,
+          0.10652973570017775,
+          0.15259827907033022,
+          0.25
+        ],
+        "rating_only": [
+          0.3515529878524357,
+          0.10673275027230078,
+          0.11567323120159263,
+          0.250652179702288
+        ],
+        "rating_history": [
+          0.3050535433182987,
+          0.11223566467063245,
+          0.1389686554127165,
+          0.25143859511880895
+        ]
+      },
+      "pair_weight_differences": {
+        "control_vs_rating_only": true,
+        "control_vs_rating_history": true,
+        "rating_only_vs_rating_history": true
+      },
+      "pair_action_differences_on_shared_corpus": {
+        "control_vs_rating_only": 3,
+        "control_vs_rating_history": 2,
+        "rating_only_vs_rating_history": 1
+      },
+      "updated_weights_used_for_preferences": true,
+      "reconstructed_trajectories_equal_saved_outputs": true
+    },
+    {
+      "replicate": 9,
+      "post_training_weights": {
+        "control": [
+          0.269326374804382,
+          0.10960601219518391,
+          0.14871331940711707,
+          0.25
+        ],
+        "rating_only": [
+          0.24269021393823523,
+          0.10609414423536512,
+          0.13697594927979465,
+          0.2586166317806262
+        ],
+        "rating_history": [
+          0.2311112579642283,
+          0.10434987539513005,
+          0.14434725557723307,
+          0.2501109604632964
+        ]
+      },
+      "pair_weight_differences": {
+        "control_vs_rating_only": true,
+        "control_vs_rating_history": true,
+        "rating_only_vs_rating_history": true
+      },
+      "pair_action_differences_on_shared_corpus": {
+        "control_vs_rating_only": 0,
+        "control_vs_rating_history": 0,
+        "rating_only_vs_rating_history": 0
+      },
+      "updated_weights_used_for_preferences": true,
+      "reconstructed_trajectories_equal_saved_outputs": true
+    }
+  ]
+}
