@@ -16,6 +16,7 @@ from statistics import mean, stdev
 from typing import Any, Iterable
 
 from .agent import LearningAgent
+from .legacy_student import as_student_agent
 from .elo import EloRatings
 from .hour3 import _t_critical_975, _t_two_sided_p
 from .hour4 import _wilcoxon, evaluate
@@ -74,8 +75,9 @@ def replicate_seeds(master_seed: int, replicate: int) -> dict[str, Any]:
 
 
 def _fingerprint(agent: LearningAgent, elo: float, history: Any) -> str:
-    return json.dumps({"weights": agent.weights, "elo": elo, "rng": repr(agent._rng.getstate()),
-                       "games_learned": agent.games_learned, "history": history}, sort_keys=True)
+    state = dict(as_student_agent(agent).serialize_state())
+    state.pop("agent_id", None)
+    return json.dumps({"agent_state": state, "elo": elo, "history": history}, sort_keys=True)
 
 
 def _elo(evaluations: dict[str, dict[str, Any]], config: Hour6Config) -> dict[str, float]:

@@ -16,6 +16,8 @@ from statistics import mean, stdev
 from typing import Any, Iterable
 
 from .agent import LearningAgent
+from .legacy_student import as_student_agent
+from .student import StudentAgent
 from .elo import EloRatings
 from .hour3 import _t_critical_975, _t_two_sided_p
 from .tetris import TetrisAdapter
@@ -75,14 +77,15 @@ def primary_score(challenges: Iterable[dict[str, Any]]) -> float:
     return mean(float(row["successful_placements"]) for row in rows)
 
 
-def _evaluate_challenge(agent: LearningAgent, seed: int, max_placements: int) -> dict[str, Any]:
+def _evaluate_challenge(agent: StudentAgent, seed: int, max_placements: int) -> dict[str, Any]:
     adapter, environment_rng = TetrisAdapter(), Random(seed)
     state, lines, placements, trajectory = adapter.initial_state(), 0, 0, []
     while placements < max_placements:
-        choices = adapter.legal_actions(state, adapter.sample_environment(environment_rng))
+        piece = adapter.sample_environment(environment_rng)
+        choices = adapter.legal_actions(state, piece)
         if not choices:
             break
-        choice = agent.choose(choices, learn=False)
+        choice = agent.choose_placement(state, piece, choices, learn=False).evaluation
         state, placements = choice.next_state, placements + 1
         lines += int(choice.info["lines_cleared"])
         trajectory.append(dict(choice.raw_features))
@@ -92,9 +95,10 @@ def _evaluate_challenge(agent: LearningAgent, seed: int, max_placements: int) ->
             "skill_scores": skill_scores_from_steps(trajectory)}
 
 
-def evaluate(agent: LearningAgent, seeds: Iterable[int], max_placements: int) -> dict[str, Any]:
+def evaluate(agent: StudentAgent | LearningAgent, seeds: Iterable[int], max_placements: int) -> dict[str, Any]:
     """Use a disposable clone and observable play only; the supplied agent is untouched."""
-    evaluation_agent = agent.clone(f"{agent.name}_hour4_evaluation_copy")
+    source = as_student_agent(agent)
+    evaluation_agent = source.clone(f"{source.agent_id}_hour4_evaluation_copy")
     challenges = [_evaluate_challenge(evaluation_agent, seed, max_placements) for seed in seeds]
     skill_scores = {name: mean(c["skill_scores"][name] for c in challenges)
                     for name in SKILL_METRICS}

@@ -7,6 +7,8 @@ from random import Random
 from typing import Any, Iterable
 
 from .agent import LearningAgent
+from .legacy_student import FourFeatureStudentAdapter, as_student_agent
+from .student import StudentAgent
 from .tetris import HEIGHT, WIDTH, TetrisAdapter, TetrisState
 
 CONTROL = "control"
@@ -139,35 +141,57 @@ def control_material() -> TrainingMaterial:
                             "Ordinary practice starts from an empty board.", None)
 
 
-def train(agent: LearningAgent, material: TrainingMaterial, rating: float, steps: int,
+def train(agent: StudentAgent | LearningAgent, material: TrainingMaterial, rating: float, steps: int,
           seed: int) -> dict[str, Any]:
     """Apply exactly `steps` ordinary policy-learning placements."""
     if steps < 0:
         raise ValueError("steps must be non-negative")
     adapter, piece_rng = TetrisAdapter(), Random(seed)
-    before, state, placements, episodes = agent.weights.copy(), material.state, [], 1
+    student = as_student_agent(agent)
+    before_state, state, placements, episodes = dict(student.serialize_state()), material.state, [], 1
     while len(placements) < steps:
         piece = adapter.sample_environment(piece_rng)
         choices = adapter.legal_actions(state, piece)
         if not choices:
             state, episodes = material.state, episodes + 1
             continue
-        old_weights = agent.weights.copy()
-        choice = agent.choose(choices, learn=True)
+        old_state = dict(student.serialize_state())
+        decision = student.choose_placement(state, piece, choices, learn=True)
+        choice = decision.evaluation
         state = choice.next_state
-        placements.append({"piece": piece, "action": list(choice.action), "reward": choice.reward,
-                           "features": choice.raw_features, "weights_before": old_weights,
-                           "weights_after": agent.weights.copy()})
-    agent.finish_game(learned=True)
+        step = {"piece": piece, "action": list(choice.action), "reward": choice.reward,
+                "features": choice.raw_features}
+        # Preserve the frozen log schema for the historical adapter only.
+        if isinstance(student, FourFeatureStudentAdapter):
+            step.update(weights_before=list(old_state["weights"]),
+                        weights_after=list(student.serialize_state()["weights"]))
+        placements.append(step)
+    student.finish_episode(learned=True)
+    after_state = dict(student.serialize_state())
+    legacy = isinstance(student, FourFeatureStudentAdapter)
+    if legacy:
+        # Preserve both values and insertion order of the frozen record schema.
+        return {
+            "agent_id": student.agent_id, "condition": material.condition, "starting_elo": rating,
+            "training_steps": len(placements), "recent_history_features": material.diagnosis,
+            "diagnosed_weakness": material.diagnosed_weakness, "difficulty": material.difficulty,
+            "selection_rationale": material.rationale, "tutorial_board": board_rows(material.state),
+            "policy_weights_before": list(before_state["weights"]),
+            "policy_weights_after": list(after_state["weights"]),
+            "selection_seed": material.selection_seed, "piece_stream_seed": seed,
+            "random_seed": seed, "episodes_used": episodes, "placements": placements,
+            "learning_path": "LearningAgent.choose(choices, learn=True)",
+        }
     return {
-        "agent_id": agent.name, "condition": material.condition, "starting_elo": rating,
+        "agent_id": student.agent_id, "agent_version": student.agent_version,
+        "condition": material.condition, "starting_elo": rating,
         "training_steps": len(placements), "recent_history_features": material.diagnosis,
         "diagnosed_weakness": material.diagnosed_weakness, "difficulty": material.difficulty,
         "selection_rationale": material.rationale, "tutorial_board": board_rows(material.state),
-        "policy_weights_before": before, "policy_weights_after": agent.weights.copy(),
+        "agent_state_before": before_state, "agent_state_after": after_state,
         "selection_seed": material.selection_seed, "piece_stream_seed": seed,
         "random_seed": seed, "episodes_used": episodes, "placements": placements,
-        "learning_path": "LearningAgent.choose(choices, learn=True)",
+        "learning_path": f"{student.agent_version}.choose_placement(learn=True)",
     }
 
 

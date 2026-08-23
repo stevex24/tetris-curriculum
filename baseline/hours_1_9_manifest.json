@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "baseline_name": "hours-1-9-four-feature-curriculum",
+  "git_head": "3098059b76a2adbfc11420dad1c77edde87b4c89",
+  "scientific_artifacts": {
+    "artifacts/hour3": {"git_tree_sha1": "7421ea676a1641496b13a55cfd2d2cc0ba4a2437"},
+    "artifacts/hour4": {"git_tree_sha1": "863f16a621a58876f1826385e7133e05b6422267"},
+    "artifacts/hour5": {"git_tree_sha1": "d4b5e540a243f352f85afbbe3df6f242611fa313"},
+    "artifacts/hour6": {"git_tree_sha1": "85d377f6942040f48350742a042f47a72a71e1d7"},
+    "artifacts/hour7": {"git_tree_sha1": "88f4551e5d6ed711649374278823587cc04b09ca"},
+    "artifacts/hour8": {"status": "no dedicated committed artifact directory; audit is preserved in Hour 9"},
+    "artifacts/hour9_large_sample": {"git_tree_sha1": "721c4e01becceeed28457b10417bb6074c763b07"}
+  },
+  "artifact_hash_semantics": "Git tree SHA-1 recursively commits every path, mode, and blob hash in each directory.",
+  "combined_committed_tree_listing_sha256": "c8968377766063ea93425b92c7b240af5e85b8824552b9b939a97c102352826d",
+  "legacy_learner": {
+    "implementation": "tetris_research.agent.LearningAgent",
+    "source_git_blob_sha1": "d81dba98410b50c9221f6a81dc29bab7ee8a873d",
+    "policy": "four normalized afterstate features with softmax sampling",
+    "features": ["holes", "max_height", "bumpiness", "lines_cleared"],
+    "adapter_version": "hours-1-9-four-feature-v1"
+  },
+  "primary_outcome": {
+    "hours_6_7_9": "mean successful placements per held-out challenge",
+    "source": "Hour6Config.primary_measure"
+  },
+  "behavioral_validator": {
+    "artifact": "artifacts/hour9_large_sample/behavioral_validation.json",
+    "status": "pass",
+    "scope": "predetermined replicates 0-9 and fixed shared-state corpus seeds 910001-910004",
+    "historical_limitation": "Hour 9 validation is preserved as an attestation; Day 1 adds an independently auditable permanent validator."
+  }
+}
