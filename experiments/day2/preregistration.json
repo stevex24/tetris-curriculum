@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "registered_before_outcomes": true,
+  "purpose": "Placement-oracle strength benchmark; not a curriculum experiment",
+  "master_seed": 2026082302,
+  "matched_games": 100,
+  "maximum_successful_placements_per_game": 500,
+  "piece_randomization": "independent uniform draws from I,O,T,S,Z,J,L using Python random.Random; identical saved stream per matched pair",
+  "policies": {
+    "legacy": "hours-1-9 four-feature weights [0.20, 0.10, 0.15, 0.25], deterministic argmax",
+    "reference": "simulator-native Dellacherie/Thiery-style rich afterstate evaluation with deterministic depth-2 beam expectimax"
+  },
+  "primary_measure": "successful placements before top-out, administratively censored at 500",
+  "secondary_measures": ["lines cleared", "final holes", "final maximum height", "final aggregate height"],
+  "uncertainty": "paired nonparametric bootstrap percentile 95% CI, 10000 resamples, seed 2026082303",
+  "strength_criterion": "PASS only if expert mean placements is at least 1.50 times legacy mean AND the paired-bootstrap 95% CI lower bound for relative mean improvement exceeds 0.20",
+  "criterion_rationale": "Requires both a large point improvement and uncertainty excluding a trivial gain; significance alone is insufficient.",
+  "runtime_pilot_rule": "Time 3 games at the registered settings without inspecting performance summaries. If projected wall time exceeds 30 minutes, first reduce matched games to 50; if still projected above 30 minutes, reduce second-ply beam width from 6 to 3. Record any change before the benchmark outcome is summarized.",
+  "representative_example_rule": "first 8 policy disagreements in game/placement order plus the first 2 agreements after those; no visual-quality filtering",
+  "hold": false,
+  "visible_next_pieces": 0,
+  "registered_search": {"depth": 2, "beam_width": 6, "second_piece_model": "uniform expectation over seven tetrominoes"}
+}

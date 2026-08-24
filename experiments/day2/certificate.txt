@@ -1,0 +1,17 @@
+EXPERT POLICY VALIDATION
+
+Expert implementation/version: dellacherie-depth2-expectimax-v1
+Rules compatible: PASS
+All recommended placements legal: PASS
+Deterministic rankings reproducible: PASS
+Independent board transitions match: PASS
+Expert rankings internally consistent: PASS
+
+Matched benchmark games: 50
+Legacy mean placements: 250.820
+Expert mean placements: 500.000
+Relative improvement: 99.3%
+Paired-bootstrap 95% CI: [82.4%, 118.7%]
+Predetermined strength threshold: point improvement >= 50% and paired-bootstrap 95% CI lower bound > 20%
+Threshold satisfied: PASS
+Expert suitable as Day 3 oracle: YES

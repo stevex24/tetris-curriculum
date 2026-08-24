@@ -1,0 +1,3651 @@
+{
+  "master_seed": 2026082302,
+  "matched_games": 50,
+  "maximum_placements": 500,
+  "beam_width": 3,
+  "legacy": {
+    "placements": {
+      "mean": 250.82,
+      "median": 234.0,
+      "min": 133,
+      "max": 500
+    },
+    "lines_cleared": {
+      "mean": 83.76,
+      "median": 77.0,
+      "min": 36,
+      "max": 193
+    },
+    "holes": {
+      "mean": 21.64,
+      "median": 22.0,
+      "min": 7,
+      "max": 28
+    },
+    "maximum_height": {
+      "mean": 19.44,
+      "median": 20.0,
+      "min": 9,
+      "max": 20
+    },
+    "aggregate_height": {
+      "mean": 187.32,
+      "median": 192.0,
+      "min": 77,
+      "max": 197
+    }
+  },
+  "expert": {
+    "placements": {
+      "mean": 500,
+      "median": 500.0,
+      "min": 500,
+      "max": 500
+    },
+    "lines_cleared": {
+      "mean": 197.98,
+      "median": 198.0,
+      "min": 196,
+      "max": 199
+    },
+    "holes": {
+      "mean": 0.22,
+      "median": 0.0,
+      "min": 0,
+      "max": 2
+    },
+    "maximum_height": {
+      "mean": 4.38,
+      "median": 4.0,
+      "min": 2,
+      "max": 9
+    },
+    "aggregate_height": {
+      "mean": 20.42,
+      "median": 20.0,
+      "min": 10,
+      "max": 42
+    }
+  },
+  "relative_placement_improvement": 0.9934614464556255,
+  "relative_improvement_95ci": [
+    0.8238856058947983,
+    1.1870352550083108
+  ],
+  "criterion": "point improvement >= 50% and paired-bootstrap 95% CI lower bound > 20%",
+  "threshold_satisfied": true,
+  "pairs": [
+    {
+      "game": 0,
+      "stream_sha256": "8111bab12b7091bd56f22ee66fe0afde5d98294dbf1549cdd9dfe9ef3ccc26de",
+      "legacy": {
+        "placements": 200,
+        "lines_cleared": 63,
+        "holes": 26,
+        "maximum_height": 20,
+        "aggregate_height": 196
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 197,
+        "holes": 0,
+        "maximum_height": 6,
+        "aggregate_height": 30
+      }
+    },
+    {
+      "game": 1,
+      "stream_sha256": "d03da5d9415e71d8b1717a03fbbc3bd177d1cfbc33099d5a5da5a7f662be553e",
+      "legacy": {
+        "placements": 339,
+        "lines_cleared": 119,
+        "holes": 27,
+        "maximum_height": 20,
+        "aggregate_height": 193
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 5,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 2,
+      "stream_sha256": "5aacc2444126d0fa0bb277d59c62d80d107dbb63375dd9c97799dd7f5ab4c763",
+      "legacy": {
+        "placements": 256,
+        "lines_cleared": 86,
+        "holes": 23,
+        "maximum_height": 19,
+        "aggregate_height": 187
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 196,
+        "holes": 1,
+        "maximum_height": 9,
+        "aggregate_height": 41
+      }
+    },
+    {
+      "game": 3,
+      "stream_sha256": "c1b552ea58d943ab55b49fdb05c32c6ea40ec7c6820f39f9f4304fff6ff52f39",
+      "legacy": {
+        "placements": 260,
+        "lines_cleared": 87,
+        "holes": 22,
+        "maximum_height": 20,
+        "aggregate_height": 192
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 197,
+        "holes": 0,
+        "maximum_height": 7,
+        "aggregate_height": 30
+      }
+    },
+    {
+      "game": 4,
+      "stream_sha256": "112b6186fea72775c999ecc0c633ce56fd387562ea23d393f04793965a8fd750",
+      "legacy": {
+        "placements": 194,
+        "lines_cleared": 61,
+        "holes": 22,
+        "maximum_height": 20,
+        "aggregate_height": 188
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 6,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 5,
+      "stream_sha256": "b85e18b681679918dca5380f7b473785e8b6e62e33412eb48543c85db1553594",
+      "legacy": {
+        "placements": 303,
+        "lines_cleared": 104,
+        "holes": 18,
+        "maximum_height": 20,
+        "aggregate_height": 190
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 3,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 6,
+      "stream_sha256": "43e1e1356ab4489d5a54d83fe21486b88986ed5ba398b82033fa43e8e4bcb0c8",
+      "legacy": {
+        "placements": 218,
+        "lines_cleared": 70,
+        "holes": 22,
+        "maximum_height": 20,
+        "aggregate_height": 194
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 2,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 7,
+      "stream_sha256": "bc1f0d6beb4bdc4d3a04d8c9a81b8e4ad7975f6fa595e37735ae1a8391d3d055",
+      "legacy": {
+        "placements": 238,
+        "lines_cleared": 78,
+        "holes": 23,
+        "maximum_height": 20,
+        "aggregate_height": 195
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 196,
+        "holes": 2,
+        "maximum_height": 8,
+        "aggregate_height": 42
+      }
+    },
+    {
+      "game": 8,
+      "stream_sha256": "eaecb6b7a282d5c2eb916d98b907b0fce2deb8fa20506c27ecaac2e16510fefa",
+      "legacy": {
+        "placements": 226,
+        "lines_cleared": 73,
+        "holes": 22,
+        "maximum_height": 20,
+        "aggregate_height": 196
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 2,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 9,
+      "stream_sha256": "081aa885d4d717efabfbf1e45f125237b88c4e261884d18a03d437eea08286e2",
+      "legacy": {
+        "placements": 255,
+        "lines_cleared": 85,
+        "holes": 25,
+        "maximum_height": 20,
+        "aggregate_height": 195
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 6,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 10,
+      "stream_sha256": "d296bb01364d9e032330cca704bbe48fb1252dae0a4ea2c4b031b92988d67b76",
+      "legacy": {
+        "placements": 234,
+        "lines_cleared": 77,
+        "holes": 22,
+        "maximum_height": 19,
+        "aggregate_height": 188
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 2,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 11,
+      "stream_sha256": "42f31d176f1ed3fe6f6ed8f11779b447e894704bba08b4575ce23caccb7cfd1f",
+      "legacy": {
+        "placements": 224,
+        "lines_cleared": 72,
+        "holes": 18,
+        "maximum_height": 20,
+        "aggregate_height": 194
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 3,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 12,
+      "stream_sha256": "39dfa1df82e71b8d000c5f3cf1c2076ba5d93a70c0844902c5f47241fa9ec05f",
+      "legacy": {
+        "placements": 161,
+        "lines_cleared": 47,
+        "holes": 23,
+        "maximum_height": 20,
+        "aggregate_height": 197
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 3,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 13,
+      "stream_sha256": "173960db81fa3afc32f8f7d434437fd8721ddb6b9cdf2645d389dad9829297a8",
+      "legacy": {
+        "placements": 161,
+        "lines_cleared": 47,
+        "holes": 20,
+        "maximum_height": 20,
+        "aggregate_height": 194
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 3,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 14,
+      "stream_sha256": "5eda9e10970698fd885e706fdd258d4dcaa45d892d05b40dbcb0b5883cdc10e9",
+      "legacy": {
+        "placements": 149,
+        "lines_cleared": 43,
+        "holes": 19,
+        "maximum_height": 20,
+        "aggregate_height": 185
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 3,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 15,
+      "stream_sha256": "b8bd7076804bfb69511eaa61c6f19d30c52672ab66b31dfc872b2a3c2fe0e62f",
+      "legacy": {
+        "placements": 164,
+        "lines_cleared": 49,
+        "holes": 19,
+        "maximum_height": 20,
+        "aggregate_height": 185
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 2,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 16,
+      "stream_sha256": "7d51e93a19e9d528e3553f3aaf455bd3cd8c866d08a5463e4d61bb31b6f9bcac",
+      "legacy": {
+        "placements": 242,
+        "lines_cleared": 80,
+        "holes": 22,
+        "maximum_height": 20,
+        "aggregate_height": 190
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 197,
+        "holes": 1,
+        "maximum_height": 5,
+        "aggregate_height": 31
+      }
+    },
+    {
+      "game": 17,
+      "stream_sha256": "bef238787db50a714484338d623ec30bfa23a5078fd4cda3af645e65dcbe79fb",
+      "legacy": {
+        "placements": 148,
+        "lines_cleared": 42,
+        "holes": 19,
+        "maximum_height": 20,
+        "aggregate_height": 191
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 197,
+        "holes": 2,
+        "maximum_height": 6,
+        "aggregate_height": 32
+      }
+    },
+    {
+      "game": 18,
+      "stream_sha256": "3b344c8b57c98179b81dc858617d80ebb308e980610c02567fe7cdcb6889dd8b",
+      "legacy": {
+        "placements": 223,
+        "lines_cleared": 72,
+        "holes": 21,
+        "maximum_height": 20,
+        "aggregate_height": 193
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 4,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 19,
+      "stream_sha256": "c11791b936adf62fe50e925729757310382e7f11cffe6c133123ed936278c2de",
+      "legacy": {
+        "placements": 237,
+        "lines_cleared": 78,
+        "holes": 25,
+        "maximum_height": 20,
+        "aggregate_height": 193
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 197,
+        "holes": 0,
+        "maximum_height": 5,
+        "aggregate_height": 30
+      }
+    },
+    {
+      "game": 20,
+      "stream_sha256": "655dd3b4c27a48a6ddd3a6935ebbb26395990f966a4fb2285c75872909d69b82",
+      "legacy": {
+        "placements": 303,
+        "lines_cleared": 104,
+        "holes": 22,
+        "maximum_height": 20,
+        "aggregate_height": 194
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 6,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 21,
+      "stream_sha256": "3ad172bbfa06c8e67be7a01c1190297e09aaedd2a3105c19a1cb148a7661be88",
+      "legacy": {
+        "placements": 329,
+        "lines_cleared": 115,
+        "holes": 21,
+        "maximum_height": 19,
+        "aggregate_height": 187
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 4,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 22,
+      "stream_sha256": "5de04837edf257236b766a36e17b9a1e61bff5c5665464b43cf6036f15fa72e7",
+      "legacy": {
+        "placements": 318,
+        "lines_cleared": 110,
+        "holes": 22,
+        "maximum_height": 20,
+        "aggregate_height": 194
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 2,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 23,
+      "stream_sha256": "241ccb16d07ca5bde94b39e05a9af571a7be3c8735e0195ca2b86deacbf38511",
+      "legacy": {
+        "placements": 388,
+        "lines_cleared": 138,
+        "holes": 25,
+        "maximum_height": 20,
+        "aggregate_height": 197
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 6,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 24,
+      "stream_sha256": "0d5ea8e2eb13a0545bfa3d6e0c15dc9a43153ca707cdcdc65d379f3147d3a839",
+      "legacy": {
+        "placements": 148,
+        "lines_cleared": 42,
+        "holes": 22,
+        "maximum_height": 20,
+        "aggregate_height": 194
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 4,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 25,
+      "stream_sha256": "c39f04d754e0d34319d0b3e535ed9517dba473369fe771d61a6bf83132b26b9c",
+      "legacy": {
+        "placements": 353,
+        "lines_cleared": 124,
+        "holes": 22,
+        "maximum_height": 20,
+        "aggregate_height": 194
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 4,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 26,
+      "stream_sha256": "265048dae18a73c6bcb48b33bfd6097fb44dd01c8b264ecc98f6ef6cf5b72f4b",
+      "legacy": {
+        "placements": 268,
+        "lines_cleared": 90,
+        "holes": 21,
+        "maximum_height": 20,
+        "aggregate_height": 193
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 4,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 27,
+      "stream_sha256": "b5bd3ededffbab28f531ef4af13b8c03bf159ad7604e276dbc428996eb66d50d",
+      "legacy": {
+        "placements": 500,
+        "lines_cleared": 192,
+        "holes": 11,
+        "maximum_height": 10,
+        "aggregate_height": 91
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 5,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 28,
+      "stream_sha256": "afc50b2e23a6c812a0c21f2ca93a5ae91d14808d5f9fea756e6bdb49af4fa377",
+      "legacy": {
+        "placements": 166,
+        "lines_cleared": 50,
+        "holes": 23,
+        "maximum_height": 19,
+        "aggregate_height": 187
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 197,
+        "holes": 1,
+        "maximum_height": 6,
+        "aggregate_height": 31
+      }
+    },
+    {
+      "game": 29,
+      "stream_sha256": "e5f61e42915b1bcfad4fb4bc4b6bd71e1a8920a9f83c7dbb9e9d04dcb2425f6c",
+      "legacy": {
+        "placements": 143,
+        "lines_cleared": 40,
+        "holes": 21,
+        "maximum_height": 20,
+        "aggregate_height": 193
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 3,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 30,
+      "stream_sha256": "e60166d5c47a1f81f0a36e596e3704fe0fc9f998e0f8d332175b6c76c686382c",
+      "legacy": {
+        "placements": 224,
+        "lines_cleared": 73,
+        "holes": 21,
+        "maximum_height": 20,
+        "aggregate_height": 187
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 7,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 31,
+      "stream_sha256": "9d2db7ae42494e4564946dec499a823c83b59024967593e803ab792a9604b8d7",
+      "legacy": {
+        "placements": 133,
+        "lines_cleared": 36,
+        "holes": 22,
+        "maximum_height": 20,
+        "aggregate_height": 194
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 2,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 32,
+      "stream_sha256": "e78d977499fdfdf9ab16fa4f107ba02fd4aec6042a50a0a273ca1ee9f0156274",
+      "legacy": {
+        "placements": 387,
+        "lines_cleared": 138,
+        "holes": 27,
+        "maximum_height": 20,
+        "aggregate_height": 195
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 197,
+        "holes": 0,
+        "maximum_height": 5,
+        "aggregate_height": 30
+      }
+    },
+    {
+      "game": 33,
+      "stream_sha256": "7e3061e99eb31d4b9914a79d7255c92fd69589ef26da7e085808e13267d6fdde",
+      "legacy": {
+        "placements": 206,
+        "lines_cleared": 66,
+        "holes": 22,
+        "maximum_height": 19,
+        "aggregate_height": 186
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 2,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 34,
+      "stream_sha256": "124de866f92fc86d057622a7471b38d948a3a0b73f42057c9158302f7e31d5c9",
+      "legacy": {
+        "placements": 234,
+        "lines_cleared": 77,
+        "holes": 23,
+        "maximum_height": 19,
+        "aggregate_height": 189
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 197,
+        "holes": 0,
+        "maximum_height": 6,
+        "aggregate_height": 30
+      }
+    },
+    {
+      "game": 35,
+      "stream_sha256": "aa9b5083d74214e658e29e2bbb6690acb524050382d45cc4b6ec80c179d31aed",
+      "legacy": {
+        "placements": 342,
+        "lines_cleared": 120,
+        "holes": 20,
+        "maximum_height": 20,
+        "aggregate_height": 188
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 2,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 36,
+      "stream_sha256": "89b6a30274ed0928fe44e1f6300c385b2d237f993b38e5ab865868269be5c8ca",
+      "legacy": {
+        "placements": 179,
+        "lines_cleared": 55,
+        "holes": 26,
+        "maximum_height": 20,
+        "aggregate_height": 192
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 3,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 37,
+      "stream_sha256": "4d1ed9b66c9dc51cce92387c089588c67b40a57e1d66c3c20357755c3e63b27a",
+      "legacy": {
+        "placements": 311,
+        "lines_cleared": 107,
+        "holes": 21,
+        "maximum_height": 20,
+        "aggregate_height": 195
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 196,
+        "holes": 2,
+        "maximum_height": 7,
+        "aggregate_height": 42
+      }
+    },
+    {
+      "game": 38,
+      "stream_sha256": "fb0aa8edcef0eb63f44faa8f6fb374367fa80615ee9fb7ddf5d0f1aa743a00a8",
+      "legacy": {
+        "placements": 218,
+        "lines_cleared": 71,
+        "holes": 28,
+        "maximum_height": 20,
+        "aggregate_height": 190
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 4,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 39,
+      "stream_sha256": "85ccb29f38fe4902d073caffae07a2564879f2aa2493ed9a840a40451e0db94c",
+      "legacy": {
+        "placements": 500,
+        "lines_cleared": 193,
+        "holes": 7,
+        "maximum_height": 9,
+        "aggregate_height": 77
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 197,
+        "holes": 0,
+        "maximum_height": 5,
+        "aggregate_height": 30
+      }
+    },
+    {
+      "game": 40,
+      "stream_sha256": "b49dcf6f88b67398382c7f3d5e3f669107b9fe08f3a52df2b02e7bf2fe0b81f7",
+      "legacy": {
+        "placements": 172,
+        "lines_cleared": 52,
+        "holes": 20,
+        "maximum_height": 20,
+        "aggregate_height": 188
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 5,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 41,
+      "stream_sha256": "c6cfd32850895d7f8056da0652d7b04cb4d7ef6773c3b418b3cd4cfbcd84e1c3",
+      "legacy": {
+        "placements": 311,
+        "lines_cleared": 107,
+        "holes": 21,
+        "maximum_height": 20,
+        "aggregate_height": 195
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 1,
+        "maximum_height": 3,
+        "aggregate_height": 21
+      }
+    },
+    {
+      "game": 42,
+      "stream_sha256": "6ad7b53db9417879ff4f55e0f634cc03bbe5e7bf5949f2f90af328ef712da5cf",
+      "legacy": {
+        "placements": 202,
+        "lines_cleared": 64,
+        "holes": 24,
+        "maximum_height": 20,
+        "aggregate_height": 192
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 4,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 43,
+      "stream_sha256": "7bb11524081cfe274d6ff173b7d94577e560d00a14c9550dd698cccf0aeee614",
+      "legacy": {
+        "placements": 294,
+        "lines_cleared": 101,
+        "holes": 24,
+        "maximum_height": 20,
+        "aggregate_height": 190
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 196,
+        "holes": 0,
+        "maximum_height": 6,
+        "aggregate_height": 40
+      }
+    },
+    {
+      "game": 44,
+      "stream_sha256": "7a33e8f7a7879bc94d93e2e750ea0bfded715c51686a0534ff180af8fbed2bf0",
+      "legacy": {
+        "placements": 295,
+        "lines_cleared": 101,
+        "holes": 22,
+        "maximum_height": 20,
+        "aggregate_height": 192
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 5,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 45,
+      "stream_sha256": "b93ea8ada63fb184852617bf0b273bbcd2c02331a514cf34c7ee01f37f2be9aa",
+      "legacy": {
+        "placements": 227,
+        "lines_cleared": 74,
+        "holes": 21,
+        "maximum_height": 19,
+        "aggregate_height": 189
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 2,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 46,
+      "stream_sha256": "0d080a10e86c89051cc984743da2832dac32a5ac7c50dc43657b0b9344b8a485",
+      "legacy": {
+        "placements": 180,
+        "lines_cleared": 55,
+        "holes": 24,
+        "maximum_height": 20,
+        "aggregate_height": 194
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 197,
+        "holes": 1,
+        "maximum_height": 5,
+        "aggregate_height": 31
+      }
+    },
+    {
+      "game": 47,
+      "stream_sha256": "ec7355da63c54a79bd3787e879b48fd75e2c6de0f9777ec45e30361bd98665c5",
+      "legacy": {
+        "placements": 223,
+        "lines_cleared": 72,
+        "holes": 15,
+        "maximum_height": 20,
+        "aggregate_height": 187
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 198,
+        "holes": 0,
+        "maximum_height": 3,
+        "aggregate_height": 20
+      }
+    },
+    {
+      "game": 48,
+      "stream_sha256": "59f8cc7bb679e9b29d50d4a6c057b879b276edf601788622874d3c02b8cade05",
+      "legacy": {
+        "placements": 315,
+        "lines_cleared": 109,
+        "holes": 22,
+        "maximum_height": 20,
+        "aggregate_height": 192
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 199,
+        "holes": 0,
+        "maximum_height": 3,
+        "aggregate_height": 10
+      }
+    },
+    {
+      "game": 49,
+      "stream_sha256": "6381994c785c85f8836ad79e0d727452ddb8c4948abeab773882f3839f00bf6e",
+      "legacy": {
+        "placements": 240,
+        "lines_cleared": 79,
+        "holes": 24,
+        "maximum_height": 20,
+        "aggregate_height": 194
+      },
+      "expert": {
+        "placements": 500,
+        "lines_cleared": 196,
+        "holes": 0,
+        "maximum_height": 6,
+        "aggregate_height": 40
+      }
+    }
+  ],
+  "representative_examples": [
+    {
+      "selection": "first_disagreement",
+      "game": 0,
+      "placement_index": 0,
+      "piece": "I",
+      "board_before": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_placement": [
+        0,
+        0
+      ],
+      "expert_placement": [
+        0,
+        6
+      ],
+      "legacy_board_after": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expert_board_after": [
+        960,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_regret": 5.684341886080802e-14,
+      "ranking": [
+        {
+          "placement": [
+            0,
+            6
+          ],
+          "value": -302.80778523715946,
+          "rank": 1
+        },
+        {
+          "placement": [
+            0,
+            0
+          ],
+          "value": -302.8077852371595,
+          "rank": 2
+        },
+        {
+          "placement": [
+            0,
+            3
+          ],
+          "value": -309.3096524878357,
+          "rank": 3
+        },
+        {
+          "placement": [
+            0,
+            4
+          ],
+          "value": -309.3096524878357,
+          "rank": 4
+        },
+        {
+          "placement": [
+            1,
+            0
+          ],
+          "value": -309.73417573413667,
+          "rank": 5
+        },
+        {
+          "placement": [
+            1,
+            9
+          ],
+          "value": -309.73417573413667,
+          "rank": 6
+        },
+        {
+          "placement": [
+            0,
+            2
+          ],
+          "value": -310.22569919069946,
+          "rank": 7
+        },
+        {
+          "placement": [
+            0,
+            1
+          ],
+          "value": -313.8802087412163,
+          "rank": 8
+        },
+        {
+          "placement": [
+            0,
+            5
+          ],
+          "value": -313.8802087412163,
+          "rank": 9
+        },
+        {
+          "placement": [
+            1,
+            2
+          ],
+          "value": -344.4873692321034,
+          "rank": 10
+        },
+        {
+          "placement": [
+            1,
+            3
+          ],
+          "value": -344.4873692321034,
+          "rank": 11
+        },
+        {
+          "placement": [
+            1,
+            4
+          ],
+          "value": -344.4873692321034,
+          "rank": 12
+        },
+        {
+          "placement": [
+            1,
+            5
+          ],
+          "value": -344.4873692321034,
+          "rank": 13
+        },
+        {
+          "placement": [
+            1,
+            6
+          ],
+          "value": -344.4873692321034,
+          "rank": 14
+        },
+        {
+          "placement": [
+            1,
+            7
+          ],
+          "value": -344.4873692321034,
+          "rank": 15
+        },
+        {
+          "placement": [
+            1,
+            1
+          ],
+          "value": -390.1929317659093,
+          "rank": 16
+        },
+        {
+          "placement": [
+            1,
+            8
+          ],
+          "value": -390.1929317659093,
+          "rank": 17
+        }
+      ]
+    },
+    {
+      "selection": "first_disagreement",
+      "game": 0,
+      "placement_index": 1,
+      "piece": "J",
+      "board_before": [
+        15,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_placement": [
+        2,
+        4
+      ],
+      "expert_placement": [
+        2,
+        7
+      ],
+      "legacy_board_after": [
+        127,
+        64,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expert_board_after": [
+        911,
+        512,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_regret": 9.348646925649234,
+      "ranking": [
+        {
+          "placement": [
+            2,
+            7
+          ],
+          "value": -303.32840684457216,
+          "rank": 1
+        },
+        {
+          "placement": [
+            1,
+            0
+          ],
+          "value": -310.815712577508,
+          "rank": 2
+        },
+        {
+          "placement": [
+            2,
+            4
+          ],
+          "value": -312.6770537702214,
+          "rank": 3
+        },
+        {
+          "placement": [
+            2,
+            0
+          ],
+          "value": -317.5516705051629,
+          "rank": 4
+        },
+        {
+          "placement": [
+            1,
+            4
+          ],
+          "value": -323.2023616727238,
+          "rank": 5
+        },
+        {
+          "placement": [
+            2,
+            5
+          ],
+          "value": -324.73531071917347,
+          "rank": 6
+        },
+        {
+          "placement": [
+            2,
+            1
+          ],
+          "value": -330.8105251330352,
+          "rank": 7
+        },
+        {
+          "placement": [
+            1,
+            6
+          ],
+          "value": -331.8906600472155,
+          "rank": 8
+        },
+        {
+          "placement": [
+            2,
+            6
+          ],
+          "value": -333.8764232259347,
+          "rank": 9
+        },
+        {
+          "placement": [
+            1,
+            5
+          ],
+          "value": -336.46121630059605,
+          "rank": 10
+        },
+        {
+          "placement": [
+            1,
+            7
+          ],
+          "value": -336.46121630059605,
+          "rank": 11
+        },
+        {
+          "placement": [
+            1,
+            8
+          ],
+          "value": -336.9140304328655,
+          "rank": 12
+        },
+        {
+          "placement": [
+            1,
+            2
+          ],
+          "value": -337.9658744610772,
+          "rank": 13
+        },
+        {
+          "placement": [
+            3,
+            8
+          ],
+          "value": -355.7568661092227,
+          "rank": 14
+        },
+        {
+          "placement": [
+            2,
+            2
+          ],
+          "value": -362.3074545312814,
+          "rank": 15
+        },
+        {
+          "placement": [
+            3,
+            3
+          ],
+          "value": -362.3074545312814,
+          "rank": 16
+        },
+        {
+          "placement": [
+            1,
+            1
+          ],
+          "value": -365.3892119813607,
+          "rank": 17
+        },
+        {
+          "placement": [
+            1,
+            3
+          ],
+          "value": -374.033360112704,
+          "rank": 18
+        },
+        {
+          "placement": [
+            3,
+            5
+          ],
+          "value": -381.8217612326978,
+          "rank": 19
+        },
+        {
+          "placement": [
+            3,
+            6
+          ],
+          "value": -381.8217612326978,
+          "rank": 20
+        },
+        {
+          "placement": [
+            0,
+            0
+          ],
+          "value": -384.0359506408556,
+          "rank": 21
+        },
+        {
+          "placement": [
+            3,
+            4
+          ],
+          "value": -386.39231748607835,
+          "rank": 22
+        },
+        {
+          "placement": [
+            0,
+            4
+          ],
+          "value": -386.6490346014856,
+          "rank": 23
+        },
+        {
+          "placement": [
+            0,
+            7
+          ],
+          "value": -386.6490346014856,
+          "rank": 24
+        },
+        {
+          "placement": [
+            3,
+            2
+          ],
+          "value": -387.8969756465595,
+          "rank": 25
+        },
+        {
+          "placement": [
+            3,
+            1
+          ],
+          "value": -392.4675318999401,
+          "rank": 26
+        },
+        {
+          "placement": [
+            3,
+            0
+          ],
+          "value": -392.92034603220964,
+          "rank": 27
+        },
+        {
+          "placement": [
+            2,
+            3
+          ],
+          "value": -398.3749401829082,
+          "rank": 28
+        },
+        {
+          "placement": [
+            0,
+            5
+          ],
+          "value": -399.9078892293579,
+          "rank": 29
+        },
+        {
+          "placement": [
+            0,
+            6
+          ],
+          "value": -399.9078892293579,
+          "rank": 30
+        },
+        {
+          "placement": [
+            3,
+            7
+          ],
+          "value": -409.2450987529813,
+          "rank": 31
+        },
+        {
+          "placement": [
+            0,
+            2
+          ],
+          "value": -412.23855571676376,
+          "rank": 32
+        },
+        {
+          "placement": [
+            0,
+            1
+          ],
+          "value": -415.1242161499807,
+          "rank": 33
+        },
+        {
+          "placement": [
+            0,
+            3
+          ],
+          "value": -423.06456404368845,
+          "rank": 34
+        }
+      ]
+    },
+    {
+      "selection": "first_disagreement",
+      "game": 0,
+      "placement_index": 2,
+      "piece": "Z",
+      "board_before": [
+        127,
+        64,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_placement": [
+        0,
+        7
+      ],
+      "expert_placement": [
+        0,
+        4
+      ],
+      "legacy_board_after": [
+        511,
+        832,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expert_board_after": [
+        127,
+        112,
+        96,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_regret": 34.395503142759424,
+      "ranking": [
+        {
+          "placement": [
+            0,
+            4
+          ],
+          "value": -326.67318419001185,
+          "rank": 1
+        },
+        {
+          "placement": [
+            0,
+            7
+          ],
+          "value": -361.0686873327713,
+          "rank": 2
+        },
+        {
+          "placement": [
+            0,
+            0
+          ],
+          "value": -368.21230567062725,
+          "rank": 3
+        },
+        {
+          "placement": [
+            1,
+            8
+          ],
+          "value": -370.57776343457715,
+          "rank": 4
+        },
+        {
+          "placement": [
+            1,
+            0
+          ],
+          "value": -372.0824215950583,
+          "rank": 5
+        },
+        {
+          "placement": [
+            0,
+            2
+          ],
+          "value": -373.1625565092386,
+          "rank": 6
+        },
+        {
+          "placement": [
+            1,
+            4
+          ],
+          "value": -376.2001637161694,
+          "rank": 7
+        },
+        {
+          "placement": [
+            1,
+            6
+          ],
+          "value": -376.2001637161694,
+          "rank": 8
+        },
+        {
+          "placement": [
+            0,
+            1
+          ],
+          "value": -377.73311276261916,
+          "rank": 9
+        },
+        {
+          "placement": [
+            0,
+            3
+          ],
+          "value": -377.73311276261916,
+          "rank": 10
+        },
+        {
+          "placement": [
+            1,
+            2
+          ],
+          "value": -384.88846209066105,
+          "rank": 11
+        },
+        {
+          "placement": [
+            1,
+            7
+          ],
+          "value": -388.4071743158301,
+          "rank": 12
+        },
+        {
+          "placement": [
+            1,
+            3
+          ],
+          "value": -389.4590183440417,
+          "rank": 13
+        },
+        {
+          "placement": [
+            1,
+            1
+          ],
+          "value": -398.6001308508029,
+          "rank": 14
+        },
+        {
+          "placement": [
+            1,
+            5
+          ],
+          "value": -401.7896848314475,
+          "rank": 15
+        },
+        {
+          "placement": [
+            0,
+            5
+          ],
+          "value": -436.95727322857647,
+          "rank": 16
+        },
+        {
+          "placement": [
+            0,
+            6
+          ],
+          "value": -452.35383780888185,
+          "rank": 17
+        }
+      ]
+    },
+    {
+      "selection": "first_disagreement",
+      "game": 0,
+      "placement_index": 5,
+      "piece": "Z",
+      "board_before": [
+        511,
+        992,
+        480,
+        320,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_placement": [
+        0,
+        2
+      ],
+      "expert_placement": [
+        1,
+        6
+      ],
+      "legacy_board_after": [
+        511,
+        1004,
+        504,
+        320,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expert_board_after": [
+        511,
+        992,
+        480,
+        448,
+        192,
+        64,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_regret": 31.773291506133944,
+      "ranking": [
+        {
+          "placement": [
+            1,
+            6
+          ],
+          "value": -415.5123865495066,
+          "rank": 1
+        },
+        {
+          "placement": [
+            1,
+            8
+          ],
+          "value": -443.27980866525957,
+          "rank": 2
+        },
+        {
+          "placement": [
+            1,
+            3
+          ],
+          "value": -445.5715148351064,
+          "rank": 3
+        },
+        {
+          "placement": [
+            0,
+            0
+          ],
+          "value": -447.2856780556405,
+          "rank": 4
+        },
+        {
+          "placement": [
+            0,
+            2
+          ],
+          "value": -447.2856780556405,
+          "rank": 5
+        },
+        {
+          "placement": [
+            1,
+            0
+          ],
+          "value": -450.32328526257135,
+          "rank": 6
+        },
+        {
+          "placement": [
+            0,
+            1
+          ],
+          "value": -460.5445326835128,
+          "rank": 7
+        },
+        {
+          "placement": [
+            0,
+            4
+          ],
+          "value": -465.69155895690807,
+          "rank": 8
+        },
+        {
+          "placement": [
+            0,
+            3
+          ],
+          "value": -476.16952349325675,
+          "rank": 9
+        },
+        {
+          "placement": [
+            1,
+            1
+          ],
+          "value": -476.8409945183158,
+          "rank": 10
+        },
+        {
+          "placement": [
+            1,
+            2
+          ],
+          "value": -476.8409945183158,
+          "rank": 11
+        },
+        {
+          "placement": [
+            1,
+            4
+          ],
+          "value": -488.24347286525534,
+          "rank": 12
+        },
+        {
+          "placement": [
+            1,
+            5
+          ],
+          "value": -492.18097732668406,
+          "rank": 13
+        },
+        {
+          "placement": [
+            0,
+            6
+          ],
+          "value": -510.26710532334425,
+          "rank": 14
+        },
+        {
+          "placement": [
+            0,
+            5
+          ],
+          "value": -516.5225573968883,
+          "rank": 15
+        },
+        {
+          "placement": [
+            1,
+            7
+          ],
+          "value": -524.1748711003482,
+          "rank": 16
+        },
+        {
+          "placement": [
+            0,
+            7
+          ],
+          "value": -532.3719361094631,
+          "rank": 17
+        }
+      ]
+    },
+    {
+      "selection": "first_disagreement",
+      "game": 0,
+      "placement_index": 6,
+      "piece": "T",
+      "board_before": [
+        511,
+        1004,
+        504,
+        320,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_placement": [
+        2,
+        0
+      ],
+      "expert_placement": [
+        1,
+        6
+      ],
+      "legacy_board_after": [
+        511,
+        1006,
+        511,
+        320,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expert_board_after": [
+        511,
+        1004,
+        504,
+        448,
+        192,
+        128,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_regret": 17.06469302390491,
+      "ranking": [
+        {
+          "placement": [
+            1,
+            6
+          ],
+          "value": -464.33753216571677,
+          "rank": 1
+        },
+        {
+          "placement": [
+            0,
+            3
+          ],
+          "value": -464.4210331507324,
+          "rank": 2
+        },
+        {
+          "placement": [
+            2,
+            6
+          ],
+          "value": -467.8090810656216,
+          "rank": 3
+        },
+        {
+          "placement": [
+            3,
+            2
+          ],
+          "value": -474.4230964254165,
+          "rank": 4
+        },
+        {
+          "placement": [
+            3,
+            5
+          ],
+          "value": -480.49831083927825,
+          "rank": 5
+        },
+        {
+          "placement": [
+            3,
+            7
+          ],
+          "value": -480.95112497154764,
+          "rank": 6
+        },
+        {
+          "placement": [
+            1,
+            8
+          ],
+          "value": -481.3597888606688,
+          "rank": 7
+        },
+        {
+          "placement": [
+            2,
+            0
+          ],
+          "value": -481.4022251896217,
+          "rank": 8
+        },
+        {
+          "placement": [
+            3,
+            1
+          ],
+          "value": -487.0829211573466,
+          "rank": 9
+        },
+        {
+          "placement": [
+            3,
+            0
+          ],
+          "value": -496.1798834209593,
+          "rank": 10
+        },
+        {
+          "placement": [
+            2,
+            4
+          ],
+          "value": -506.3586945129479,
+          "rank": 11
+        },
+        {
+          "placement": [
+            1,
+            0
+          ],
+          "value": -509.4387380488316,
+          "rank": 12
+        },
+        {
+          "placement": [
+            2,
+            1
+          ],
+          "value": -515.6800446793915,
+          "rank": 13
+        },
+        {
+          "placement": [
+            1,
+            4
+          ],
+          "value": -516.565796490905,
+          "rank": 14
+        },
+        {
+          "placement": [
+            0,
+            2
+          ],
+          "value": -516.5799419338894,
+          "rank": 15
+        },
+        {
+          "placement": [
+            3,
+            3
+          ],
+          "value": -525.2540948653967,
+          "rank": 16
+        },
+        {
+          "placement": [
+            1,
+            1
+          ],
+          "value": -525.8871466573485,
+          "rank": 17
+        },
+        {
+          "placement": [
+            0,
+            0
+          ],
+          "value": -529.1956164226708,
+          "rank": 18
+        },
+        {
+          "placement": [
+            1,
+            3
+          ],
+          "value": -529.8246511187773,
+          "rank": 19
+        },
+        {
+          "placement": [
+            3,
+            4
+          ],
+          "value": -529.8246511187773,
+          "rank": 20
+        },
+        {
+          "placement": [
+            0,
+            6
+          ],
+          "value": -531.7962688545123,
+          "rank": 21
+        },
+        {
+          "placement": [
+            1,
+            2
+          ],
+          "value": -536.0801031923213,
+          "rank": 22
+        },
+        {
+          "placement": [
+            1,
+            5
+          ],
+          "value": -542.1553176061831,
+          "rank": 23
+        },
+        {
+          "placement": [
+            3,
+            6
+          ],
+          "value": -542.1553176061831,
+          "rank": 24
+        },
+        {
+          "placement": [
+            0,
+            4
+          ],
+          "value": -554.1520857459972,
+          "rank": 25
+        },
+        {
+          "placement": [
+            0,
+            5
+          ],
+          "value": -554.1520857459972,
+          "rank": 26
+        },
+        {
+          "placement": [
+            2,
+            3
+          ],
+          "value": -555.6850347924469,
+          "rank": 27
+        },
+        {
+          "placement": [
+            0,
+            7
+          ],
+          "value": -560.8603519518109,
+          "rank": 28
+        },
+        {
+          "placement": [
+            2,
+            2
+          ],
+          "value": -561.940486865991,
+          "rank": 29
+        },
+        {
+          "placement": [
+            3,
+            8
+          ],
+          "value": -562.5752525721385,
+          "rank": 30
+        },
+        {
+          "placement": [
+            0,
+            1
+          ],
+          "value": -563.4734359124408,
+          "rank": 31
+        },
+        {
+          "placement": [
+            2,
+            5
+          ],
+          "value": -578.8417096067775,
+          "rank": 32
+        },
+        {
+          "placement": [
+            2,
+            7
+          ],
+          "value": -594.6910883193524,
+          "rank": 33
+        },
+        {
+          "placement": [
+            1,
+            7
+          ],
+          "value": -597.0019926467501,
+          "rank": 34
+        }
+      ]
+    },
+    {
+      "selection": "first_disagreement",
+      "game": 0,
+      "placement_index": 9,
+      "piece": "T",
+      "board_before": [
+        511,
+        1006,
+        511,
+        383,
+        17,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_placement": [
+        2,
+        6
+      ],
+      "expert_placement": [
+        0,
+        1
+      ],
+      "legacy_board_after": [
+        511,
+        1006,
+        511,
+        511,
+        465,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expert_board_after": [
+        511,
+        1006,
+        511,
+        383,
+        31,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_regret": 12.223131412104465,
+      "ranking": [
+        {
+          "placement": [
+            0,
+            1
+          ],
+          "value": -496.62172062059165,
+          "rank": 1
+        },
+        {
+          "placement": [
+            1,
+            6
+          ],
+          "value": -503.94114472667457,
+          "rank": 2
+        },
+        {
+          "placement": [
+            2,
+            6
+          ],
+          "value": -508.8448520326961,
+          "rank": 3
+        },
+        {
+          "placement": [
+            3,
+            7
+          ],
+          "value": -514.8448685020635,
+          "rank": 4
+        },
+        {
+          "placement": [
+            1,
+            8
+          ],
+          "value": -515.2535323911843,
+          "rank": 5
+        },
+        {
+          "placement": [
+            1,
+            0
+          ],
+          "value": -516.3495266625446,
+          "rank": 6
+        },
+        {
+          "placement": [
+            1,
+            4
+          ],
+          "value": -520.4672687836558,
+          "rank": 7
+        },
+        {
+          "placement": [
+            3,
+            3
+          ],
+          "value": -520.4672687836558,
+          "rank": 8
+        },
+        {
+          "placement": [
+            2,
+            0
+          ],
+          "value": -537.6393540828335,
+          "rank": 9
+        },
+        {
+          "placement": [
+            0,
+            5
+          ],
+          "value": -543.2900452503943,
+          "rank": 10
+        },
+        {
+          "placement": [
+            2,
+            2
+          ],
+          "value": -546.3276524573253,
+          "rank": 11
+        },
+        {
+          "placement": [
+            2,
+            4
+          ],
+          "value": -546.3276524573253,
+          "rank": 12
+        },
+        {
+          "placement": [
+            3,
+            0
+          ],
+          "value": -556.0593804270854,
+          "rank": 13
+        },
+        {
+          "placement": [
+            1,
+            2
+          ],
+          "value": -556.5347544352824,
+          "rank": 14
+        },
+        {
+          "placement": [
+            3,
+            5
+          ],
+          "value": -556.5347544352824,
+          "rank": 15
+        },
+        {
+          "placement": [
+            1,
+            5
+          ],
+          "value": -569.7936090631546,
+          "rank": 16
+        },
+        {
+          "placement": [
+            3,
+            1
+          ],
+          "value": -570.246423195424,
+          "rank": 17
+        },
+        {
+          "placement": [
+            0,
+            6
+          ],
+          "value": -570.2605686384084,
+          "rank": 18
+        },
+        {
+          "placement": [
+            3,
+            2
+          ],
+          "value": -574.3641653165353,
+          "rank": 19
+        },
+        {
+          "placement": [
+            1,
+            1
+          ],
+          "value": -578.9347215699157,
+          "rank": 20
+        },
+        {
+          "placement": [
+            3,
+            6
+          ],
+          "value": -580.6196173900794,
+          "rank": 21
+        },
+        {
+          "placement": [
+            1,
+            3
+          ],
+          "value": -582.1242755505605,
+          "rank": 22
+        },
+        {
+          "placement": [
+            3,
+            4
+          ],
+          "value": -582.1242755505605,
+          "rank": 23
+        },
+        {
+          "placement": [
+            0,
+            0
+          ],
+          "value": -590.0033015692634,
+          "rank": 24
+        },
+        {
+          "placement": [
+            0,
+            2
+          ],
+          "value": -594.1210436903746,
+          "rank": 25
+        },
+        {
+          "placement": [
+            0,
+            3
+          ],
+          "value": -594.1210436903746,
+          "rank": 26
+        },
+        {
+          "placement": [
+            0,
+            4
+          ],
+          "value": -594.1210436903746,
+          "rank": 27
+        },
+        {
+          "placement": [
+            0,
+            7
+          ],
+          "value": -594.7540954823264,
+          "rank": 28
+        },
+        {
+          "placement": [
+            3,
+            8
+          ],
+          "value": -596.468996102654,
+          "rank": 29
+        },
+        {
+          "placement": [
+            2,
+            1
+          ],
+          "value": -604.7951052435853,
+          "rank": 30
+        },
+        {
+          "placement": [
+            2,
+            5
+          ],
+          "value": -606.4800010637489,
+          "rank": 31
+        },
+        {
+          "placement": [
+            2,
+            3
+          ],
+          "value": -618.8106675511549,
+          "rank": 32
+        },
+        {
+          "placement": [
+            2,
+            7
+          ],
+          "value": -628.5848318498679,
+          "rank": 33
+        },
+        {
+          "placement": [
+            1,
+            7
+          ],
+          "value": -630.8957361772658,
+          "rank": 34
+        }
+      ]
+    },
+    {
+      "selection": "first_disagreement",
+      "game": 0,
+      "placement_index": 12,
+      "piece": "T",
+      "board_before": [
+        511,
+        1006,
+        991,
+        516,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_placement": [
+        2,
+        4
+      ],
+      "expert_placement": [
+        3,
+        5
+      ],
+      "legacy_board_after": [
+        511,
+        1006,
+        628,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expert_board_after": [
+        511,
+        1006,
+        612,
+        32,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_regret": 29.76901966000554,
+      "ranking": [
+        {
+          "placement": [
+            3,
+            5
+          ],
+          "value": -401.9137155390087,
+          "rank": 1
+        },
+        {
+          "placement": [
+            2,
+            4
+          ],
+          "value": -431.68273519901425,
+          "rank": 2
+        },
+        {
+          "placement": [
+            1,
+            4
+          ],
+          "value": -441.2878362323102,
+          "rank": 3
+        },
+        {
+          "placement": [
+            0,
+            6
+          ],
+          "value": -477.4513780502725,
+          "rank": 4
+        },
+        {
+          "placement": [
+            3,
+            8
+          ],
+          "value": -486.5783451140493,
+          "rank": 5
+        },
+        {
+          "placement": [
+            1,
+            2
+          ],
+          "value": -490.69608723516046,
+          "rank": 6
+        },
+        {
+          "placement": [
+            2,
+            7
+          ],
+          "value": -507.86817253433844,
+          "rank": 7
+        },
+        {
+          "placement": [
+            2,
+            0
+          ],
+          "value": -512.4387287877189,
+          "rank": 8
+        },
+        {
+          "placement": [
+            0,
+            3
+          ],
+          "value": -513.5188637018992,
+          "rank": 9
+        },
+        {
+          "placement": [
+            3,
+            0
+          ],
+          "value": -513.9575323911844,
+          "rank": 10
+        },
+        {
+          "placement": [
+            2,
+            2
+          ],
+          "value": -516.5564709088301,
+          "rank": 11
+        },
+        {
+          "placement": [
+            3,
+            1
+          ],
+          "value": -518.119424755444,
+          "rank": 12
+        },
+        {
+          "placement": [
+            1,
+            8
+          ],
+          "value": -526.2881988785903,
+          "rank": 13
+        },
+        {
+          "placement": [
+            3,
+            3
+          ],
+          "value": -526.7635728867872,
+          "rank": 14
+        },
+        {
+          "placement": [
+            0,
+            4
+          ],
+          "value": -526.7777183297715,
+          "rank": 15
+        },
+        {
+          "placement": [
+            0,
+            5
+          ],
+          "value": -526.7777183297715,
+          "rank": 16
+        },
+        {
+          "placement": [
+            1,
+            0
+          ],
+          "value": -527.2163870190567,
+          "rank": 17
+        },
+        {
+          "placement": [
+            3,
+            6
+          ],
+          "value": -535.4518712612789,
+          "rank": 18
+        },
+        {
+          "placement": [
+            1,
+            3
+          ],
+          "value": -540.0224275146594,
+          "rank": 19
+        },
+        {
+          "placement": [
+            1,
+            6
+          ],
+          "value": -540.0224275146594,
+          "rank": 20
+        },
+        {
+          "placement": [
+            1,
+            7
+          ],
+          "value": -540.4752416469289,
+          "rank": 21
+        },
+        {
+          "placement": [
+            3,
+            7
+          ],
+          "value": -544.5929837680401,
+          "rank": 22
+        },
+        {
+          "placement": [
+            1,
+            5
+          ],
+          "value": -546.2778795882036,
+          "rank": 23
+        },
+        {
+          "placement": [
+            3,
+            4
+          ],
+          "value": -550.8484358415842,
+          "rank": 24
+        },
+        {
+          "placement": [
+            3,
+            2
+          ],
+          "value": -552.3530940020653,
+          "rank": 25
+        },
+        {
+          "placement": [
+            1,
+            1
+          ],
+          "value": -556.9236502554459,
+          "rank": 26
+        },
+        {
+          "placement": [
+            0,
+            0
+          ],
+          "value": -560.2321200207683,
+          "rank": 27
+        },
+        {
+          "placement": [
+            0,
+            7
+          ],
+          "value": -560.2321200207683,
+          "rank": 28
+        },
+        {
+          "placement": [
+            0,
+            2
+          ],
+          "value": -564.3498621418794,
+          "rank": 29
+        },
+        {
+          "placement": [
+            0,
+            1
+          ],
+          "value": -568.92041839526,
+          "rank": 30
+        },
+        {
+          "placement": [
+            2,
+            6
+          ],
+          "value": -570.4533674417097,
+          "rank": 31
+        },
+        {
+          "placement": [
+            2,
+            5
+          ],
+          "value": -572.1382632618732,
+          "rank": 32
+        },
+        {
+          "placement": [
+            2,
+            3
+          ],
+          "value": -576.7088195152537,
+          "rank": 33
+        },
+        {
+          "placement": [
+            2,
+            1
+          ],
+          "value": -593.6100422560403,
+          "rank": 34
+        }
+      ]
+    },
+    {
+      "selection": "first_disagreement",
+      "game": 0,
+      "placement_index": 18,
+      "piece": "O",
+      "board_before": [
+        511,
+        1007,
+        511,
+        454,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_placement": [
+        0,
+        3
+      ],
+      "expert_placement": [
+        0,
+        4
+      ],
+      "legacy_board_after": [
+        511,
+        1007,
+        511,
+        478,
+        24,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expert_board_after": [
+        511,
+        1007,
+        511,
+        502,
+        48,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_regret": 2.3169223711630593,
+      "ranking": [
+        {
+          "placement": [
+            0,
+            4
+          ],
+          "value": -455.38074641966546,
+          "rank": 1
+        },
+        {
+          "placement": [
+            0,
+            3
+          ],
+          "value": -457.6976687908285,
+          "rank": 2
+        },
+        {
+          "placement": [
+            0,
+            6
+          ],
+          "value": -461.8677757497203,
+          "rank": 3
+        },
+        {
+          "placement": [
+            0,
+            0
+          ],
+          "value": -486.1462101998692,
+          "rank": 4
+        },
+        {
+          "placement": [
+            0,
+            1
+          ],
+          "value": -490.3081025641286,
+          "rank": 5
+        },
+        {
+          "placement": [
+            0,
+            8
+          ],
+          "value": -496.9722185267939,
+          "rank": 6
+        },
+        {
+          "placement": [
+            0,
+            7
+          ],
+          "value": -499.44921507088975,
+          "rank": 7
+        },
+        {
+          "placement": [
+            0,
+            2
+          ],
+          "value": -503.52280694885246,
+          "rank": 8
+        },
+        {
+          "placement": [
+            0,
+            5
+          ],
+          "value": -503.52280694885246,
+          "rank": 9
+        }
+      ]
+    },
+    {
+      "selection": "agreement_control",
+      "game": 0,
+      "placement_index": 3,
+      "piece": "S",
+      "board_before": [
+        511,
+        832,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_placement": [
+        1,
+        7
+      ],
+      "expert_placement": [
+        1,
+        7
+      ],
+      "legacy_board_after": [
+        511,
+        960,
+        384,
+        256,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expert_board_after": [
+        511,
+        960,
+        384,
+        256,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_regret": 0.0,
+      "ranking": [
+        {
+          "placement": [
+            1,
+            7
+          ],
+          "value": -385.1763653769623,
+          "rank": 1
+        },
+        {
+          "placement": [
+            1,
+            5
+          ],
+          "value": -386.7938032874551,
+          "rank": 2
+        },
+        {
+          "placement": [
+            0,
+            3
+          ],
+          "value": -411.2301321022107,
+          "rank": 3
+        },
+        {
+          "placement": [
+            0,
+            0
+          ],
+          "value": -414.9014125465154,
+          "rank": 4
+        },
+        {
+          "placement": [
+            1,
+            0
+          ],
+          "value": -417.93901975344625,
+          "rank": 5
+        },
+        {
+          "placement": [
+            0,
+            1
+          ],
+          "value": -423.58971092100705,
+          "rank": 6
+        },
+        {
+          "placement": [
+            0,
+            2
+          ],
+          "value": -423.58971092100705,
+          "rank": 7
+        },
+        {
+          "placement": [
+            1,
+            8
+          ],
+          "value": -424.014234167308,
+          "rank": 8
+        },
+        {
+          "placement": [
+            1,
+            2
+          ],
+          "value": -430.745060249049,
+          "rank": 9
+        },
+        {
+          "placement": [
+            1,
+            3
+          ],
+          "value": -430.745060249049,
+          "rank": 10
+        },
+        {
+          "placement": [
+            0,
+            7
+          ],
+          "value": -431.8026352873019,
+          "rank": 11
+        },
+        {
+          "placement": [
+            1,
+            4
+          ],
+          "value": -435.31561650242963,
+          "rank": 12
+        },
+        {
+          "placement": [
+            1,
+            1
+          ],
+          "value": -444.4567290091908,
+          "rank": 13
+        },
+        {
+          "placement": [
+            1,
+            6
+          ],
+          "value": -447.6462829898354,
+          "rank": 14
+        },
+        {
+          "placement": [
+            0,
+            6
+          ],
+          "value": -465.73241098649555,
+          "rank": 15
+        },
+        {
+          "placement": [
+            0,
+            4
+          ],
+          "value": -471.9878630600397,
+          "rank": 16
+        },
+        {
+          "placement": [
+            0,
+            5
+          ],
+          "value": -471.9878630600397,
+          "rank": 17
+        }
+      ]
+    },
+    {
+      "selection": "agreement_control",
+      "game": 0,
+      "placement_index": 4,
+      "piece": "S",
+      "board_before": [
+        511,
+        960,
+        384,
+        256,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_placement": [
+        1,
+        5
+      ],
+      "expert_placement": [
+        1,
+        5
+      ],
+      "legacy_board_after": [
+        511,
+        992,
+        480,
+        320,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "expert_board_after": [
+        511,
+        992,
+        480,
+        320,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "legacy_regret": 0.0,
+      "ranking": [
+        {
+          "placement": [
+            1,
+            5
+          ],
+          "value": -400.57005353661157,
+          "rank": 1
+        },
+        {
+          "placement": [
+            1,
+            6
+          ],
+          "value": -401.26441022666165,
+          "rank": 2
+        },
+        {
+          "placement": [
+            0,
+            3
+          ],
+          "value": -428.70112368999605,
+          "rank": 3
+        },
+        {
+          "placement": [
+            0,
+            0
+          ],
+          "value": -433.3788234277681,
+          "rank": 4
+        },
+        {
+          "placement": [
+            1,
+            0
+          ],
+          "value": -436.416430634699,
+          "rank": 5
+        },
+        {
+          "placement": [
+            0,
+            1
+          ],
+          "value": -442.06712180225986,
+          "rank": 6
+        },
+        {
+          "placement": [
+            0,
+            2
+          ],
+          "value": -442.06712180225986,
+          "rank": 7
+        },
+        {
+          "placement": [
+            1,
+            7
+          ],
+          "value": -448.61100970557095,
+          "rank": 8
+        },
+        {
+          "placement": [
+            1,
+            2
+          ],
+          "value": -449.22247113030187,
+          "rank": 9
+        },
+        {
+          "placement": [
+            1,
+            3
+          ],
+          "value": -449.22247113030187,
+          "rank": 10
+        },
+        {
+          "placement": [
+            1,
+            4
+          ],
+          "value": -458.363583637063,
+          "rank": 11
+        },
+        {
+          "placement": [
+            1,
+            1
+          ],
+          "value": -462.9341398904436,
+          "rank": 12
+        },
+        {
+          "placement": [
+            0,
+            4
+          ],
+          "value": -481.7769755668009,
+          "rank": 13
+        },
+        {
+          "placement": [
+            1,
+            8
+          ],
+          "value": -485.4352030368949,
+          "rank": 14
+        },
+        {
+          "placement": [
+            0,
+            5
+          ],
+          "value": -498.67819830758737,
+          "rank": 15
+        },
+        {
+          "placement": [
+            0,
+            7
+          ],
+          "value": -509.32396897482965,
+          "rank": 16
+        },
+        {
+          "placement": [
+            0,
+            6
+          ],
+          "value": -527.1533798560826,
+          "rank": 17
+        }
+      ]
+    }
+  ]
+}

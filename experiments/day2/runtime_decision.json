@@ -1,0 +1,10 @@
+{
+  "decision_made_without_viewing_performance": true,
+  "registered_setting": {"games": 100, "beam_width": 6, "maximum_placements": 500},
+  "observation": "The three-game timing-only pilot had not completed after 150 seconds and was interrupted without emitting or inspecting outcomes.",
+  "projection": "More than 5000 seconds for 100 games, exceeding the predeclared 1800-second limit.",
+  "predeclared_fallback_applied": {"games": 50, "beam_width": 3, "maximum_placements": 500},
+  "reason": "Both registered fallback steps were required by the timing projection; no performance statistic was available.",
+  "observed_full_run_wall_time": "approximately 65 minutes on the development machine",
+  "runtime_deviation": "The fallback run exceeded the 30-minute target. It was allowed to complete without changing the locked sample, cap, or search parameters."
+}
