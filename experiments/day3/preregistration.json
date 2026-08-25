@@ -1,0 +1,21 @@
+{
+  "status": "locked in tetris_research.day3.FINAL and printed before the one final evaluation",
+  "training_budget": 80,
+  "held_out_decision_states": 24,
+  "evaluation_games": 10,
+  "maximum_placements": 300,
+  "expert_beam_width": 3,
+  "learning_rate": 0.35,
+  "training_seeds": [2026082401, 2026082402, 2026082403, 2026082404],
+  "evaluation_state_seeds": [2026082501, 2026082502, 2026082503],
+  "evaluation_game_seeds": [2026082601, 2026082602, 2026082603, 2026082604, 2026082605, 2026082606, 2026082607, 2026082608, 2026082609, 2026082610],
+  "conditions": ["initial", "direct_expert_imitation", "random_legal_label_control"],
+  "equal_budget_rule": "both trained conditions receive the same states, 80 labels, and 80 updates",
+  "success_criterion": {
+    "agreement": "taught >= initial + 0.10 and taught >= control + 0.10",
+    "regret": "taught <= 90% of initial and taught <= 90% of control",
+    "gameplay": "taught strictly exceeds both initial and control in mean placements or mean lines",
+    "decision": "all conditions must hold"
+  },
+  "ratings": "not reported; no clean independently calibrated rating is available"
+}

@@ -28,6 +28,20 @@ Run tests:
 python -m unittest discover -s tests -v
 ```
 
+Run the Day 3 direct expert-imitation experiment:
+
+```sh
+python -m tetris_research.day3 smoke
+python -m tetris_research.day3 final
+```
+
+Day 3 adds a replaceable linear behavior-cloning student and an equal-update random-label control.
+The final held-out run achieved 54.2% expert agreement and 8.127 mean expert-relative regret for the
+taught student, versus 12.5% and 60.434 for control; matched mean survival was 259.2 versus 25.4
+placements. Students have no expert reference during evaluation, and serialized states are checked
+for mutation. See [the Day 3 report](docs/day3_transfer.md). Direct imitation is the baseline for a
+future equal-budget personalized-tutorial comparison, not the ultimate tutor method.
+
 Run the frozen Hour 4 evaluation experiment (after its required three-replicate smoke run):
 
 ```sh

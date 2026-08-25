@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "checks": {
+    "identical_weak_start": true,
+    "identical_initial_decisions": true,
+    "no_expert_coefficients_in_student": true,
+    "equal_training_budgets": true,
+    "training_evaluation_state_separation": true,
+    "training_evaluation_seed_separation": true,
+    "evaluation_learning_disabled": true,
+    "expert_absent_during_student_choice": true,
+    "student_has_no_expert_dependency": true,
+    "behavior_not_parameter_only": true,
+    "no_rating_claim": true
+  },
+  "overall": "PASS",
+  "independence": "Recomputes controls from serialized result; does not call the Day 3 trainer or success function."
+}

@@ -1,0 +1,2568 @@
+{
+  "schema_version": 1,
+  "experiment": "Day 3 direct expert imitation baseline",
+  "configuration": {
+    "name": "final-held-out",
+    "training_budget": 80,
+    "held_out_states": 24,
+    "evaluation_games": 10,
+    "maximum_placements": 300,
+    "expert_beam_width": 3,
+    "training_seeds": [
+      2026082401,
+      2026082402,
+      2026082403,
+      2026082404
+    ],
+    "evaluation_state_seeds": [
+      2026082501,
+      2026082502,
+      2026082503
+    ],
+    "evaluation_game_seeds": [
+      2026082601,
+      2026082602,
+      2026082603,
+      2026082604,
+      2026082605,
+      2026082606,
+      2026082607,
+      2026082608,
+      2026082609,
+      2026082610
+    ],
+    "learning_rate": 0.35
+  },
+  "predeclaration": {
+    "conditions": [
+      "initial",
+      "taught",
+      "random_label_control"
+    ],
+    "learning_rule": "one multiclass action-softmax cross-entropy SGD update per state",
+    "control": "same states and updates; uniformly random legal labels without expert information",
+    "success_criterion": "all five predeclared checks must pass",
+    "expert_disconnection": "students contain no expert reference; choose calls complete before external scoring; learn=False"
+  },
+  "initial_state": {
+    "format": "linear-imitation-four-feature-v1",
+    "agent_id": "initial",
+    "agent_version": "linear-imitation-four-feature-v1",
+    "learning_enabled": true,
+    "feature_names": [
+      "holes",
+      "max_height",
+      "bumpiness",
+      "lines_cleared"
+    ],
+    "weights": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "learning_rate": 0.35,
+    "updates": 0,
+    "expert_parameters": null
+  },
+  "initial_clone_states": {
+    "taught": {
+      "format": "linear-imitation-four-feature-v1",
+      "agent_id": "taught",
+      "agent_version": "linear-imitation-four-feature-v1",
+      "learning_enabled": true,
+      "feature_names": [
+        "holes",
+        "max_height",
+        "bumpiness",
+        "lines_cleared"
+      ],
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "learning_rate": 0.35,
+      "updates": 0,
+      "expert_parameters": null
+    },
+    "random_label_control": {
+      "format": "linear-imitation-four-feature-v1",
+      "agent_id": "random_label_control",
+      "agent_version": "linear-imitation-four-feature-v1",
+      "learning_enabled": true,
+      "feature_names": [
+        "holes",
+        "max_height",
+        "bumpiness",
+        "lines_cleared"
+      ],
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "learning_rate": 0.35,
+      "updates": 0,
+      "expert_parameters": null
+    }
+  },
+  "initial_probe_decisions": {
+    "taught": {
+      "rotation": 0,
+      "x": 0,
+      "use_hold": false
+    },
+    "random_label_control": {
+      "rotation": 0,
+      "x": 0,
+      "use_hold": false
+    }
+  },
+  "trained_states": {
+    "taught": {
+      "format": "linear-imitation-four-feature-v1",
+      "agent_id": "taught",
+      "agent_version": "linear-imitation-four-feature-v1",
+      "learning_enabled": true,
+      "feature_names": [
+        "holes",
+        "max_height",
+        "bumpiness",
+        "lines_cleared"
+      ],
+      "weights": [
+        3.077873643889517,
+        0.6695666667020197,
+        0.5592199814018667,
+        0.0
+      ],
+      "learning_rate": 0.35,
+      "updates": 80,
+      "expert_parameters": null
+    },
+    "random_label_control": {
+      "format": "linear-imitation-four-feature-v1",
+      "agent_id": "random_label_control",
+      "agent_version": "linear-imitation-four-feature-v1",
+      "learning_enabled": true,
+      "feature_names": [
+        "holes",
+        "max_height",
+        "bumpiness",
+        "lines_cleared"
+      ],
+      "weights": [
+        0.14469536567630137,
+        -0.2200890618362112,
+        -0.255098465195211,
+        0.0
+      ],
+      "learning_rate": 0.35,
+      "updates": 80,
+      "expert_parameters": null
+    }
+  },
+  "expert_parameter_names": [
+    "column_transitions",
+    "cumulative_wells",
+    "eroded_piece_cells",
+    "holes",
+    "landing_height",
+    "row_transitions"
+  ],
+  "expert_parameter_values_sha256": "0907bf74573d345898a8095f0597d6c379912da19f030b0ff0c6b27a65e9996c",
+  "training_audit": {
+    "opportunities": {
+      "taught": 80,
+      "random_label_control": 80
+    },
+    "updates": {
+      "taught": 80,
+      "random_label_control": 80
+    },
+    "state_hashes": [
+      "691d185c6812ca10e82ef3c416a39cf2cd2d82c496f90a0c2feec7b1856b7ad9",
+      "1e612722c7703a4398bd44267835fa06dd2c512fc4912c94a065c2253f3a2990",
+      "adb89e1e23e614ba441ec8d131b8306336859f8a42f3fdd5ab8546d150d361a8",
+      "e4fc2bea917ee6b62ce21a43a2d2e6ab28ead70dbf930a709dd72210f1e6c25b",
+      "8ea4005fdcf09552ddae76a52821e201f27430edf002b887dd925786b2883a34",
+      "f17210896459fbd3b426c3e4ba33fcf080b0f41464bbcf02ee061123d84b7095",
+      "d45f4f78df7bfc74b06d84d3a9e40addfb856005022cb31f1e984bca4923a6df",
+      "26582462fb1fc44b907ed31efa0b106fb9c2e05d33d642528810c3b6b8086a2d",
+      "ae1918aa129b9a732d545bf4f1d9b4d2e9bbbb41c60ef02158ce9214a0a6f63b",
+      "6c9834d8006a59dd76e8e0ff6eb0881d7060d5546977ad83d3032df274f7d152",
+      "d45cbefbbaedbda3e9520651a9dac28685f50de15b3d600e1ecc10b3f1f91347",
+      "3d7fc5ba9067a91fbb47ab2404b8e8167ef7473fd605400c1492dcd213bc280f",
+      "1882f6bf68882cd5b7f445b8555b1cd72699b71f9693e1f96e128e47eb1f0296",
+      "b76d0fe6a3ff756b342cb4c5cf384018568ab3d469a264375909d7451d63eafd",
+      "17a2bd54c3fa79ca5b1072d21497903904dbe06134739b44f3d2c65d4b0cc36e",
+      "bf6b7688548c9b9f772c85b6bdf1f4d4e00e2b0972023879cea001063bc1f5bf",
+      "ae3b831ea16b8438650f525210fd99500fc906e831ce9d1769c7074d3b855a0d",
+      "d36e99c5ef0cecee9cdf10b07ec6b83c71a7af96b3a25ea5f1b0ac3635200c01",
+      "7515377e1cc8417dc8502ef65db7d48644204694a592098dea041848ae5b2831",
+      "6b2c3359ce58341eb264d17c49b3bf3bb150c0bb3bd9ca7b12faa641ee0924d6",
+      "ed8e7b92ab4936d1a5c28aedfcfca61820e69a3426e3769fe75231de86a3d5b9",
+      "f47c96afaf0374947efe448142c0583a99f6746516ea25b165a4ee56704156ff",
+      "9e36e634a6d32f80dceaaa9d452ffd6a68647ebf97dfe40c7a3d29d3f2e430aa",
+      "25cbbcfa532cebaf9c929a74ff783a360df92a8aac71eb725e1dc6095165b1d5",
+      "791d348138c9cb501e6d3ddc80b22cf4f51aae0b340e5a110b14643f9861a786",
+      "0185e1195d5be74c34e2323bc33eb9913e3c9978beb424e8c3a882bfe5d55f66",
+      "e87e628d6053c23239db038bc27d63ac8f92012c25198c04ab64f5d80d405c99",
+      "165f334e0f2b6ab2d6daefb06e27a7e6dc6c8083f0b4777de91a764452da7b4f",
+      "b2d769b9bfe6e5616aff46f3dae5f27cb5f7811b7549ef44fdd2b66495399dd0",
+      "0510831dae641a001e8f231421460e429a4069f01ca9a9f87859e76f8c1be8bd",
+      "23434d21fd267e13b41791b528cc7db49629178d73d6cacd345d62d2d90422a7",
+      "037a592b832ea026e2dade6a93e926d6e44606cf3a3f64629bd93b528a1807a8",
+      "2328047093db6220fc24fa630f91174f4f2bf497e6f5092bdba0ae12475c1c2e",
+      "5c0df289566a355ac3c2e8c4fd3e7840b29790dfbe5a59ab570685a6badc0837",
+      "036b89c8e1fa544f812a00f17830fc8cbdb45a4bb98a573952f8801c832df55e",
+      "53a5039e224a0238a8aa40f785ee3d85b3ee7f4c6d9b7d82a52428fa4a7ea349",
+      "c6edcf55aa22be36dfbb1160be0f05980725562043f01c45a0ed7c8d136c610b",
+      "0b880c16608bbad6b1498a350be472b1808355819363d3efe5764bb931fc66ff",
+      "1793307b2958b9780fa179d0c91577512db0cc97d5dc210ed7dc840fdca352d3",
+      "acb68645cc2a9c0ff821ff46c3a92977205fdc06870dc50f3b845bd9de0f5cfb",
+      "c2bcdec425963d02aa2fc27ce6a37b63841ad792d91f1f024bb925155f7c4cba",
+      "2c3dd206544a2f586ff82cae3535b1df35ac37b626b942e52df5a5f0f0eb2351",
+      "a88a64fd67d2fecd7b2224e54464ddd0bfcdec24e9462e812307bd4ddb3fa379",
+      "3ecf72e5dd75579979cf0f7027fa7fcdf089aef845e97463d28fa0044fee6e6f",
+      "ec99d69b20fe37bcdee9b147043963c036a31b639a96c09c93e2b7c4ec6eedd6",
+      "215a930d9bed01dd7c490410e135df7f8aef52963a21170ca8b8df6162d30795",
+      "dcae5b4bf1e354fc4c89bfb5d3e352ed3f27d6bb47032dee0ec8abcdbe43d0a0",
+      "c6141790325030aa13fb47a8ef2dd691c3f253bfc09e33f1728eb95817fc62db",
+      "d39daefc11c6ebbacf7f7a5606e00327c5579d39e3267a34b0b60b285b2576ca",
+      "29db968a93b0a0df755d8815ca172c41bea601a877e44e74e81e28365950ceb9",
+      "8675b336ef0b6c61ef1d7a83609ecef6837cb11c84e4ef92ad9c38cf1a0925c6",
+      "28d3e737a603e3be6056372f7367094b5bcb0f499192c8ac3db3cb4152511fd5",
+      "a833bb7feeb28fa0bbe1119940c6d78656388560975f491a6e8465f01b9bd2cc",
+      "d76e834b313203fa245ad953c5d4b08ea77a859156e062226472d136dd3fb963",
+      "5867454a7cf7662825fc638a0e6fdba8d1c3c6174c3720c4ac14377125ec86ef",
+      "15ce7ef146b2a14e08e899fc7d343b15741005a9f88fa3abaf64f3d86900829f",
+      "d22ca823c6ff0a573eaebcaafd74704229939c62a45146eeaa59f5ee13c9b269",
+      "c601cb3cf03c9bfbcff1a10f316c143569b5e9311174012fcf3af07c10ed76c1",
+      "c84e012663b23b1f6281532bb0bd1931b5bbed43ab7812b1d3a1346d387e392e",
+      "aa0d18e530f85547de4da39d15f78446e05604915a2b3b4d51d57fd5e68d3740",
+      "ac607a4af725957999bb704e4c6f3423488b7d2fdfe25bd864e80fa59714908b",
+      "e73622b789949e023e312b91a8ce831530f6438725fb72b00f98c2eb82742e13",
+      "913e4eb1830954b3f4230191931973f91d4bc43eea6bda95ac891afeecd6f60e",
+      "320ec0d9d724439e29c184e29be3e7d9f0d0d87560b68ad44d28a83bf8e4c619",
+      "3fa0e9c574fd4b61af66820cff657aa071a836752f5c0ab38d32e7e3e9d80d2c",
+      "b28b935a473e6273f2c9701d5c6cab8400cecbb8bc62ad3920fafed6d2e7970e",
+      "0e498883f60bc24c2a1e1895f976672c3c577f8594f2e11cb3dca1ed56b97ee6",
+      "72b29077b6612f91a3b0cd4b17596a41319f768589508abf40fae3f2b1b3d3f4",
+      "99fc250f371f5855fe81e2848d331365a3f92729c9f3e505a70541a148cff6cf",
+      "b094c201450f6bf768ff196b4553c0dff568b9ba891f668a9657b0d781a7f5b6",
+      "ba5f00c75e08a8db3efe5b60e93ec795ca8bf75fea01f7a047fa08877cd70030",
+      "046e54ebc6069887c5ee1e904f813acdf57641edda73a10b9345eacf3c11232a",
+      "9910cc7aba2098e28b397ecf46e8b25de7e832eb993cef15e7823401a051237b",
+      "deeeca23bfa2ebfba79b78b79796595e0c4e30e4fd5b8b9c6afd5e566de04fcd",
+      "df1d5fda022b051c2f04ea5e0cfcad9cdd1c9913a674883be78f7ae34b407a4e",
+      "a4c71a0e70b9568850e96ffd63f566da6b6b9d242265a3b6839250f00b3f4d5e",
+      "ec3c50ece2a06e8ce0d282372dab1f649c00a067a91a26aeb48a1619754b37be",
+      "11ea326594789adc6af3106ee07e9eb42c5d60c7775c4c5c7db888395830c801",
+      "a17957e69b449d1b2dfa934c545d0a1fc9fe41ba96e10220f9e10af5f63f8d17",
+      "d9ce2f6e5209541a4984ae22360d75637c45c8c80657990f946abf15bab3c99f"
+    ],
+    "labels": [
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 7,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 3,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 8,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 8,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 2,
+          "x": 5,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 0,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 8,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 5,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 3,
+          "x": 4,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 3,
+          "x": 6,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 7,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 3,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 6,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 1,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 4,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 2,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 7,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 3,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 8,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 3,
+          "x": 8,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 2,
+          "x": 0,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 3,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 3,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 3,
+          "x": 8,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 2,
+          "x": 6,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 2,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 5,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 3,
+          "x": 8,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 2,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 3,
+          "x": 8,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 4,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 3,
+          "x": 8,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 2,
+          "x": 0,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 3,
+          "x": 6,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 3,
+          "x": 4,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 3,
+          "x": 6,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 2,
+          "x": 5,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 1,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 1,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 2,
+          "x": 3,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 8,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 3,
+          "x": 7,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 1,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 6,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 5,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 3,
+          "x": 0,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 0,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 0,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 0,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 8,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 8,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 4,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 4,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 6,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 2,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 3,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 2,
+          "x": 7,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 3,
+          "x": 3,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 2,
+          "x": 2,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 3,
+          "x": 0,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 9,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 1,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 2,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 1,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 4,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 3,
+          "x": 8,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 4,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 2,
+          "x": 5,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 2,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 1,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 9,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 6,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 6,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 5,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 4,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 2,
+          "x": 1,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 4,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 3,
+          "x": 0,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 6,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 4,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 5,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 7,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 7,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 3,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 3,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 5,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 2,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 1,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 7,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 5,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 4,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 8,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 2,
+          "x": 7,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 9,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 3,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 8,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 7,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 8,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 7,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 4,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 5,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 1,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 1,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 2,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 2,
+          "x": 0,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 9,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 9,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 2,
+          "x": 2,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 2,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 7,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 3,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 5,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 8,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 6,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 2,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 2,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 1,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 1,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 6,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 1,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 3,
+          "x": 2,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 3,
+          "x": 7,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 1,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 1,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 3,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 3,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 3,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 2,
+          "x": 4,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 1,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 6,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 3,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 3,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 3,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 0,
+          "x": 6,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 3,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 2,
+          "x": 6,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 4,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 0,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 2,
+          "x": 0,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 9,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 3,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 2,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 2,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 1,
+          "x": 4,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 4,
+          "use_hold": false
+        }
+      },
+      {
+        "expert": {
+          "rotation": 0,
+          "x": 1,
+          "use_hold": false
+        },
+        "control": {
+          "rotation": 1,
+          "x": 4,
+          "use_hold": false
+        }
+      }
+    ],
+    "mean_training_loss": {
+      "taught": 2.4768146273934724,
+      "random_label_control": 2.6933780370386486
+    }
+  },
+  "evaluation_state_hashes": [
+    "ae7c82495c9befa9e4ba52132a159a24b343615577d8281972723e4f4eabd499",
+    "00dd57fdcf4f3c3d3d5ae32e5ccff30dfaa2e8e90eda12e1613fa40be08954cf",
+    "969227946aa018e416945c32db48fd4145f7075fd9a18d161c76d6d1c854b27d",
+    "3ff4ba539242c958aeefa2f5800ae0d71f9c89346315a25c3d5b1fe08930c881",
+    "cca910a9a72928bfa2e8ee1ac3318caca9757dbcc03334dba861b5b70b73bc19",
+    "87b03d6d530b5d736846454bbe3cdbc1216b935ca962bf049bbcc3b5c42aabac",
+    "e654bae7397d6b45fd9d72a75cbae5deaac6c65580fbb06d7a990119377472dc",
+    "1011a66daab9624669a47a3a9630146ca800c0809887d0fac6ddf2aa721b8bc2",
+    "2fbb6a94c11a4784e4592e6f82227ab437d25573e7aef52c566319d121d13d67",
+    "a1602ff7d7a4fd5925f3f65a451b6a14376affe6eb336a1ad30ebf950e822b9a",
+    "420c1d76e096adb1ccf99c468b311ae6f6c01c9770e9e495a556871a787cf488",
+    "2fa56499773272e2da95633debecd2ae07b18df715b129de8a1cdca0c8c543e0",
+    "5415cff3f4652a7f008b04a3ddcd21c7e512cf25c03b3fc313a682241775ab4e",
+    "396b5ae372f19222a3866111c6cba7514f2286028eb5091a8e9f3a7e8e5c62b6",
+    "3d1e0518e11348db39c85c1a16a26145dc64e41be83f9731694e02f3e6fb0f41",
+    "e89e9c7ac28718847e7e67d8177a25f3814c0bddad06321182d7e05de74839f3",
+    "59f3583725eee0f6422ced3aad8c973c3cca12a6a575981399e2863349f4fe4d",
+    "4c419ddd16dfc6664e1b3372681bb33c026c80ba33c68c06115616d896993bf7",
+    "ceb2a73ae9efd2aed008424d1ad51c4c1185fee1e87a385ece2eeb0a64b97795",
+    "af5eadd797ff424fe98a6b158377b11950b57fabf9bc7a048f12a45807fb773b",
+    "419410fbf81b2d4a0f157a5553091d8bd3c37090045fdbff57ce88b375db96cd",
+    "3a1d6fe4009f7df9e452c4d431df7bf8c42c57cdea31960801a00bf8b2517250",
+    "c2843cc9545786a3b82605d007d51291abd8c64f1c3e3d053d5af12779ae1021",
+    "3be6b7ea21325e56fd135f79137f84ed5cfd2a315896c209e12f5cceaf97aa60"
+  ],
+  "evaluation_before_states": {
+    "initial": {
+      "format": "linear-imitation-four-feature-v1",
+      "agent_id": "initial",
+      "agent_version": "linear-imitation-four-feature-v1",
+      "learning_enabled": true,
+      "feature_names": [
+        "holes",
+        "max_height",
+        "bumpiness",
+        "lines_cleared"
+      ],
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "learning_rate": 0.35,
+      "updates": 0,
+      "expert_parameters": null
+    },
+    "taught": {
+      "format": "linear-imitation-four-feature-v1",
+      "agent_id": "taught",
+      "agent_version": "linear-imitation-four-feature-v1",
+      "learning_enabled": true,
+      "feature_names": [
+        "holes",
+        "max_height",
+        "bumpiness",
+        "lines_cleared"
+      ],
+      "weights": [
+        3.077873643889517,
+        0.6695666667020197,
+        0.5592199814018667,
+        0.0
+      ],
+      "learning_rate": 0.35,
+      "updates": 80,
+      "expert_parameters": null
+    },
+    "random_label_control": {
+      "format": "linear-imitation-four-feature-v1",
+      "agent_id": "random_label_control",
+      "agent_version": "linear-imitation-four-feature-v1",
+      "learning_enabled": true,
+      "feature_names": [
+        "holes",
+        "max_height",
+        "bumpiness",
+        "lines_cleared"
+      ],
+      "weights": [
+        0.14469536567630137,
+        -0.2200890618362112,
+        -0.255098465195211,
+        0.0
+      ],
+      "learning_rate": 0.35,
+      "updates": 80,
+      "expert_parameters": null
+    }
+  },
+  "evaluation_after_states": {
+    "initial": {
+      "format": "linear-imitation-four-feature-v1",
+      "agent_id": "initial",
+      "agent_version": "linear-imitation-four-feature-v1",
+      "learning_enabled": true,
+      "feature_names": [
+        "holes",
+        "max_height",
+        "bumpiness",
+        "lines_cleared"
+      ],
+      "weights": [
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "learning_rate": 0.35,
+      "updates": 0,
+      "expert_parameters": null
+    },
+    "taught": {
+      "format": "linear-imitation-four-feature-v1",
+      "agent_id": "taught",
+      "agent_version": "linear-imitation-four-feature-v1",
+      "learning_enabled": true,
+      "feature_names": [
+        "holes",
+        "max_height",
+        "bumpiness",
+        "lines_cleared"
+      ],
+      "weights": [
+        3.077873643889517,
+        0.6695666667020197,
+        0.5592199814018667,
+        0.0
+      ],
+      "learning_rate": 0.35,
+      "updates": 80,
+      "expert_parameters": null
+    },
+    "random_label_control": {
+      "format": "linear-imitation-four-feature-v1",
+      "agent_id": "random_label_control",
+      "agent_version": "linear-imitation-four-feature-v1",
+      "learning_enabled": true,
+      "feature_names": [
+        "holes",
+        "max_height",
+        "bumpiness",
+        "lines_cleared"
+      ],
+      "weights": [
+        0.14469536567630137,
+        -0.2200890618362112,
+        -0.255098465195211,
+        0.0
+      ],
+      "learning_rate": 0.35,
+      "updates": 80,
+      "expert_parameters": null
+    }
+  },
+  "decision_trace": [
+    {
+      "state_hash": "ae7c82495c9befa9e4ba52132a159a24b343615577d8281972723e4f4eabd499",
+      "piece": "J",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 2,
+        "x": 7,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 73.89526188711005
+        },
+        "taught": {
+          "placement": {
+            "rotation": 2,
+            "x": 7,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 1,
+            "use_hold": false
+          },
+          "regret": 55.248523227615124
+        }
+      }
+    },
+    {
+      "state_hash": "00dd57fdcf4f3c3d3d5ae32e5ccff30dfaa2e8e90eda12e1613fa40be08954cf",
+      "piece": "J",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 2,
+        "x": 4,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 73.02458066730333
+        },
+        "taught": {
+          "placement": {
+            "rotation": 2,
+            "x": 4,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 7,
+            "use_hold": false
+          },
+          "regret": 43.67548956862885
+        }
+      }
+    },
+    {
+      "state_hash": "969227946aa018e416945c32db48fd4145f7075fd9a18d161c76d6d1c854b27d",
+      "piece": "Z",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 1,
+        "x": 5,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 74.30236183708564
+        },
+        "taught": {
+          "placement": {
+            "rotation": 0,
+            "x": 4,
+            "use_hold": false
+          },
+          "regret": 2.9277725434050126
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 1,
+            "use_hold": false
+          },
+          "regret": 46.13817599428512
+        }
+      }
+    },
+    {
+      "state_hash": "3ff4ba539242c958aeefa2f5800ae0d71f9c89346315a25c3d5b1fe08930c881",
+      "piece": "J",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 1,
+        "x": 3,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 44.16045586420114
+        },
+        "taught": {
+          "placement": {
+            "rotation": 1,
+            "x": 3,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 8,
+            "use_hold": false
+          },
+          "regret": 95.90721091585897
+        }
+      }
+    },
+    {
+      "state_hash": "cca910a9a72928bfa2e8ee1ac3318caca9757dbcc03334dba861b5b70b73bc19",
+      "piece": "O",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 0,
+        "x": 3,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 72.54388094408625
+        },
+        "taught": {
+          "placement": {
+            "rotation": 0,
+            "x": 3,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 0,
+            "x": 8,
+            "use_hold": false
+          },
+          "regret": 32.31646186405692
+        }
+      }
+    },
+    {
+      "state_hash": "87b03d6d530b5d736846454bbe3cdbc1216b935ca962bf049bbcc3b5c42aabac",
+      "piece": "L",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 2,
+        "x": 3,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 161.56988455466876
+        },
+        "taught": {
+          "placement": {
+            "rotation": 1,
+            "x": 6,
+            "use_hold": false
+          },
+          "regret": 14.149392619262471
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 3,
+            "x": 8,
+            "use_hold": false
+          },
+          "regret": 38.76700207002318
+        }
+      }
+    },
+    {
+      "state_hash": "e654bae7397d6b45fd9d72a75cbae5deaac6c65580fbb06d7a990119377472dc",
+      "piece": "J",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 1,
+        "x": 3,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 69.5525407427931
+        },
+        "taught": {
+          "placement": {
+            "rotation": 1,
+            "x": 3,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 8,
+            "use_hold": false
+          },
+          "regret": 90.94654923732116
+        }
+      }
+    },
+    {
+      "state_hash": "1011a66daab9624669a47a3a9630146ca800c0809887d0fac6ddf2aa721b8bc2",
+      "piece": "I",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 1,
+        "x": 0,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 204.94305764260184
+        },
+        "taught": {
+          "placement": {
+            "rotation": 1,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 7,
+            "use_hold": false
+          },
+          "regret": 140.6927501536037
+        }
+      }
+    },
+    {
+      "state_hash": "2fbb6a94c11a4784e4592e6f82227ab437d25573e7aef52c566319d121d13d67",
+      "piece": "O",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 0,
+        "x": 8,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 25.521234380921896
+        },
+        "taught": {
+          "placement": {
+            "rotation": 0,
+            "x": 1,
+            "use_hold": false
+          },
+          "regret": 11.428702559589965
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 0,
+            "x": 4,
+            "use_hold": false
+          },
+          "regret": 9.521095586932688
+        }
+      }
+    },
+    {
+      "state_hash": "a1602ff7d7a4fd5925f3f65a451b6a14376affe6eb336a1ad30ebf950e822b9a",
+      "piece": "J",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 0,
+        "x": 0,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "taught": {
+          "placement": {
+            "rotation": 2,
+            "x": 4,
+            "use_hold": false
+          },
+          "regret": 0.5902351327176802
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 7,
+            "use_hold": false
+          },
+          "regret": 78.87066608982332
+        }
+      }
+    },
+    {
+      "state_hash": "420c1d76e096adb1ccf99c468b311ae6f6c01c9770e9e495a556871a787cf488",
+      "piece": "J",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 1,
+        "x": 2,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 82.88697340880253
+        },
+        "taught": {
+          "placement": {
+            "rotation": 0,
+            "x": 1,
+            "use_hold": false
+          },
+          "regret": 20.93768410707935
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 7,
+            "use_hold": false
+          },
+          "regret": 87.70633498056577
+        }
+      }
+    },
+    {
+      "state_hash": "2fa56499773272e2da95633debecd2ae07b18df715b129de8a1cdca0c8c543e0",
+      "piece": "Z",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 1,
+        "x": 2,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 11.903584244671038
+        },
+        "taught": {
+          "placement": {
+            "rotation": 0,
+            "x": 4,
+            "use_hold": false
+          },
+          "regret": 28.155138741748488
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 4,
+            "use_hold": false
+          },
+          "regret": 57.7104552044234
+        }
+      }
+    },
+    {
+      "state_hash": "5415cff3f4652a7f008b04a3ddcd21c7e512cf25c03b3fc313a682241775ab4e",
+      "piece": "I",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 1,
+        "x": 0,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 534.3194967372174
+        },
+        "taught": {
+          "placement": {
+            "rotation": 1,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 4,
+            "use_hold": false
+          },
+          "regret": 150.69457089243224
+        }
+      }
+    },
+    {
+      "state_hash": "396b5ae372f19222a3866111c6cba7514f2286028eb5091a8e9f3a7e8e5c62b6",
+      "piece": "J",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 3,
+        "x": 5,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 363.67167408380374
+        },
+        "taught": {
+          "placement": {
+            "rotation": 2,
+            "x": 2,
+            "use_hold": false
+          },
+          "regret": 16.504848488184052
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 2,
+            "use_hold": false
+          },
+          "regret": 39.184300902112454
+        }
+      }
+    },
+    {
+      "state_hash": "3d1e0518e11348db39c85c1a16a26145dc64e41be83f9731694e02f3e6fb0f41",
+      "piece": "S",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 0,
+        "x": 3,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 224.6786574610628
+        },
+        "taught": {
+          "placement": {
+            "rotation": 0,
+            "x": 3,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 0,
+            "x": 1,
+            "use_hold": false
+          },
+          "regret": 28.941167542052426
+        }
+      }
+    },
+    {
+      "state_hash": "e89e9c7ac28718847e7e67d8177a25f3814c0bddad06321182d7e05de74839f3",
+      "piece": "I",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 1,
+        "x": 0,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 313.67981037038635
+        },
+        "taught": {
+          "placement": {
+            "rotation": 1,
+            "x": 6,
+            "use_hold": false
+          },
+          "regret": 65.76434500606183
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 0,
+            "x": 1,
+            "use_hold": false
+          },
+          "regret": 170.62375450824993
+        }
+      }
+    },
+    {
+      "state_hash": "59f3583725eee0f6422ced3aad8c973c3cca12a6a575981399e2863349f4fe4d",
+      "piece": "T",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 2,
+        "x": 2,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 171.96454983640706
+        },
+        "taught": {
+          "placement": {
+            "rotation": 0,
+            "x": 1,
+            "use_hold": false
+          },
+          "regret": 9.323879395167296
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 0,
+            "x": 1,
+            "use_hold": false
+          },
+          "regret": 9.323879395167296
+        }
+      }
+    },
+    {
+      "state_hash": "4c419ddd16dfc6664e1b3372681bb33c026c80ba33c68c06115616d896993bf7",
+      "piece": "O",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 0,
+        "x": 2,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 2,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "taught": {
+          "placement": {
+            "rotation": 0,
+            "x": 2,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 0,
+            "x": 2,
+            "use_hold": false
+          },
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "state_hash": "ceb2a73ae9efd2aed008424d1ad51c4c1185fee1e87a385ece2eeb0a64b97795",
+      "piece": "T",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 1,
+        "x": 8,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 1,
+            "x": 8,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "taught": {
+          "placement": {
+            "rotation": 1,
+            "x": 8,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 8,
+            "use_hold": false
+          },
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "state_hash": "af5eadd797ff424fe98a6b158377b11950b57fabf9bc7a048f12a45807fb773b",
+      "piece": "I",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 1,
+        "x": 6,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 1,
+            "x": 6,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "taught": {
+          "placement": {
+            "rotation": 1,
+            "x": 6,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 6,
+            "use_hold": false
+          },
+          "regret": 0.0
+        }
+      }
+    },
+    {
+      "state_hash": "419410fbf81b2d4a0f157a5553091d8bd3c37090045fdbff57ce88b375db96cd",
+      "piece": "S",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 0,
+        "x": 0,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "taught": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 1,
+            "use_hold": false
+          },
+          "regret": 28.79999079061929
+        }
+      }
+    },
+    {
+      "state_hash": "3a1d6fe4009f7df9e452c4d431df7bf8c42c57cdea31960801a00bf8b2517250",
+      "piece": "I",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 0,
+        "x": 0,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "taught": {
+          "placement": {
+            "rotation": 0,
+            "x": 3,
+            "use_hold": false
+          },
+          "regret": 11.710408624546176
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 7,
+            "use_hold": false
+          },
+          "regret": 54.46799794315683
+        }
+      }
+    },
+    {
+      "state_hash": "c2843cc9545786a3b82605d007d51291abd8c64f1c3e3d053d5af12779ae1021",
+      "piece": "L",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 2,
+        "x": 0,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 82.10366992858792
+        },
+        "taught": {
+          "placement": {
+            "rotation": 2,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 0.0
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 3,
+            "x": 7,
+            "use_hold": false
+          },
+          "regret": 89.3190288569582
+        }
+      }
+    },
+    {
+      "state_hash": "3be6b7ea21325e56fd135f79137f84ed5cfd2a315896c209e12f5cceaf97aa60",
+      "piece": "J",
+      "event_order": [
+        "student_choose:initial",
+        "student_choose:taught",
+        "student_choose:random_label_control",
+        "external_expert_score"
+      ],
+      "expert_preferred": {
+        "rotation": 2,
+        "x": 4,
+        "use_hold": false
+      },
+      "decisions": {
+        "initial": {
+          "placement": {
+            "rotation": 0,
+            "x": 0,
+            "use_hold": false
+          },
+          "regret": 25.346982403295442
+        },
+        "taught": {
+          "placement": {
+            "rotation": 0,
+            "x": 6,
+            "use_hold": false
+          },
+          "regret": 13.55390665052289
+        },
+        "random_label_control": {
+          "placement": {
+            "rotation": 1,
+            "x": 1,
+            "use_hold": false
+          },
+          "regret": 101.55190889742312
+        }
+      }
+    }
+  ],
+  "game_rows": [
+    {
+      "seed": 2026082601,
+      "stream_sha256": "55c5103b577c1d29573fd5d7730fae196fdf1ab0a8304cfa439814fab0e6695f",
+      "initial": {
+        "placements": 27,
+        "lines_cleared": 0
+      },
+      "taught": {
+        "placements": 300,
+        "lines_cleared": 117
+      },
+      "random_label_control": {
+        "placements": 25,
+        "lines_cleared": 0
+      }
+    },
+    {
+      "seed": 2026082602,
+      "stream_sha256": "3ca0e0c3ced4256bdef300443cc87567f4248b7ddaf504369cb2573ee2406a05",
+      "initial": {
+        "placements": 25,
+        "lines_cleared": 0
+      },
+      "taught": {
+        "placements": 300,
+        "lines_cleared": 119
+      },
+      "random_label_control": {
+        "placements": 30,
+        "lines_cleared": 0
+      }
+    },
+    {
+      "seed": 2026082603,
+      "stream_sha256": "d8527afd06c922010f3b99afd063361b229ff2bbb256a58a12cd817fb8d5e816",
+      "initial": {
+        "placements": 15,
+        "lines_cleared": 0
+      },
+      "taught": {
+        "placements": 121,
+        "lines_cleared": 32
+      },
+      "random_label_control": {
+        "placements": 23,
+        "lines_cleared": 0
+      }
+    },
+    {
+      "seed": 2026082604,
+      "stream_sha256": "94dd355093660143dc111ab99c26698a8650ff1386af1ddc9a73843bea264f7b",
+      "initial": {
+        "placements": 26,
+        "lines_cleared": 0
+      },
+      "taught": {
+        "placements": 300,
+        "lines_cleared": 118
+      },
+      "random_label_control": {
+        "placements": 26,
+        "lines_cleared": 0
+      }
+    },
+    {
+      "seed": 2026082605,
+      "stream_sha256": "c4b1c308b1fea670d7ce4026e7229e9a1a89d6f8e57674201dd577fd654c6f49",
+      "initial": {
+        "placements": 25,
+        "lines_cleared": 0
+      },
+      "taught": {
+        "placements": 300,
+        "lines_cleared": 113
+      },
+      "random_label_control": {
+        "placements": 24,
+        "lines_cleared": 0
+      }
+    },
+    {
+      "seed": 2026082606,
+      "stream_sha256": "ba079a6e91174c19627e4e70cc2ed2dcdda38aba907c52881df0c17045e3c176",
+      "initial": {
+        "placements": 27,
+        "lines_cleared": 0
+      },
+      "taught": {
+        "placements": 71,
+        "lines_cleared": 12
+      },
+      "random_label_control": {
+        "placements": 25,
+        "lines_cleared": 0
+      }
+    },
+    {
+      "seed": 2026082607,
+      "stream_sha256": "bb6e68a091b651316204f57ff03794b2525dee813e1f95ebb000acee86aebf4a",
+      "initial": {
+        "placements": 24,
+        "lines_cleared": 0
+      },
+      "taught": {
+        "placements": 300,
+        "lines_cleared": 118
+      },
+      "random_label_control": {
+        "placements": 24,
+        "lines_cleared": 0
+      }
+    },
+    {
+      "seed": 2026082608,
+      "stream_sha256": "df6e86f5f79c130332fa8147a201f29e82b445658258d6fd43e025bf757993d3",
+      "initial": {
+        "placements": 22,
+        "lines_cleared": 0
+      },
+      "taught": {
+        "placements": 300,
+        "lines_cleared": 110
+      },
+      "random_label_control": {
+        "placements": 24,
+        "lines_cleared": 0
+      }
+    },
+    {
+      "seed": 2026082609,
+      "stream_sha256": "336b240b786059481a9c71a138b13f74e7d95b6310b4ad9cabd46ba44edaf3af",
+      "initial": {
+        "placements": 32,
+        "lines_cleared": 1
+      },
+      "taught": {
+        "placements": 300,
+        "lines_cleared": 115
+      },
+      "random_label_control": {
+        "placements": 27,
+        "lines_cleared": 0
+      }
+    },
+    {
+      "seed": 2026082610,
+      "stream_sha256": "b5471f72442469ee628d466dc3bdb903590ab39c118dca2be65b2373496bd57d",
+      "initial": {
+        "placements": 30,
+        "lines_cleared": 0
+      },
+      "taught": {
+        "placements": 300,
+        "lines_cleared": 113
+      },
+      "random_label_control": {
+        "placements": 26,
+        "lines_cleared": 0
+      }
+    }
+  ],
+  "metrics": {
+    "initial": {
+      "held_out_agreement": 0.25,
+      "held_out_mean_regret": 108.75286070812525,
+      "mean_placements": 25.3,
+      "mean_lines_cleared": 0.1
+    },
+    "taught": {
+      "held_out_agreement": 0.5416666666666666,
+      "held_out_mean_regret": 8.126929744511884,
+      "mean_placements": 259.2,
+      "mean_lines_cleared": 96.7
+    },
+    "random_label_control": {
+      "held_out_agreement": 0.125,
+      "held_out_mean_regret": 60.433638109221256,
+      "mean_placements": 25.4,
+      "mean_lines_cleared": 0
+    }
+  },
+  "success_checks": {
+    "agreement_gain_vs_initial_10pp": true,
+    "agreement_gain_vs_control_10pp": true,
+    "regret_reduction_vs_initial_10pct": true,
+    "regret_reduction_vs_control_10pct": true,
+    "gameplay_better_than_initial_and_control": true
+  },
+  "knowledge_transfer_success": true,
+  "ratings": null
+}
