@@ -1,0 +1,29 @@
+{
+  "status": "locked before final held-out run",
+  "date": "2026-08-25",
+  "learner": "18-feature linear softmax placement policy; no search, preview, or expert reference",
+  "features": [
+    "holes", "hole_depth", "rows_with_holes", "aggregate_height",
+    "maximum_height", "height_stddev", "bumpiness", "cliffs",
+    "landing_height", "completed_lines", "eroded_piece_cells",
+    "row_transitions", "column_transitions", "cumulative_wells",
+    "deep_wells", "covered_columns", "high_stack_cells", "surface_blocks"
+  ],
+  "trainable_parameters": 18,
+  "algorithm": "episodic REINFORCE; linear-softmax policy, learning rate 0.008, temperature 0.35, discount 0.99, causal mean-return baseline from completed earlier trajectories, advantage clipped to [-10,10]",
+  "credit_assignment": "G_t = r_t + 0.99 G_(t+1); every action gradient is weighted by its future return minus the baseline from earlier trajectories",
+  "reward": "0.02 for each legal placement plus 1.0 for each simulator-cleared row",
+  "training_exposure_placements": 3000,
+  "checkpoints": [0, 250, 750, 1500, 3000],
+  "checkpoint_rule": "Each declared checkpoint is a trajectory boundary and frozen deterministic evaluation point.",
+  "training_seed": 2026082701,
+  "held_out_game_seeds": [2026082801, 2026082802, 2026082803, 2026082804, 2026082805, 2026082806, 2026082807, 2026082808, 2026082809, 2026082810, 2026082811, 2026082812],
+  "held_out_diagnostic_seeds": [2026082901, 2026082902],
+  "evaluation": "12 matched deterministic games per checkpoint, capped at 300 placements; 16 policy-independent diagnostic states",
+  "primary_metrics": ["mean placements survived", "mean lines cleared"],
+  "secondary_metrics": ["expert agreement", "expert-relative regret"],
+  "control": "identical initial student receives the same 3000 indexed pieces and acts sequentially but receives zero parameter updates",
+  "success_criterion": "Final RL mean placements must exceed initial by both 25% and 10 placements; final mean lines must be at least 25% above initial; final placements and lines must both exceed matched non-learning control.",
+  "rating": "No rating will be reported because no independent richer-student ladder is calibrated.",
+  "expert_isolation": "The expert is neither constructed nor called in train_exposure; training audit must record zero calls. It is invoked only after frozen student decisions for secondary diagnostics."
+}

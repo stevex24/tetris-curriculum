@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "checks": {
+    "richer_interpretable_representation": true,
+    "no_expert_coefficients": true,
+    "expert_absent_from_training": true,
+    "environment_reward_only": true,
+    "equal_exposure": true,
+    "rl_updates_match_exposure": true,
+    "training_evaluation_seed_separation": true,
+    "evaluation_nonmutating": true,
+    "delayed_credit_declared": true,
+    "behavior_not_parameters_only": true,
+    "primary_gameplay_metrics_present": true,
+    "expert_is_secondary_only": true,
+    "no_uncalibrated_rating": true
+  },
+  "overall": "PASS",
+  "independence": "Recomputes artifact invariants without importing the Day 4 trainer or success rule."
+}

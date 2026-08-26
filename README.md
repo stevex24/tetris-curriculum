@@ -42,6 +42,18 @@ placements. Students have no expert reference during evaluation, and serialized 
 for mutation. See [the Day 3 report](docs/day3_transfer.md). Direct imitation is the baseline for a
 future equal-budget personalized-tutorial comparison, not the ultimate tutor method.
 
+Run the Day 4 sequential-RL experiment:
+
+```sh
+python3 -m tetris_research.day4 smoke
+python3 -m tetris_research.day4 final
+python3 -m tetris_research.day4_validator experiments/day4/final_results.json
+```
+
+Day 4 adds an 18-feature interpretable placement policy trained by episodic REINFORCE from its own
+survival and line-clear outcomes. The external expert is absent from training and is used only for
+secondary post-decision diagnostics. See [the Day 4 report](docs/day4_rl.md).
+
 Run the frozen Hour 4 evaluation experiment (after its required three-replicate smoke run):
 
 ```sh
