@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "checks": {
+    "documented_mapping_complete": true,
+    "history_fields_complete": true,
+    "independently_replayable": true,
+    "student_decision_precedes_oracle": true,
+    "near_zero_excluded": true,
+    "cross_game_consistency_in_score": true,
+    "hidden_weights_irrelevant": true,
+    "distinct_synthetic_profiles": true,
+    "intended_weaknesses_recovered": true,
+    "diagnosis_nonmutating": true,
+    "no_hidden_training_data": true
+  },
+  "overall": "PASS",
+  "independence": "Replays histories and recomputes diagnosis invariance without importing the Day 5 experiment runner."
+}

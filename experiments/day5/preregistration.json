@@ -1,0 +1,20 @@
+{
+  "status": "locked before final validation",
+  "date": "2026-08-26",
+  "experiment": "Day 5 history-based behavioral weakness diagnosis",
+  "history_games_per_profile": 6,
+  "maximum_placements_per_game": 80,
+  "history_seeds": [2026083001, 2026083002, 2026083003, 2026083004, 2026083005, 2026083006],
+  "material_regret_threshold": 1.0,
+  "feature_delta_threshold": 0.01,
+  "family_attribution": "On materially regretted decisions, take direction-adjusted student-minus-expert deltas in the fixed scaled 18-feature space, discard deltas <= 0.01, average positive deltas within each family, and divide each family's evidence by total evidence on that decision.",
+  "weakness_score": "sum(regret * family attribution share) / all recorded decisions * games-with-attribution / all games",
+  "profiles": [
+    "hole-weak: fixed richer-student policy uses magnitude-40 penalties/rewards except that it omits hole-family penalties",
+    "well-weak: fixed richer-student policy uses magnitude-40 penalties/rewards except that it omits well-family penalties",
+    "natural-rl: frozen rl@3000 state from the Day 4 final artifact"
+  ],
+  "success_criterion": "For each synthetic profile, the intended family is top 2; the two intended-family score vectors differ by at least 0.01 in L1 distance; diagnosis is unchanged after adding/changing irrelevant hidden-weight fields; and history collection plus diagnosis does not mutate a student.",
+  "development_note": "An initial magnitude-8 construction failed the two-game smoke because well weakness ranked fifth. Before the final run, retained penalties/rewards were strengthened uniformly to magnitude 40; no diagnosis threshold, seed, budget, mapping, final result, or success criterion was inspected or changed.",
+  "no_tuning_rule": "This revised construction, thresholds, seeds, budgets, mappings, and criterion are fixed before the final run. A null final result is reported without retuning against final cases."
+}
