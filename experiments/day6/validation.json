@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "validator": "independent Day 6 behavioral validator",
+  "checks": {
+    "result_success": true,
+    "selector_ast_has_no_hidden_weight_or_oracle_names": true,
+    "scenario_schema_has_no_action_labels_or_rewards": true,
+    "day4_source_unchanged_from_checkpoint": true,
+    "equal_budget": true,
+    "target_labels_behaviorally_valid": true,
+    "multiple_sources": true,
+    "nonterminal_plausible": true,
+    "overlap_not_claimed_exclusive": true
+  },
+  "success": true,
+  "forbidden_generator_references": []
+}

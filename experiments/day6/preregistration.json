@@ -1,0 +1,16 @@
+{
+  "status": "locked before final validation",
+  "date": "2026-08-28",
+  "experiment": "Day 6 targeted tutorial generation and training plumbing",
+  "representation": "A 20-element tuple of legal 10-bit simulator row masks plus one current tetromino; metadata contains family, source, and perturbation but no action label or reward.",
+  "target_families": ["surface_smoothness", "well_management", "hole_management"],
+  "generation_algorithm": "From frozen natural Day 5 rl@3000 history, retain plausible historical states and add one deterministic random legal-placement neighbor per state with a seeded next piece. Rank candidates independently per family by the preregistered sensitivity metric, deduplicate board/piece pairs, require at least four source positions, and retain eight.",
+  "targeting_metric": "For every legal placement, compute the unchanged Day 4 18-feature vector. For a family, take max-minus-min for each member feature and average those ranges. Tutorial validation compares the mean sensitivity of its eight states with the generic set mean for that family.",
+  "diversity_requirement": "Eight unique board/piece pairs and at least four distinct historical source positions per family; at least one generated one-legal-placement neighbor.",
+  "personalized_allocation": "Restrict the Day 5 ranking to supported families, take the first two, normalize their nonnegative Day 5 scores, and allocate 24 exposures with deterministic largest remainder (equal split if both scores are zero). Cycle within each family set.",
+  "generic_control": "Ignore the weakness profile, deterministically shuffle the same plausible natural/one-step candidate pool with seed+1, deduplicate, and take eight states.",
+  "exposure_accounting": "One situation, one stochastic choose_placement(learn=True), one update with unchanged Day 4 gameplay_reward, and one finish_episode(learned=True). Reset after every placement. Both conditions receive exactly 24 placements, updates, and scenario resets.",
+  "seeds": {"generation": 2026083101},
+  "success_criterion": "Selection differs for the natural and contrasting profiles; every state has at least two legal actions and is replayable; each family targeted mean sensitivity is at least 1.25 times generic; standard Day 4 source is unchanged; both training conditions apply exactly 24 standard RL updates; expert calls during learning are zero; rewards are only Day 4 gameplay_reward; each set has eight unique boards and at least four origins; source history is unchanged; generator/selector AST contains no hidden-weight or oracle references.",
+  "no_tuning_rule": "Run the final generation and independent validator once under these thresholds. Report a null result without redesigning against final cases."
+}
