@@ -83,3 +83,18 @@ surface-smoothness score for the natural student warrants inspection rather than
 
 **Day 5 diagnoses recurring behavioral weaknesses; it does not yet prove that training those
 weaknesses improves rating.**
+
+## Reproduce and inspect
+
+```bash
+python -m tetris_research.day5 smoke
+python -m tetris_research.day5 run
+python -m tetris_research.day5_validator experiments/day5/final_results.json
+```
+
+The `run` command writes the canonical result path, so use it deliberately. See the
+[preregistration](../experiments/day5/preregistration.json),
+[final artifact](../experiments/day5/final_results.json),
+[committed validation](../experiments/day5/validation.json),
+[implementation](../tetris_research/day5.py), [diagnosis logic](../tetris_research/diagnosis.py),
+and [tests](../tests/test_day5_diagnosis.py).

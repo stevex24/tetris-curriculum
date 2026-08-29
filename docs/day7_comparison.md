@@ -91,3 +91,22 @@ one-step tutorial reset equivalent to a sequential RL trajectory, and imitation 
 supervised objective as intended. The imitation endpoint is heavily ceiling-censored. Weakness
 profile change was not measured, because the optional explanatory analysis would add substantial
 oracle runtime and was not required for the locked primary question.
+
+The personalized curriculum was static for all 500 exposures. A future system could instead run
+`diagnose → short targeted practice → reassess → retarget`, but Day 7 neither implemented nor
+tested that adaptive loop. It also does not map 500 machine placements to a human training duration
+or establish that feature families are causally independent.
+
+## Reproduce and inspect
+
+```bash
+python -m tetris_research.day7 smoke --output /tmp/day7-smoke.json
+python -m tetris_research.day7 final --output /tmp/day7-final.json
+```
+
+The independent validator currently reads and rewrites the canonical artifact paths; its exact
+command is `python -m tetris_research.day7_validator` and should therefore be run deliberately.
+See the [preregistration](../experiments/day7/preregistration.json),
+[final artifact](../experiments/day7/final_results.json),
+[committed validation](../experiments/day7/validation.json),
+[implementation](../tetris_research/day7.py), and [tests](../tests/test_day7_comparison.py).

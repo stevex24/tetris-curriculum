@@ -69,3 +69,17 @@ Secondary expert agreement changed from 0.0% to 43.75%; mean expert-relative reg
 92.834 to 16.361. These diagnostics did not determine success and the expert was first invoked only
 after frozen student decisions. The independent validator passed all structural and behavioral
 artifact checks.
+
+## Reproduce and inspect
+
+```bash
+python -m tetris_research.day4 smoke --output /tmp/day4-smoke.json
+python -m tetris_research.day4 final --output /tmp/day4-final.json
+python -m tetris_research.day4_validator /tmp/day4-final.json
+```
+
+See the [preregistration](../experiments/day4/preregistration.json),
+[final artifact](../experiments/day4/final_results.json),
+[committed validation](../experiments/day4/validation.json),
+[implementation](../tetris_research/day4.py), [richer student](../tetris_research/richer_student.py),
+and [tests](../tests/test_day4_rl.py).

@@ -58,3 +58,16 @@ the policy has four coarse afterstate features, and gameplay estimates have no c
 Days 4–7 remain out of scope. In particular, Day 4 should add genuine reinforcement learning; Day 5
 history-based error diagnosis; Day 6 targeted level generation; and Day 7 an equal-budget comparison
 of ordinary practice, this direct-imitation baseline, and history-aware personalized tutorials.
+
+## Reproduce and inspect
+
+```bash
+python -m tetris_research.day3 smoke --output /tmp/day3-smoke.json
+python -m tetris_research.day3 final --output /tmp/day3-final.json
+python -m tetris_research.day3_validator /tmp/day3-final.json
+```
+
+See the [preregistration](../experiments/day3/preregistration.json),
+[final artifact](../experiments/day3/final_results.json),
+[committed validation](../experiments/day3/validation.json),
+[implementation](../tetris_research/day3.py), and [tests](../tests/test_day3_transfer.py).

@@ -88,3 +88,21 @@ The independent certificate passes all rule, legality, repeatability, replay, ra
 checks. Accordingly, Day 3 may use this policy as a simulator-specific placement oracle. It should
 not describe it as a modern-guideline or globally state-of-the-art Tetris engine, and should address
 runtime before generating a large imitation corpus.
+
+## Reproduce and inspect
+
+The committed runtime fallback has already selected 50 games and beam width 3. To avoid replacing
+scientific artifacts during inspection, validation can read the committed benchmark directly:
+
+```bash
+python -m tetris_research.day2 validate
+python -m unittest tests.test_day2_expert -v
+```
+
+The original benchmark command is `python -m tetris_research.day2 run`; it writes the canonical
+Day 2 files in place and should only be used deliberately. See the
+[preregistration](../experiments/day2/preregistration.json),
+[runtime decision](../experiments/day2/runtime_decision.json),
+[benchmark](../experiments/day2/benchmark.json), [certificate](../experiments/day2/certificate.txt),
+[implementation](../tetris_research/day2.py), [expert policy](../tetris_research/expert.py), and
+[tests](../tests/test_day2_expert.py).

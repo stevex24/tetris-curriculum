@@ -87,3 +87,15 @@ Generate the preserved Hour 9 certificate with:
 ```bash
 python -m tetris_research.validator artifacts/hour9_large_sample
 ```
+
+Day 1 itself is architecture and validation work rather than a training experiment: it has no
+exposure budget, evaluation cap, or outcome estimate. Run its focused tests with:
+
+```bash
+python -m unittest tests.test_day1_architecture -v
+```
+
+Relevant files are the [student interface](../tetris_research/student.py),
+[legacy adapter](../tetris_research/legacy_student.py), [validator](../tetris_research/validator.py),
+[Hour 9 certificate input](../artifacts/hour9_large_sample), and
+[architecture tests](../tests/test_day1_architecture.py).
