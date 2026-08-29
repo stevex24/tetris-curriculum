@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "validator": "independent Day 7 artifact validator",
+  "checks": {
+    "identical_starting_students": true,
+    "equal_update_counts": true,
+    "equal_decision_exposure": true,
+    "history_collection_has_no_free_learning": true,
+    "expert_coefficients_not_copied": true,
+    "no_expert_in_personalized_learning": true,
+    "student_decisions_precede_diagnostic_expert": true,
+    "no_personalized_reward_shaping": true,
+    "same_rl_algorithm_and_reward": true,
+    "evaluation_nonmutating": true,
+    "training_evaluation_seeds_disjoint": true,
+    "condition_evaluation_streams_matched": true,
+    "selection_does_not_use_hidden_weights": true,
+    "locked_configuration_matches_result": true,
+    "common_cap_for_all_conditions": true,
+    "paired_replicate_identities_preserved": true,
+    "primary_is_independent_gameplay": true,
+    "no_uncalibrated_rating": true
+  },
+  "success": true
+}

@@ -203,6 +203,37 @@ class RicherRLStudent(StudentAgent):
         self._episode[-1] = (gradient, float(experience.reward))
         self.placements_seen += 1
 
+    def learn_from_label(self, state: TetrisState, piece: str,
+                         legal_placements: Sequence[ActionEvaluation], label: Placement,
+                         *, learning_rate: float | None = None) -> float:
+        """Apply one supervised softmax update in the student's 18-feature space."""
+        if not self.learning_enabled:
+            raise RuntimeError("learning is disabled for this agent")
+        if self._episode:
+            raise RuntimeError("imitation update cannot interrupt an RL trajectory")
+        indices = [index for index, choice in enumerate(legal_placements)
+                   if self._placement(choice) == label]
+        if len(indices) != 1:
+            raise ValueError("label must identify exactly one legal placement")
+        vectors = self._vectors(state, piece, legal_placements)
+        logits = [sum(weight * value for weight, value in zip(self.weights, vector)) /
+                  self.temperature for vector in vectors]
+        peak = max(logits)
+        exps = [math.exp(value - peak) for value in logits]
+        total = sum(exps)
+        probabilities = [value / total for value in exps]
+        target = indices[0]
+        expected = [sum(probability * vector[j]
+                        for probability, vector in zip(probabilities, vectors))
+                    for j in range(len(FEATURE_NAMES))]
+        rate = self.learning_rate if learning_rate is None else float(learning_rate)
+        self.weights = [weight + rate * (wanted - average) / self.temperature
+                        for weight, wanted, average in zip(
+                            self.weights, vectors[target], expected)]
+        self.updates += 1
+        self.placements_seen += 1
+        return -math.log(max(probabilities[target], 1e-300))
+
     def finish_episode(self, *, learned: bool) -> None:
         if not learned:
             if self._episode:

@@ -1,0 +1,41 @@
+{
+  "status": "locked before final run",
+  "date": "2026-08-28",
+  "configuration": {
+    "name": "preregistered-final",
+    "starting_checkpoint": "rl@750",
+    "replicate_seeds": [2026090101, 2026090102, 2026090103, 2026090104, 2026090105, 2026090106, 2026090107, 2026090108],
+    "training_budget": 500,
+    "history_seeds": [2026090001, 2026090002, 2026090003, 2026090004, 2026090005, 2026090006],
+    "history_maximum": 80,
+    "tutorial_generation_seed": 2026090050,
+    "evaluation_game_seeds": [2026091101, 2026091102, 2026091103, 2026091104, 2026091105, 2026091106, 2026091107, 2026091108, 2026091109, 2026091110, 2026091111, 2026091112],
+    "evaluation_maximum": 500,
+    "diagnostic_state_seeds": [2026091201, 2026091202],
+    "diagnostic_states": 16,
+    "imitation_learning_rate": 0.08,
+    "bootstrap_seed": 2026091301,
+    "bootstrap_samples": 10000
+  },
+  "starting_student": "Exact Day 4 final artifact evaluation_before_states rl@750, including 18 weights, optimizer counters, and return baseline; only the stochastic RNG is reproducibly reseeded per replicate, identically before cloning all conditions.",
+  "starting_student_reason": "rl@750 is already competent (43.67 mean held-out lines and 149.58 placements at Day 4 cap 300), but remains below rl@3000 (62.08 lines and 192.17 placements), leaving measurable headroom.",
+  "history_design": "Option A. Collect one shared six-game deterministic history from the common rl@750 policy with learning disabled before condition cloning. Diagnosis may query the external oracle only after recorded decisions. History adds zero updates to every condition.",
+  "conditions": {
+    "ordinary": "500 sequential ordinary-game placements and exactly 500 unchanged Day 4 episodic REINFORCE updates using only 0.02 plus simulator-cleared rows.",
+    "imitation": "500 policy-independent ordinary decision states, 500 beam-width-1 expert preferred-placement labels, and exactly 500 18-feature student-owned action-softmax cross-entropy updates; no expert coefficients copied.",
+    "personalized": "Day 5 diagnosis of shared history, Day 6 selection from generated target-family situations, then 500 one-placement resets and exactly 500 unchanged Day 4 REINFORCE updates using only 0.02 plus simulator-cleared rows; no expert labels during learning."
+  },
+  "equal_budget_rule": "One encountered decision state followed by one parameter update is one learning opportunity in every condition. Every condition receives exactly 500 opportunities and updates. CPU time, oracle computation, episode length, and resets are reported but are not budget units.",
+  "evaluation": "Freeze all policies. For each replicate evaluate its baseline and three trained conditions deterministically on the same 12 held-out piece streams, each capped at 500 placements. All replicates use the same held-out streams. Learning, expert-assisted choice, and tutorial selection are absent.",
+  "primary_metric": "Per replicate, change in mean held-out lines cleared relative to that replicate's frozen baseline.",
+  "secondary_metrics": ["mean placements survived", "expert agreement on 16 policy-independent held-out states", "mean expert-relative regret on those states", "cap-hit counts"],
+  "statistical_method": "Paired contrasts over the eight replicate units. Report mean and median improvements and differences. Use a deterministic 10000-sample paired nonparametric bootstrap over replicate units and percentile 90% confidence intervals.",
+  "success_criterion": {
+    "minimum_success": "personalized minus ordinary mean primary improvement is at least 2.0 held-out lines and its paired-bootstrap 90% confidence interval lower bound is greater than zero",
+    "strong_success": "minimum success plus personalized minus imitation meeting the same 2.0-line and positive-lower-bound rule",
+    "null": "minimum success is not met and the personalized-minus-ordinary mean is nonnegative",
+    "negative": "personalized-minus-ordinary mean is negative"
+  },
+  "no_tuning_rule": "The final runner verifies this exact configuration before execution. Run it once. Do not change checkpoint, budget, seeds, cap, endpoints, intervals, or criterion after viewing final results.",
+  "rating": "No rating is reported; the repository has no independently calibrated richer-student ladder."
+}
