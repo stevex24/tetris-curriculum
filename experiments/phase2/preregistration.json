@@ -1,0 +1,58 @@
+{
+  "status": "locked before final run",
+  "date": "2026-09-03",
+  "configuration": {
+    "name": "preregistered-final",
+    "starting_checkpoint": "rl@750",
+    "replicate_seeds": [2026100101, 2026100102, 2026100103, 2026100104, 2026100105, 2026100106, 2026100107, 2026100108],
+    "training_budget": 500,
+    "block_size": 50,
+    "history_seeds": [2026100001, 2026100002, 2026100003, 2026100004, 2026100005, 2026100006],
+    "history_maximum": 80,
+    "tutorial_generation_seed": 2026100050,
+    "responsive_diagnostic_seeds": [2026100061, 2026100062, 2026100063, 2026100064, 2026100065, 2026100066, 2026100067, 2026100068, 2026100069, 2026100070, 2026100071],
+    "responsive_diagnostic_maximum": 20,
+    "candidate_count": 16,
+    "shortlist": 4,
+    "rating_calibration_seeds": [2026100201, 2026100202, 2026100203, 2026100204, 2026100205, 2026100206, 2026100207, 2026100208, 2026100209, 2026100210, 2026100211, 2026100212],
+    "rating_probe_seeds": [2026100301, 2026100302],
+    "evaluation_game_seeds": [2026101101, 2026101102, 2026101103, 2026101104, 2026101105, 2026101106, 2026101107, 2026101108, 2026101109, 2026101110, 2026101111, 2026101112],
+    "evaluation_maximum": 500,
+    "diagnostic_state_seeds": [2026101201, 2026101202],
+    "diagnostic_states": 16,
+    "imitation_learning_rate": 0.08,
+    "bootstrap_seed": 2026101301,
+    "bootstrap_samples": 10000
+  },
+  "starting_student": "Committed Day 4 rl@750 serialized state, reproducibly reseeded within replicate before identical condition clones.",
+  "rating_ladder": {
+    "references": ["rl@0", "rl@250", "rl@750", "rl@1500", "rl@3000"],
+    "calibration": "Twelve matched ordinary-game streams, 300-placement cap, line total as match outcome and placements as tie-breaker.",
+    "formula": "Batch Bradley-Terry fit using the Elo logistic scale, centered so reference mean is zero. Candidate performance ratings use matched outcomes against every fixed reference with Jeffreys smoothing.",
+    "uncertainty": "Deterministic 500-sample matched-game bootstrap, percentile 90% intervals.",
+    "interpretation": "Simulator ladder points, not FIDE-equivalent Elo. Calibration separates the two weak checkpoints; the upper three reference intervals overlap and are not claimed to have a stable internal order."
+  },
+  "full_profile": "All 18 Day 4 features retain separate regret-weighted behavioral severity and normalized severity values. Family summaries are not inputs to responsive scoring.",
+  "tutorial_value": "For each of 16 candidate board/piece situations, clone the current student, apply exactly one unchanged Day 4 one-placement RL episode, and measure change in performance rating on two fixed nonlearning probe streams. Predicted rating gain is the primary ordering key; alignment between all 18 current severities and all 18 action-range sensitivities is only a deterministic tie-breaker.",
+  "mastery_retirement": "For each candidate, track its three most action-sensitive features. Reduce emphasis by their mean current/initial normalized-severity ratio, capped at one. Retire when all three fall to at most 70% of initial severity and projected gain is nonpositive, or after two consecutive nonpositive projected gains.",
+  "curriculum_update": "Train in ten blocks of 50 updates. Before each block, freeze the learner, collect one matched 20-placement nonlearning history, recompute the 18-feature profile, rescore all candidates, and cycle through the four highest-valued nonretired situations. Collect one additional nonlearning final profile.",
+  "conditions": {
+    "ordinary": "Unchanged Day 4 sequential episodic REINFORCE on ordinary game states.",
+    "imitation": "Existing richer-student supervised imitation with expert-preferred actions and student-owned updates.",
+    "static_personalized": "Frozen Day 7 mechanism: one shared diagnosis and fixed top-family allocation for all 500 updates.",
+    "responsive_personalized": "Repeated full-profile diagnosis, counterfactual rating-gain scoring, mastery retirement, and 50-update curriculum redesign using unchanged Day 4 RL."
+  },
+  "exposure_accounting": "Every condition receives exactly 500 learner decisions and 500 parameter updates. Responsive diagnostic play is nonlearning and reported separately. Oracle calls for diagnosis and imitation labels are reported separately and are not learner updates.",
+  "primary_metric": "Per-replicate matched-stream simulator performance-rating gain from the frozen baseline after 500 learner updates.",
+  "secondary_metrics": ["lines cleared", "placements survived", "expert agreement", "expert regret", "18-feature profile evolution", "curriculum switches", "selected situation exposures"],
+  "statistics": "Eight paired training replicates; deterministic 10000-sample paired bootstrap; percentile 90% confidence intervals.",
+  "success_hierarchy": {
+    "minimum": "responsive-minus-ordinary mean is positive and its paired-bootstrap 90% interval lower bound is above zero",
+    "adaptive": "minimum success plus responsive-minus-static meeting the same rule",
+    "strong": "adaptive success plus responsive-minus-imitation meeting the same rule",
+    "null": "responsive does not reliably beat ordinary and its mean contrast is nonnegative",
+    "negative": "responsive-minus-ordinary mean is negative"
+  },
+  "demo_seed_rule": "first final held-out evaluation seed",
+  "no_tuning_rule": "Day 7 final outcomes are historical context only and must not be used to tune Phase-2 seeds or thresholds. Run the locked final comparison once."
+}

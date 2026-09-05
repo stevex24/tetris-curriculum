@@ -50,6 +50,8 @@ Beginning at `23a5407`, the project introduced a modular student interface and i
 | Day 6 | Replayable, profile-selected one-placement practice | [Tutorials](docs/day6_tutorials.md) |
 | Day 7 | Ordinary, imitation, and personalized training at equal budgets | [Comparison](docs/day7_comparison.md) |
 
+Phase 2 extends that comparison with a preregistered responsive full-profile tutor. See the [Phase 2 report](docs/phase2_adaptive_tutor.md), [locked configuration](experiments/phase2/preregistration.json), [frozen results](experiments/phase2/final_results.json), and [four-board replay demo](demo/phase2-comparison.html).
+
 ## What the terms mean
 
 - **Student:** the trainable machine policy being taught and evaluated.
